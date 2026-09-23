@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-container":"#1d4ed8","surface-dim":"#cbdbf5","background":"#f8f9ff","primary":"#0037b0","surface":"#f8f9ff","on-tertiary-container":"#c9d4ff","on-secondary-container":"#5c647a","on-primary-container":"#cad3ff","outline-variant":"#c4c5d7","surface-container-highest":"#d3e4fe","on-error-container":"#93000a","on-tertiary-fixed":"#00174b","on-tertiary":"#ffffff","surface-bright":"#f8f9ff","surface-container-low":"#eff4ff","on-secondary-fixed":"#131b2e","primary-fixed":"#dce1ff","inverse-surface":"#213145","on-surface-variant":"#434655","error-container":"#ffdad6","surface-container":"#e5eeff","surface-variant":"#d3e4fe","on-primary-fixed-variant":"#0039b5","inverse-on-surface":"#eaf1ff","on-primary-fixed":"#001551","surface-container-lowest":"#ffffff","secondary-fixed":"#dae2fd","surface-tint":"#2151da","tertiary-container":"#0051d6","on-surface":"#0b1c30","surface-container-high":"#dce9ff","tertiary-fixed":"#dbe1ff","secondary-container":"#dae2fd","on-background":"#0b1c30","primary-fixed-dim":"#b7c4ff","secondary":"#565e74","on-secondary":"#ffffff","on-primary":"#ffffff","on-tertiary-fixed-variant":"#003ea8","secondary-fixed-dim":"#bec6e0","tertiary":"#003ca3","outline":"#747686","tertiary-fixed-dim":"#b4c5ff","on-error":"#ffffff","on-secondary-fixed-variant":"#3f465c","error":"#ba1a1a","inverse-primary":"#b7c4ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"0.75rem","gutter-dense":"0.5rem","space-lg":"1rem","space-sm":"0.5rem","space-2xl":"2rem","space-xs":"0.25rem","space-xl":"1.5rem","margin":"1.5rem","gutter":"1rem","margin-compact":"1rem"},"fontFamily":{"headline-lg":["Inter"],"display-lg":["Inter"],"code-mono":["JetBrains Mono"],"label-md":["Inter"],"body-md":["Inter"],"label-sm":["Inter"],"headline-sm":["Inter"],"display-md":["Inter"],"body-bold":["Inter"],"body-lg":["Inter"]},"fontSize":{"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-mono":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-bold":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="p-space-lg flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #1d4ed8
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WZaVAPBbmPEq579_00uv2bs2YrnYxBWG8B8maHdvv-Mo8DTfO6k02iTscoX_KGKPJc4FudNe6cjzYFuBuCFR4lF13GrBXfGMnuJkNilDtec2DNH-XAONQEiFKAZVn0rW22x2Wb6J-RjcznHbw9Yba44zp-u5-84_BLWSUbBau4FCUNdH_jLHrxIfaN1RHSSBPAcAXSpttyd-Yit3_6dUI1uzInFpNdMrGhPjKWEgVcRsnvTI9VjE5_pxUT"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate">Gestor Tienda</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Tienda Central</span></div></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high rounded"><span class="material-symbols-outlined text-primary text-[16px]">wifi_off</span><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Modo Offline Activo</span></div></div><nav class="flex-1 px-space-md py-space-xs flex flex-col gap-space-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-md text-label-md flex-1">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventario" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-md text-label-md flex-1">Inventario</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ventas-tpv" href="#"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-label-md text-label-md flex-1">Ventas (TPV)</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="proveedores" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-md text-label-md flex-1">Proveedores</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span class="font-label-md text-label-md flex-1">Reportes</span><span class="font-label-sm text-label-sm px-space-xs py-[2px] bg-secondary-container text-on-secondary-container rounded font-bold">Admin</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="usuarios-y-roles" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="font-label-md text-label-md flex-1">Usuarios y Roles</span></a></nav><div class="p-space-md bg-surface-container-low"><div class="flex items-center justify-between gap-space-xs text-on-surface-variant"><div class="flex items-center gap-space-xs min-w-0"><span class="h-2 w-2 rounded-full bg-primary shrink-0"></span><span class="font-code-mono text-code-mono truncate">0 pend. SQLite Local</span></div><span class="font-label-sm text-label-sm shrink-0">v1.0.0</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 px-space-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md min-w-0"><img alt="Brand logo. - Primary color: #1d4ed8
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WZaVAPBbmPEq579_00uv2bs2YrnYxBWG8B8maHdvv-Mo8DTfO6k02iTscoX_KGKPJc4FudNe6cjzYFuBuCFR4lF13GrBXfGMnuJkNilDtec2DNH-XAONQEiFKAZVn0rW22x2Wb6J-RjcznHbw9Yba44zp-u5-84_BLWSUbBau4FCUNdH_jLHrxIfaN1RHSSBPAcAXSpttyd-Yit3_6dUI1uzInFpNdMrGhPjKWEgVcRsnvTI9VjE5_pxUT"/><nav class="hidden xl:flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant truncate"><span class="text-on-surface-variant">Panel de Operaciones</span><span>/</span><span class="text-on-surface-variant">Módulo 03</span><span>/</span><span class="font-body-bold text-body-bold text-on-surface truncate">Ventas y Punto de Venta (TPV)</span></nav></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded"><span class="material-symbols-outlined text-primary text-[16px]">database</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">SQLite Activa</span></div><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded"><span class="font-label-sm text-label-sm text-on-surface-variant">Moneda:</span><span class="font-code-mono text-code-mono text-on-surface font-bold">CUP / MLC / USD</span></div><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">shield_person</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Rol: Admin</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden lg:flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Alejandro Morales</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Administrador</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-screen px-space-margin pb-space-2xl"><div class="flex flex-col w-full gap-space-lg">
+<!-- CABECERA DE OPERACIÓN & CONTEXTO TPV -->
+<header class="flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-[2px] rounded bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wide">Terminal 01</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Punto de Venta y Registro de Ventas (TPV)</h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-space-xs mt-[2px]">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Terminal de Cobro Rápido — Sesión activa: <span class="font-body-bold text-body-bold text-on-surface">Caja Principal 01</span> | Turno Matutino (Cajero: Alejandro Morales)
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-center">
+<button class="h-10 px-space-md rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-all flex items-center gap-space-xs shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Historial de Tickets</span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-all flex items-center gap-space-xs shadow-sm font-label-md text-label-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">point_of_sale</span>
+<span>Cierre de Caja / Arqueo X/Z</span>
+</button>
+</div>
+</div>
+<!-- METRICAS EN VIVO DEL TURNO MATUTINO -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md relative overflow-hidden">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ventas del Turno</span>
+<span class="font-display-md text-display-md text-on-surface font-bold truncate">$84,350.00 <span class="text-label-md font-normal text-on-surface-variant">CUP</span></span>
+<span class="font-code-mono text-code-mono text-on-surface-variant text-[11px]">38 tickets completados hoy</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[24px]">query_stats</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ticket Promedio</span>
+<span class="font-display-md text-display-md text-on-surface font-bold truncate">$2,219.70 <span class="text-label-md font-normal text-on-surface-variant">CUP</span></span>
+<span class="font-code-mono text-code-mono text-primary text-[11px]">+4.2% vs. turno ayer</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">savings</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Efectivo en Gaveta</span>
+<span class="font-display-md text-display-md text-on-surface font-bold truncate">$52,100.00 <span class="text-label-md font-normal text-on-surface-variant">CUP</span></span>
+<span class="font-code-mono text-code-mono text-on-surface-variant text-[11px]">Fondo inicial: $10,000 CUP</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[24px]">qr_code_scanner</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Transfermóvil / EnZona</span>
+<span class="font-display-md text-display-md text-on-surface font-bold truncate">$32,250.00 <span class="text-label-md font-normal text-on-surface-variant">CUP</span></span>
+<span class="font-code-mono text-code-mono text-on-surface-variant text-[11px]">16 pagos digitales validados</span>
+</div>
+</div>
+</div>
+</header>
+<!-- WORKSPACE DIVIDIDO EN 2 COLUMNAS (CATÁLOGO RÁPIDO & TICKET OPERATIVO) -->
+<div class="grid grid-cols-12 gap-space-lg items-start">
+<!-- COLUMNA IZQUIERDA: CATÁLOGO DE PRODUCTOS Y BÚSQUEDA TÁCTIL (COL 12 -> 7) -->
+<section class="col-span-12 lg:col-span-7 flex flex-col gap-space-md">
+<!-- BARRA DE BÚSQUEDA RÁPIDA CON ATAJO Y SCANNER -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input autofocus="" class="w-full h-10 pl-10 pr-24 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-sm placeholder:text-outline" id="product-search-input" placeholder="Buscar por Nombre, Código de Barras o SKU (F2)..." type="text"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 font-code-mono text-[11px] bg-surface-container px-2 py-0.5 rounded text-on-surface-variant font-semibold">Atajo F2</span>
+</div>
+<button class="h-10 px-space-md bg-primary-container text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-space-xs hover:bg-primary transition-colors shadow-sm shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">barcode_scanner</span>
+<span class="hidden sm:inline">Lector Activo</span>
+</button>
+</div>
+<!-- PESTAÑAS DE CATEGORÍAS RÁPIDAS -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 text-label-md font-label-md">
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-bold shrink-0 shadow-sm" type="button">Todos (184)</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface shrink-0 transition-colors" type="button">Alimentos y Bebidas</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface shrink-0 transition-colors" type="button">Aseo y Hogar</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface shrink-0 transition-colors" type="button">Ferretería</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-primary font-semibold shrink-0 flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span>Más Vendidos</span>
+</button>
+</div>
+</div>
+<!-- GRILLA DE PRODUCTOS PARA DESPACHO DIRECTO -->
+<div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-space-sm">
+<!-- Producto 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-pointer group text-left" onclick="addItemToCurrentTicket('Detergente Multiuso 500g', 350.00)" role="button" tabindex="0">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-mono text-[10px] text-on-surface-variant bg-surface-container px-1 rounded">SKU: DET-500</span>
+<span class="px-1.5 py-[2px] rounded bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">20 u.</span>
+</div>
+<h4 class="font-body-bold text-body-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2 mt-1">Detergente Multiuso 500g</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aseo y Limpieza</span>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low rounded-lg p-2 flex items-center justify-between">
+<span class="font-display-md text-headline-sm text-primary font-bold">$350.00</span>
+<span class="material-symbols-outlined text-primary text-[20px]">add_circle</span>
+</div>
+</div>
+<!-- Producto 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-pointer group text-left" onclick="addItemToCurrentTicket('Café Tostado Molido 250g', 600.00)" role="button" tabindex="0">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-mono text-[10px] text-on-surface-variant bg-surface-container px-1 rounded">SKU: CAF-250</span>
+<span class="px-1.5 py-[2px] rounded bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">25 u.</span>
+</div>
+<h4 class="font-body-bold text-body-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2 mt-1">Café Tostado Molido 250g</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Alimentos</span>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low rounded-lg p-2 flex items-center justify-between">
+<span class="font-display-md text-headline-sm text-primary font-bold">$600.00</span>
+<span class="material-symbols-outlined text-primary text-[20px]">add_circle</span>
+</div>
+</div>
+<!-- Producto 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-pointer group text-left" onclick="addItemToCurrentTicket('Arroz Grano Largo 1kg', 245.00)" role="button" tabindex="0">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-mono text-[10px] text-on-surface-variant bg-surface-container px-1 rounded">SKU: ARR-001</span>
+<span class="px-1.5 py-[2px] rounded bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">140 u.</span>
+</div>
+<h4 class="font-body-bold text-body-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2 mt-1">Arroz Grano Largo 1kg</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Granos y Cereales</span>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low rounded-lg p-2 flex items-center justify-between">
+<span class="font-display-md text-headline-sm text-primary font-bold">$245.00</span>
+<span class="material-symbols-outlined text-primary text-[20px]">add_circle</span>
+</div>
+</div>
+<!-- Producto 4 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-pointer group text-left" onclick="addItemToCurrentTicket('Bombillo LED 12W Luz Fría', 440.00)" role="button" tabindex="0">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-mono text-[10px] text-on-surface-variant bg-surface-container px-1 rounded">SKU: LED-012</span>
+<span class="px-1.5 py-[2px] rounded bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">85 u.</span>
+</div>
+<h4 class="font-body-bold text-body-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2 mt-1">Bombillo LED 12W Luz Fría</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ferretería / Eléctrico</span>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low rounded-lg p-2 flex items-center justify-between">
+<span class="font-display-md text-headline-sm text-primary font-bold">$440.00</span>
+<span class="material-symbols-outlined text-primary text-[20px]">add_circle</span>
+</div>
+</div>
+<!-- Producto 5 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-pointer group text-left" onclick="addItemToCurrentTicket('Jabón de Baño Floral 120g', 150.00)" role="button" tabindex="0">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-mono text-[10px] text-on-surface-variant bg-surface-container px-1 rounded">SKU: JAB-120</span>
+<span class="px-1.5 py-[2px] rounded bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">210 u.</span>
+</div>
+<h4 class="font-body-bold text-body-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2 mt-1">Jabón de Baño Floral 120g</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aseo Personal</span>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low rounded-lg p-2 flex items-center justify-between">
+<span class="font-display-md text-headline-sm text-primary font-bold">$150.00</span>
+<span class="material-symbols-outlined text-primary text-[20px]">add_circle</span>
+</div>
+</div>
+<!-- Producto 6 (AGOTADO / DESHABILITADO) -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm opacity-60 flex flex-col justify-between cursor-not-allowed select-none text-left relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-highest/20 pointer-events-none"></div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-mono text-[10px] text-on-surface-variant bg-surface-container px-1 rounded">SKU: ACE-001</span>
+<span class="px-1.5 py-[2px] rounded bg-error-container text-on-error-container font-label-sm text-[11px] font-bold">Agotado</span>
+</div>
+<h4 class="font-body-bold text-body-bold text-on-surface line-clamp-2 mt-1">Aceite Vegetal Criollo 1L</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Alimentos Básicos</span>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low rounded-lg p-2 flex items-center justify-between">
+<span class="font-display-md text-headline-sm text-on-surface-variant font-bold">$920.00</span>
+<span class="material-symbols-outlined text-outline text-[20px]">block</span>
+</div>
+</div>
+<!-- Producto 7 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-pointer group text-left" onclick="addItemToCurrentTicket('Refresco Nacional Lata 355ml', 180.00)" role="button" tabindex="0">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-mono text-[10px] text-on-surface-variant bg-surface-container px-1 rounded">SKU: BEB-355</span>
+<span class="px-1.5 py-[2px] rounded bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">95 u.</span>
+</div>
+<h4 class="font-body-bold text-body-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2 mt-1">Refresco Nacional Lata 355ml</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bebidas y Líquidos</span>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low rounded-lg p-2 flex items-center justify-between">
+<span class="font-display-md text-headline-sm text-primary font-bold">$180.00</span>
+<span class="material-symbols-outlined text-primary text-[20px]">add_circle</span>
+</div>
+</div>
+<!-- Producto 8 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-pointer group text-left" onclick="addItemToCurrentTicket('Galletas Dulces Paquete', 120.00)" role="button" tabindex="0">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-mono text-[10px] text-on-surface-variant bg-surface-container px-1 rounded">SKU: GAL-002</span>
+<span class="px-1.5 py-[2px] rounded bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">60 u.</span>
+</div>
+<h4 class="font-body-bold text-body-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2 mt-1">Galletas Dulces Paquete</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Golosinas y Snacks</span>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low rounded-lg p-2 flex items-center justify-between">
+<span class="font-display-md text-headline-sm text-primary font-bold">$120.00</span>
+<span class="material-symbols-outlined text-primary text-[20px]">add_circle</span>
+</div>
+</div>
+</div>
+<!-- BANNER DE INTEGRACIÓN OFFLINE SQLITE -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between text-on-surface-variant text-label-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">storage</span>
+<span>Despacho directo y cobro sincronizado con la base local <strong>sqlite_pos.db</strong>. Operación continua sin Internet.</span>
+</div>
+<span class="font-code-mono text-[11px] bg-surface-container px-2 py-1 rounded text-on-surface font-semibold">Memoria: 4.8MB</span>
+</div>
+</section>
+<!-- COLUMNA DERECHA: TICKET ACTUAL Y TERMINAL DE PAGO (COL 12 -> 5) -->
+<section class="col-span-12 lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col gap-space-md">
+<!-- CABECERA DEL TICKET CORRELATIVO -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Orden en Proceso</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold font-code-mono">Ticket Nº FAC-2025-00142</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" onclick="toggleReceiptModal()" title="Comprobante previo" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" title="Poner orden en espera" type="button">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+</div>
+</div>
+<!-- SELECTOR RÁPIDO DE CLIENTE -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">person</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Cliente General (Mostrador)</span>
+<span class="font-code-mono text-[11px] text-on-surface-variant">Consumidor Final • Sin RUP</span>
+</div>
+</div>
+<button class="px-space-sm py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors font-bold shrink-0" type="button">
+            + Identificar
+          </button>
+</div>
+<!-- LISTA DE ARTÍCULOS EN EL TICKET ACTUAL -->
+<div class="flex flex-col gap-space-xs max-h-[280px] overflow-y-auto pr-1" id="ticket-items-list">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg gap-space-sm">
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-body-bold text-body-bold text-on-surface truncate">Café Tostado Molido 250g</span>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-code-mono text-[12px]">
+<span>2 x $600.00</span>
+<span>=</span>
+<span class="font-semibold text-on-surface">$1,200.00 CUP</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="w-7 h-7 rounded bg-surface-container flex items-center justify-center font-bold text-on-surface hover:bg-surface-container-high">-</button>
+<span class="w-6 text-center font-code-mono text-body-bold">2</span>
+<button class="w-7 h-7 rounded bg-surface-container flex items-center justify-center font-bold text-on-surface hover:bg-surface-container-high">+</button>
+<button class="w-7 h-7 rounded text-error hover:bg-error-container/40 flex items-center justify-center ml-1">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg gap-space-sm">
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-body-bold text-body-bold text-on-surface truncate">Arroz Grano Largo 1kg</span>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-code-mono text-[12px]">
+<span>3 x $245.00</span>
+<span>=</span>
+<span class="font-semibold text-on-surface">$735.00 CUP</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="w-7 h-7 rounded bg-surface-container flex items-center justify-center font-bold text-on-surface hover:bg-surface-container-high">-</button>
+<span class="w-6 text-center font-code-mono text-body-bold">3</span>
+<button class="w-7 h-7 rounded bg-surface-container flex items-center justify-center font-bold text-on-surface hover:bg-surface-container-high">+</button>
+<button class="w-7 h-7 rounded text-error hover:bg-error-container/40 flex items-center justify-center ml-1">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg gap-space-sm">
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-body-bold text-body-bold text-on-surface truncate">Jabón de Baño Floral 120g</span>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-code-mono text-[12px]">
+<span>4 x $150.00</span>
+<span>=</span>
+<span class="font-semibold text-on-surface">$600.00 CUP</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="w-7 h-7 rounded bg-surface-container flex items-center justify-center font-bold text-on-surface hover:bg-surface-container-high">-</button>
+<span class="w-6 text-center font-code-mono text-body-bold">4</span>
+<button class="w-7 h-7 rounded bg-surface-container flex items-center justify-center font-bold text-on-surface hover:bg-surface-container-high">+</button>
+<button class="w-7 h-7 rounded text-error hover:bg-error-container/40 flex items-center justify-center ml-1">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg gap-space-sm">
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-body-bold text-body-bold text-on-surface truncate">Refresco Nacional Lata 355ml</span>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-code-mono text-[12px]">
+<span>2 x $180.00</span>
+<span>=</span>
+<span class="font-semibold text-on-surface">$360.00 CUP</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="w-7 h-7 rounded bg-surface-container flex items-center justify-center font-bold text-on-surface hover:bg-surface-container-high">-</button>
+<span class="w-6 text-center font-code-mono text-body-bold">2</span>
+<button class="w-7 h-7 rounded bg-surface-container flex items-center justify-center font-bold text-on-surface hover:bg-surface-container-high">+</button>
+<button class="w-7 h-7 rounded text-error hover:bg-error-container/40 flex items-center justify-center ml-1">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- DESGLOSE ECONÓMICO -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-on-surface-variant font-body-md text-body-md">
+<span>Subtotal (11 productos)</span>
+<span class="font-code-mono text-on-surface font-semibold">$2,895.00 CUP</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-body-md text-body-md">
+<span class="flex items-center gap-1">
+              Descuento Comercial
+              <button class="text-primary text-[12px] underline">Aplicar %</button>
+</span>
+<span class="font-code-mono text-on-surface font-semibold">$0.00 CUP</span>
+</div>
+<div class="my-1 h-[1px] bg-surface-variant"></div>
+<div class="flex justify-between items-end">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Total a Cobrar</span>
+<span class="font-code-mono text-[12px] text-outline">IVA / Tasas Incluidas</span>
+</div>
+<span class="font-display-lg text-display-lg text-primary font-bold tracking-tight">$2,895.00 <span class="text-headline-sm font-semibold">CUP</span></span>
+</div>
+</div>
+<!-- FORMAS DE PAGO DEL ENTORNO CUBANO -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Método de Pago</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-1">
+<button class="py-2 px-1 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-bold flex flex-col items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span>Efectivo CUP</span>
+</button>
+<button class="py-2 px-1 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm flex flex-col items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">phone_iphone</span>
+<span>Transfermóvil</span>
+</button>
+<button class="py-2 px-1 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm flex flex-col items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">qr_code_2</span>
+<span>EnZona QR</span>
+</button>
+<button class="py-2 px-1 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm flex flex-col items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">currency_exchange</span>
+<span>Mixto / USD</span>
+</button>
+</div>
+</div>
+<!-- CÁLCULO DE VUELTO / CAMBIO INMEDIATO -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Efectivo Entregado (CUP)</label>
+<div class="relative">
+<span class="absolute left-2.5 top-1/2 -translate-y-1/2 font-code-mono text-on-surface-variant font-bold">$</span>
+<input class="w-full h-10 pl-6 pr-2 rounded-lg bg-surface-container text-on-surface font-code-mono font-bold text-headline-sm focus:outline-none focus:bg-surface-container-low" id="cash-input" oninput="calculateChange(this.value)" type="number" value="3000"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Cambio a Devolver</label>
+<div class="h-10 rounded-lg bg-surface-container-high px-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Vuelto:</span>
+<span class="font-code-mono text-headline-sm text-primary font-bold" id="change-display">$105.00 CUP</span>
+</div>
+</div>
+</div>
+<!-- ACCIONES RÁPIDAS EN GAVETA Y BASE SQLITE -->
+<div class="flex items-center gap-space-sm pt-1">
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Descontar inventario automáticamente en SQLite local</span>
+</label>
+</div>
+<!-- BOTONES PRINCIPALES DE EJECUCIÓN -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<button class="w-full h-12 bg-primary-container hover:bg-primary text-on-primary rounded-xl font-headline-sm text-headline-sm flex items-center justify-center gap-space-sm shadow-md transition-all active:scale-[0.99]" onclick="confirmSale()" type="button">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+<span>CONFIRMAR VENTA E IMPRIMIR (F12)</span>
+</button>
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="h-9 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+<span>Guardar en Espera</span>
+</button>
+<button class="h-9 rounded-lg bg-surface-container-low hover:bg-error-container hover:text-on-error-container text-error font-label-md text-label-md transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">delete_sweep</span>
+<span>Cancelar Ticket</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- MODAL FLOTANTE / PREVIEW LATERAL DE COMPROBANTE FISCAL TPV (TOGGLEABLE) -->
+<aside class="fixed right-6 bottom-6 w-80 max-w-[90vw] bg-surface-container-lowest rounded-xl shadow-xl p-space-md z-50 flex flex-col gap-space-sm transition-all duration-300" id="receipt-preview-drawer">
+<div class="flex items-center justify-between pb-2 bg-surface-container-low -mx-space-md -mt-space-md p-space-sm rounded-t-xl">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">Previsualización de Ticket</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="toggleReceiptModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- TICKET FÍSICO ESTILO TÉRMICO -->
+<div class="bg-surface-container-low p-space-sm rounded font-code-mono text-[11px] leading-relaxed text-on-surface flex flex-col gap-1 shadow-inner">
+<div class="text-center font-bold text-[12px] uppercase">Gestor Tienda — MIPYME S.R.L.</div>
+<div class="text-center text-[10px] text-on-surface-variant">RUP: 4892019 • Calle Real #102, La Habana</div>
+<div class="text-center text-[10px] text-on-surface-variant">Caja 01 • Factura: FAC-2025-00142</div>
+<div class="text-center text-[10px] text-on-surface-variant">Fecha: 24/05/2025 10:42 AM</div>
+<div class="my-1 border-t border-dashed border-outline-variant"></div>
+<div class="flex justify-between">
+<span>2x Café Tostado 250g</span>
+<span>$1,200.00</span>
+</div>
+<div class="flex justify-between">
+<span>3x Arroz Grano Largo 1kg</span>
+<span>$735.00</span>
+</div>
+<div class="flex justify-between">
+<span>4x Jabón Floral 120g</span>
+<span>$600.00</span>
+</div>
+<div class="flex justify-between">
+<span>2x Refresco Lata 355ml</span>
+<span>$360.00</span>
+</div>
+<div class="my-1 border-t border-dashed border-outline-variant"></div>
+<div class="flex justify-between font-bold text-[12px]">
+<span>TOTAL CUP:</span>
+<span>$2,895.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Efectivo recibido:</span>
+<span>$3,000.00</span>
+</div>
+<div class="flex justify-between text-primary font-bold">
+<span>Cambio / Vuelto:</span>
+<span>$105.00</span>
+</div>
+<div class="my-1 border-t border-dashed border-outline-variant"></div>
+<div class="text-center text-[9px] text-on-surface-variant mt-1">
+        ¡Gracias por su compra!<br/>
+        Transacción local offline almacenada en SQLite.
+      </div>
+</div>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-1 h-9 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-primary" onclick="printReceiptMock()" type="button">
+<span class="material-symbols-outlined text-[16px]">local_printshop</span>
+<span>Imprimir Ticket (Térmica 80mm)</span>
+</button>
+</div>
+</aside>
+</div>
+<script>
+  // Micro-interacción: Cálculo de vuelto reactivo
+  function calculateChange(cashVal) {
+    const total = 2895.00;
+    const cash = parseFloat(cashVal) || 0;
+    const change = cash - total;
+    const display = document.getElementById('change-display');
+    if (display) {
+      if (change >= 0) {
+        display.textContent = '$' + change.toFixed(2) + ' CUP';
+        display.className = 'font-code-mono text-headline-sm text-primary font-bold';
+      } else {
+        display.textContent = 'Faltan: $' + Math.abs(change).toFixed(2) + ' CUP';
+        display.className = 'font-code-mono text-headline-sm text-error font-bold';
+      }
+    }
+  }
+
+  // Micro-interacción: Toggle del drawer del ticket
+  function toggleReceiptModal() {
+    const drawer = document.getElementById('receipt-preview-drawer');
+    if (drawer) {
+      drawer.classList.toggle('hidden');
+    }
+  }
+
+  // Micro-interacción: Agregar producto al ticket
+  function addItemToCurrentTicket(name, price) {
+    const list = document.getElementById('ticket-items-list');
+    if (!list) return;
+
+    const newItem = document.createElement('div');
+    newItem.className = 'flex items-center justify-between p-space-xs bg-surface-container rounded-lg gap-space-sm animate-pulse';
+    newItem.innerHTML = `
+      <div class="flex flex-col flex-1 min-w-0">
+        <span class="font-body-bold text-body-bold text-on-surface truncate">${name}</span>
+        <div class="flex items-center gap-space-sm text-on-surface-variant font-code-mono text-[12px]">
+          <span>1 x $${price.toFixed(2)}</span>
+          <span>=</span>
+          <span class="font-semibold text-on-surface">$${price.toFixed(2)} CUP</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-1 shrink-0">
+        <button class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center font-bold text-on-surface">-</button>
+        <span class="w-6 text-center font-code-mono text-body-bold">1</span>
+        <button class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center font-bold text-on-surface">+</button>
+        <button onclick="this.closest('.flex.items-center.justify-between').remove()" class="w-7 h-7 rounded text-error hover:bg-error-container/40 flex items-center justify-center ml-1">
+          <span class="material-symbols-outlined text-[18px]">delete</span>
+        </button>
+      </div>
+    `;
+    list.prepend(newItem);
+    setTimeout(() => newItem.classList.remove('animate-pulse'), 400);
+  }
+
+  // Micro-interacción: Atajos de teclado (F2 y F12)
+  window.addEventListener('keydown', function (e) {
+    if (e.key === 'F2') {
+      e.preventDefault();
+      const input = document.getElementById('product-search-input');
+      if (input) input.focus();
+    }
+    if (e.key === 'F12') {
+      e.preventDefault();
+      confirmSale();
+    }
+  });
+
+  function confirmSale() {
+    const drawer = document.getElementById('receipt-preview-drawer');
+    if (drawer && drawer.classList.contains('hidden')) {
+      drawer.classList.remove('hidden');
+    }
+    alert('Venta procesada con éxito: FAC-2025-00142. Guardada en SQLite local.');
+  }
+
+  function printReceiptMock() {
+    alert('Enviando instrucción de impresión ESC/POS a impresora térmica conectada...');
+  }
+</script></main></div></body></html>

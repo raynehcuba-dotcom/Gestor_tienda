@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-container":"#1d4ed8","surface-dim":"#cbdbf5","background":"#f8f9ff","primary":"#0037b0","surface":"#f8f9ff","on-tertiary-container":"#c9d4ff","on-secondary-container":"#5c647a","on-primary-container":"#cad3ff","outline-variant":"#c4c5d7","surface-container-highest":"#d3e4fe","on-error-container":"#93000a","on-tertiary-fixed":"#00174b","on-tertiary":"#ffffff","surface-bright":"#f8f9ff","surface-container-low":"#eff4ff","on-secondary-fixed":"#131b2e","primary-fixed":"#dce1ff","inverse-surface":"#213145","on-surface-variant":"#434655","error-container":"#ffdad6","surface-container":"#e5eeff","surface-variant":"#d3e4fe","on-primary-fixed-variant":"#0039b5","inverse-on-surface":"#eaf1ff","on-primary-fixed":"#001551","surface-container-lowest":"#ffffff","secondary-fixed":"#dae2fd","surface-tint":"#2151da","tertiary-container":"#0051d6","on-surface":"#0b1c30","surface-container-high":"#dce9ff","tertiary-fixed":"#dbe1ff","secondary-container":"#dae2fd","on-background":"#0b1c30","primary-fixed-dim":"#b7c4ff","secondary":"#565e74","on-secondary":"#ffffff","on-primary":"#ffffff","on-tertiary-fixed-variant":"#003ea8","secondary-fixed-dim":"#bec6e0","tertiary":"#003ca3","outline":"#747686","tertiary-fixed-dim":"#b4c5ff","on-error":"#ffffff","on-secondary-fixed-variant":"#3f465c","error":"#ba1a1a","inverse-primary":"#b7c4ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"0.75rem","gutter-dense":"0.5rem","space-lg":"1rem","space-sm":"0.5rem","space-2xl":"2rem","space-xs":"0.25rem","space-xl":"1.5rem","margin":"1.5rem","gutter":"1rem","margin-compact":"1rem"},"fontFamily":{"headline-lg":["Inter"],"display-lg":["Inter"],"code-mono":["JetBrains Mono"],"label-md":["Inter"],"body-md":["Inter"],"label-sm":["Inter"],"headline-sm":["Inter"],"display-md":["Inter"],"body-bold":["Inter"],"body-lg":["Inter"]},"fontSize":{"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-mono":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-bold":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="p-space-lg flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #1d4ed8
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WZaVAPBbmPEq579_00uv2bs2YrnYxBWG8B8maHdvv-Mo8DTfO6k02iTscoX_KGKPJc4FudNe6cjzYFuBuCFR4lF13GrBXfGMnuJkNilDtec2DNH-XAONQEiFKAZVn0rW22x2Wb6J-RjcznHbw9Yba44zp-u5-84_BLWSUbBau4FCUNdH_jLHrxIfaN1RHSSBPAcAXSpttyd-Yit3_6dUI1uzInFpNdMrGhPjKWEgVcRsnvTI9VjE5_pxUT"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate">Gestor Tienda</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Tienda Central</span></div></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high rounded"><span class="material-symbols-outlined text-primary text-[16px]">wifi_off</span><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Modo Offline Activo</span></div></div><nav class="flex-1 px-space-md py-space-xs flex flex-col gap-space-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-md text-label-md flex-1">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventario" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-md text-label-md flex-1">Inventario</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ventas-tpv" href="#"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-label-md text-label-md flex-1">Ventas (TPV)</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="proveedores" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-md text-label-md flex-1">Proveedores</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span class="font-label-md text-label-md flex-1">Reportes</span><span class="font-label-sm text-label-sm px-space-xs py-[2px] bg-secondary-container text-on-secondary-container rounded font-bold">Admin</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="usuarios-y-roles" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="font-label-md text-label-md flex-1">Usuarios y Roles</span></a></nav><div class="p-space-md bg-surface-container-low"><div class="flex items-center justify-between gap-space-xs text-on-surface-variant"><div class="flex items-center gap-space-xs min-w-0"><span class="h-2 w-2 rounded-full bg-primary shrink-0"></span><span class="font-code-mono text-code-mono truncate">0 pend. SQLite Local</span></div><span class="font-label-sm text-label-sm shrink-0">v1.0.0</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 px-space-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md min-w-0"><img alt="Brand logo. - Primary color: #1d4ed8
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WZaVAPBbmPEq579_00uv2bs2YrnYxBWG8B8maHdvv-Mo8DTfO6k02iTscoX_KGKPJc4FudNe6cjzYFuBuCFR4lF13GrBXfGMnuJkNilDtec2DNH-XAONQEiFKAZVn0rW22x2Wb6J-RjcznHbw9Yba44zp-u5-84_BLWSUbBau4FCUNdH_jLHrxIfaN1RHSSBPAcAXSpttyd-Yit3_6dUI1uzInFpNdMrGhPjKWEgVcRsnvTI9VjE5_pxUT"/><nav class="hidden xl:flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant truncate"><span class="text-on-surface-variant">Panel de Operaciones</span><span>/</span><span class="text-on-surface-variant">Módulo 03</span><span>/</span><span class="font-body-bold text-body-bold text-on-surface truncate">Ventas y Punto de Venta (TPV)</span></nav></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded"><span class="material-symbols-outlined text-primary text-[16px]">database</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">SQLite Activa</span></div><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded"><span class="font-label-sm text-label-sm text-on-surface-variant">Moneda:</span><span class="font-code-mono text-code-mono text-on-surface font-bold">CUP / MLC / USD</span></div><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">shield_person</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Rol: Admin</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden lg:flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Alejandro Morales</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Administrador</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-screen px-space-margin pb-space-2xl"><div class="flex flex-col w-full gap-space-lg">
+<!-- 1. Breadcrumb & Superior Toolbar -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant flex-wrap">
+<span>Panel de Operaciones</span>
+<span class="text-outline-variant">/</span>
+<span>Módulo 02</span>
+<span class="text-outline-variant">/</span>
+<span>Inventario y Stock</span>
+<span class="text-outline-variant">/</span>
+<span class="font-body-bold text-body-bold text-on-surface">Kardex y Mermas</span>
+</div>
+<!-- Security / Audit Badges -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-[3px] rounded-lg bg-surface-container-high text-on-surface text-label-sm font-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">wifi_off</span>
+          Modo Offline Activo
+        </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-[3px] rounded-lg bg-surface-container-high text-on-surface text-label-sm font-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">storage</span>
+          SQLite Local Inmutable
+        </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-[3px] rounded-lg bg-surface-container text-on-surface text-label-sm font-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified_user</span>
+<span class="font-code-mono text-code-mono text-[11px]">SHA-256 Activo</span>
+</span>
+</div>
+</div>
+<!-- Title + Action Row -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col min-w-0">
+<h1 class="font-display-md text-display-md text-on-surface tracking-tight">Kardex Físico-Valorado y Actas de Baja / Mermas</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl pt-0.5">
+          Trazabilidad de existencias por método Promedio Ponderado / FIFO, registro oficial de mermas, roturas, caducidades y generación de actas de baja con doble firma.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 flex-wrap">
+<button class="inline-flex items-center gap-space-xs h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">inventory</span>
+          Ver Catálogo
+        </button>
+<button class="inline-flex items-center gap-space-xs h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+          Exportar Libro (PDF/Excel)
+        </button>
+<button class="inline-flex items-center gap-space-xs h-9 px-space-md rounded-lg bg-primary-container text-on-primary shadow-sm hover:bg-primary transition-all font-body-bold text-body-bold" type="button">
+<span class="material-symbols-outlined text-[18px]">post_add</span>
+          + Registrar Acta de Baja (F4)
+        </button>
+</div>
+</div>
+</div>
+<!-- 2. KPI Metrics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Valor Total Mermas (Mes)</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[19px]">trending_down</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-display-md text-display-md text-on-surface font-semibold">$14,820.00</span>
+<span class="font-code-mono text-code-mono text-on-surface-variant font-bold">CUP</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">0.82% del stock valorado</span>
+<span class="px-space-xs py-[2px] rounded-lg bg-surface-container-highest text-on-surface text-[11px] font-label-sm font-semibold shrink-0">Dentro de Norma (&lt;1.5%)</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Incidentes Registrados</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[19px]">assignment_late</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-display-md text-display-md text-on-surface font-semibold">8 Actas</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Emitidas</span>
+</div>
+<div class="mt-space-xs pt-1">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">5 roturas en tienda · 2 caducidad · 1 merma</p>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Mayor Merma Registrada</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[19px]">warning</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2 truncate">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Cerveza Cristal 355ml</span>
+</div>
+<div class="mt-space-xs pt-1 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">18 uds dadas de baja ($4,500 CUP)</span>
+<span class="font-code-mono text-code-mono text-[11px] text-on-surface-variant bg-surface-container-low px-1.5 py-0.5 rounded">Rotura</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ajustes Pendientes de Firma</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[19px]">edit_document</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline justify-between gap-2">
+<span class="font-display-md text-display-md text-on-surface font-semibold">1 Acta</span>
+<span class="px-space-xs py-[2px] rounded-lg bg-secondary-container text-on-secondary-container text-[11px] font-label-sm font-semibold">Pendiente Aprobación</span>
+</div>
+<div class="mt-space-xs pt-1">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Acta BAJA-2025-0008 requiere firma Admin</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Main Split Workspace (Left: Kardex ~62%, Right: Acta Panel ~38%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- COLUMNA IZQUIERDA: Kardex Detallado y Búsqueda (7 Cols en lg, 8 en 2xl) -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-space-md min-w-0">
+<!-- Kardex Filter & Search Card -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<!-- Search and Barcode row -->
+<div class="flex flex-col sm:flex-row gap-space-sm items-stretch">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-on-surface-variant">search</span>
+<input class="w-full h-10 pl-10 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-colors" placeholder="Buscar por SKU, código de barras o descripción..." type="text" value="786102... Cerveza Cristal 355ml Lata | Stock: 242 Uds | Costo PMP: $215.00 CUP"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-[20px] text-on-surface-variant cursor-pointer">barcode_scanner</span>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="h-10 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+              Filtros
+            </button>
+<button class="h-10 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+              Recalcular PMP
+            </button>
+</div>
+</div>
+<!-- Secondary Filter Chips -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-1">
+<!-- Periods -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest shadow-sm text-on-surface font-label-sm text-label-sm" type="button">Este Mes (Mayo 2025)</button>
+<button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">Últimos 3 Meses</button>
+<button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">Todo el Año</button>
+</div>
+<!-- Movement Types Filter -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tipo:</span>
+<span class="px-2 py-0.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-[12px] cursor-pointer">Todos</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-[12px] hover:bg-surface-container cursor-pointer">Entradas (+Compras)</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-[12px] hover:bg-surface-container cursor-pointer">Ventas TPV</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-[12px] hover:bg-surface-container cursor-pointer">Bajas/Mermas</span>
+</div>
+</div>
+</div>
+<!-- Ficha de Resumen del Producto Seleccionado -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="p-space-md bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">liquor</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Cerveza Cristal 355ml (Lata)</span>
+<span class="font-code-mono text-code-mono text-[11px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-semibold">SKU: BEB-CER-001</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px] font-label-sm">Bebidas y Licores</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Método de Valuación: Promedio Ponderado Móvil (PMP) · Lote Principal Activo</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 bg-surface-container-lowest px-space-md py-space-xs rounded-lg shadow-sm">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Stock Disponible</span>
+<span class="font-display-md text-display-md text-primary font-bold">242 <span class="font-label-md text-label-md font-normal text-on-surface-variant">Uds</span></span>
+</div>
+<div class="w-px h-8 bg-surface-container"></div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Costo Promedio PMP</span>
+<span class="font-display-md text-display-md text-on-surface font-bold">$215.00 <span class="font-code-mono text-code-mono text-[12px] font-normal text-on-surface-variant">CUP</span></span>
+</div>
+</div>
+</div>
+<!-- Balances Flow Metrics -->
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-xs p-space-md bg-surface-container-lowest text-center">
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Existencia Inicial</span>
+<span class="font-body-bold text-body-bold text-on-surface mt-0.5">300 Uds</span>
+<span class="font-code-mono text-code-mono text-[11px] text-on-surface-variant">$64,500 CUP</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant text-primary font-semibold">+ Entradas (Compras)</span>
+<span class="font-body-bold text-body-bold text-primary mt-0.5">+120 Uds</span>
+<span class="font-code-mono text-code-mono text-[11px] text-on-surface-variant">$25,800 CUP</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">− Ventas (TPV)</span>
+<span class="font-body-bold text-body-bold text-on-surface mt-0.5">−160 Uds</span>
+<span class="font-code-mono text-code-mono text-[11px] text-on-surface-variant">$34,400 CUP</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant text-error font-semibold">− Bajas / Mermas</span>
+<span class="font-body-bold text-body-bold text-error mt-0.5">−18 Uds</span>
+<span class="font-code-mono text-code-mono text-[11px] text-error">$3,870 CUP</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">= Existencia Final</span>
+<span class="font-body-bold text-body-bold text-on-surface mt-0.5">242 Uds</span>
+<span class="font-code-mono text-code-mono text-[11px] text-primary font-bold">$52,030 CUP</span>
+</div>
+</div>
+</div>
+<!-- Tabla Contable de Kardex Físico-Valorado -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<div class="px-space-md py-space-sm bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface">history_edu</span>
+<span class="font-body-bold text-body-bold text-on-surface">Libro Mayor de Movimientos de Kardex</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-2">(Filas inmutables en SQLite)</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-mono text-[11px] text-on-surface-variant">
+<span>Última reconciliación: Hoy 14:15</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-[13px] border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-[11px] uppercase tracking-wider">
+<th class="py-2.5 px-3">Fecha / Documento</th>
+<th class="py-2.5 px-2">Tipo Mov.</th>
+<th class="py-2.5 px-2 text-center bg-surface-container/50" colspan="3">Entradas</th>
+<th class="py-2.5 px-2 text-center bg-surface-container-high/40" colspan="3">Salidas</th>
+<th class="py-2.5 px-2 text-center bg-surface-container/80" colspan="3">Saldos Finales</th>
+<th class="py-2.5 px-3 text-right">Auditoría</th>
+</tr>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-[10px] uppercase border-b border-surface-container">
+<th class="py-1 px-3">Doc Ref</th>
+<th class="py-1 px-2">Concepto</th>
+<!-- Entradas -->
+<th class="py-1 px-2 text-right bg-surface-container/50">Cant.</th>
+<th class="py-1 px-2 text-right bg-surface-container/50">Unit.</th>
+<th class="py-1 px-2 text-right bg-surface-container/50">Total</th>
+<!-- Salidas -->
+<th class="py-1 px-2 text-right bg-surface-container-high/40">Cant.</th>
+<th class="py-1 px-2 text-right bg-surface-container-high/40">Unit.</th>
+<th class="py-1 px-2 text-right bg-surface-container-high/40">Total</th>
+<!-- Saldos -->
+<th class="py-1 px-2 text-right bg-surface-container/80">Stock</th>
+<th class="py-1 px-2 text-right bg-surface-container/80">PMP</th>
+<th class="py-1 px-2 text-right bg-surface-container/80">Valorado</th>
+<!-- Hash -->
+<th class="py-1 px-3 text-right">Usuario / Hash</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low text-on-surface">
+<!-- Row 1: Saldo Inicial -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">
+<span class="font-code-mono text-[11px] block">01/05/2025</span>
+<span class="font-code-mono text-[10px] text-on-surface-variant">INI-2025-05</span>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[10px] font-label-sm">Inventario Inicial</span>
+</td>
+<!-- Entradas vacías -->
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container/20">-</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container/20">-</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container/20">-</td>
+<!-- Salidas vacías -->
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container-high/10">-</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container-high/10">-</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container-high/10">-</td>
+<!-- Saldos -->
+<td class="py-2.5 px-2 text-right font-code-mono font-bold bg-surface-container/40">300</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container/40">$215.00</td>
+<td class="py-2.5 px-2 text-right font-code-mono font-bold bg-surface-container/40">$64,500.00</td>
+<!-- Auditoría -->
+<td class="py-2.5 px-3 text-right">
+<span class="block text-[11px] font-label-sm">Sistema</span>
+<span class="font-code-mono text-[10px] text-outline">#90e4f1</span>
+</td>
+</tr>
+<!-- Row 2: Compra Entrada -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">
+<span class="font-code-mono text-[11px] block">08/05 10:20</span>
+<span class="font-code-mono text-[10px] text-primary">REC-2025-0041</span>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-primary text-[10px] font-label-sm font-semibold">Entrada Compra</span>
+</td>
+<!-- Entradas -->
+<td class="py-2.5 px-2 text-right font-code-mono text-primary font-bold bg-surface-container/20">+120</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface bg-surface-container/20">$215.00</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-primary font-bold bg-surface-container/20">$25,800.00</td>
+<!-- Salidas -->
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container-high/10">-</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container-high/10">-</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container-high/10">-</td>
+<!-- Saldos -->
+<td class="py-2.5 px-2 text-right font-code-mono font-bold bg-surface-container/40">420</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container/40">$215.00</td>
+<td class="py-2.5 px-2 text-right font-code-mono font-bold bg-surface-container/40">$90,300.00</td>
+<!-- Auditoría -->
+<td class="py-2.5 px-3 text-right">
+<span class="block text-[11px] font-label-sm">C. Ramos</span>
+<span class="font-code-mono text-[10px] text-outline">#aa82c2</span>
+</td>
+</tr>
+<!-- Row 3: Ventas TPV Agrupadas -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">
+<span class="font-code-mono text-[11px] block">15/05 21:00</span>
+<span class="font-code-mono text-[10px] text-on-surface-variant">LOTE-VENTA-05</span>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[10px] font-label-sm">Ventas TPV</span>
+</td>
+<!-- Entradas -->
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container/20">-</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container/20">-</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container/20">-</td>
+<!-- Salidas -->
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface font-bold bg-surface-container-high/10">160</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface bg-surface-container-high/10">$215.00</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface font-bold bg-surface-container-high/10">$34,400.00</td>
+<!-- Saldos -->
+<td class="py-2.5 px-2 text-right font-code-mono font-bold bg-surface-container/40">260</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container/40">$215.00</td>
+<td class="py-2.5 px-2 text-right font-code-mono font-bold bg-surface-container/40">$55,900.00</td>
+<!-- Auditoría -->
+<td class="py-2.5 px-3 text-right">
+<span class="block text-[11px] font-label-sm">Caja TPV 1</span>
+<span class="font-code-mono text-[10px] text-outline">#11fa08</span>
+</td>
+</tr>
+<!-- Row 4: Merma / Baja (Rotura) Destacada -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-3">
+<span class="font-code-mono text-[11px] block font-semibold text-error">22/05 14:10</span>
+<span class="font-code-mono text-[10px] text-error font-bold">BAJA-2025-0007</span>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container text-[10px] font-label-sm font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[11px]">report</span>
+                    Merma / Baja
+                  </span>
+</td>
+<!-- Entradas -->
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container/20">-</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container/20">-</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface-variant bg-surface-container/20">-</td>
+<!-- Salidas -->
+<td class="py-2.5 px-2 text-right font-code-mono text-error font-bold bg-surface-container-high/10">18</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-error bg-surface-container-high/10">$215.00</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-error font-bold bg-surface-container-high/10">$3,870.00</td>
+<!-- Saldos Finales Actuales -->
+<td class="py-2.5 px-2 text-right font-code-mono font-bold text-on-surface bg-surface-container/60">242</td>
+<td class="py-2.5 px-2 text-right font-code-mono text-on-surface bg-surface-container/60">$215.00</td>
+<td class="py-2.5 px-2 text-right font-code-mono font-bold text-primary bg-surface-container/60">$52,030.00</td>
+<!-- Auditoría -->
+<td class="py-2.5 px-3 text-right">
+<span class="block text-[11px] font-label-sm font-semibold text-error">A. Morales (Adm)</span>
+<span class="font-code-mono text-[10px] text-outline">#bf384e</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer table metadata -->
+<div class="px-space-md py-space-xs bg-surface-container-low flex flex-wrap items-center justify-between text-[12px] text-on-surface-variant font-label-sm">
+<span>Mostrando 4 transacciones de mayo · Criterio de costeo: Resolución Ministerial Finanzas MIPYME</span>
+<div class="flex items-center gap-space-xs font-code-mono">
+<span>Bloque SHA256: 7d4c...e89a</span>
+<span class="material-symbols-outlined text-[14px] text-primary">lock</span>
+</div>
+</div>
+</div>
+</div>
+<!-- COLUMNA DERECHA: Gestión de Acta de Baja & Previsualización Oficial (5 Cols en lg, 4 en 2xl) -->
+<div class="lg:col-span-5 xl:col-span-4 flex flex-col gap-space-md min-w-0">
+<!-- Tarjeta Principal: Acta Activa / En Proceso -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm flex flex-col overflow-hidden">
+<!-- Header del Acta -->
+<div class="p-space-md bg-surface-container-high flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Documento Oficial de Mermas</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Acta Nº BAJA-2025-0008</h2>
+</div>
+<span class="px-space-xs py-1 rounded-lg bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-[15px]">pending</span>
+              En Revisión
+            </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>Emisión: Hoy, 24 Mayo 2025</span>
+<span class="font-code-mono">Turno Mañana (09:40)</span>
+</div>
+</div>
+<!-- Cuerpo del Acta -->
+<div class="p-space-md flex flex-col gap-space-md">
+<!-- Motivo de la Merma / Causal Legal -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between">
+<span>Causal / Motivo Oficial de Baja:</span>
+<span class="text-error font-normal text-[11px]">* Obligatorio</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container">
+<option selected="">Rotura por Manipulación / Transporte</option>
+<option>Vencimiento / Caducidad de Fecha</option>
+<option>Deterioro por Humedad / Calor</option>
+<option>Merma Operativa de Fraccionamiento</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Tabla de Artículos a Dar de Baja -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between">
+<span>Renglones Afectados (2 items):</span>
+<button class="text-primary hover:underline font-label-sm text-[12px]" type="button">+ Añadir Ítem</button>
+</span>
+<div class="rounded-lg bg-surface-container-low p-space-xs flex flex-col gap-space-xs">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest shadow-sm gap-space-xs">
+<div class="flex flex-col min-w-0">
+<span class="font-body-bold text-body-bold text-on-surface truncate">Jugo La Estancia 1L</span>
+<div class="flex items-center gap-1.5 text-[11px] text-on-surface-variant font-label-sm">
+<span class="text-error font-semibold">Caducado (20/05)</span>
+<span>·</span>
+<span class="font-code-mono">6 uds x $280.00 CUP</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-code-mono text-body-bold text-on-surface block font-bold">$1,680.00</span>
+<button class="text-error text-[11px] hover:underline" type="button">Quitar</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest shadow-sm gap-space-xs">
+<div class="flex flex-col min-w-0">
+<span class="font-body-bold text-body-bold text-on-surface truncate">Aceite Vegetal 900ml</span>
+<div class="flex items-center gap-1.5 text-[11px] text-on-surface-variant font-label-sm">
+<span class="text-on-surface-variant">Fuga / Perforación</span>
+<span>·</span>
+<span class="font-code-mono">2 uds x $520.00 CUP</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-code-mono text-body-bold text-on-surface block font-bold">$1,040.00</span>
+<button class="text-error text-[11px] hover:underline" type="button">Quitar</button>
+</div>
+</div>
+</div>
+<!-- Resumen Total Valorado de la Pérdida -->
+<div class="flex items-center justify-between px-space-sm py-2 rounded-lg bg-surface-container">
+<span class="font-body-bold text-body-bold text-on-surface">Total Valorado a Pérdida:</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-error font-bold">$2,720.00</span>
+<span class="font-code-mono text-code-mono text-error font-bold">CUP</span>
+</div>
+</div>
+</div>
+<!-- Destino del Producto Físico -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Destino Físico y Disposición Final:</label>
+<div class="grid grid-cols-3 gap-1">
+<button class="py-1.5 px-2 rounded-lg bg-surface-container text-primary font-label-sm text-[11px] font-bold text-center" type="button">
+                Destrucción In Situ
+              </button>
+<button class="py-1.5 px-2 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-[11px] hover:bg-surface-container text-center" type="button">
+                Desecho Clasificado
+              </button>
+<button class="py-1.5 px-2 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-[11px] hover:bg-surface-container text-center" type="button">
+                Donación / Otro
+              </button>
+</div>
+</div>
+<!-- Nota de Justificación Pericial -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Dictamen / Justificación Circunstancial:</label>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md text-[13px] leading-snug focus:bg-surface-container-lowest focus:outline-none resize-none" rows="3">Durante la descarga matutina y rotación de estantería se detectó fuga en embalaje de aceite impregnando cajas de jugo con fecha límite cumplida el 20/05/2025.</textarea>
+</div>
+<!-- Doble Firma Obligatoria de Control Interno -->
+<div class="flex flex-col gap-2 pt-1">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between">
+<span>Firmas Digitales de Autorización (Doble Control):</span>
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+</span>
+<!-- Firma 1: Almacenero -->
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-bold truncate">Carlos Ramos</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Custodio / Almacenero Principal</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-code-mono text-[11px] font-semibold">
+                PIN Verificado
+              </span>
+</div>
+<!-- Firma 2: Administrador General (Pendiente) -->
+<div class="p-space-xs rounded-lg bg-surface-container flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[20px]">draw</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-bold truncate">Alejandro Morales</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Admin General (Sesión Activa)</span>
+</div>
+</div>
+<button class="px-space-sm py-1 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary shadow-sm transition-colors shrink-0" type="button">
+                Firmar y Autorizar
+              </button>
+</div>
+</div>
+<!-- Action Buttons for Acta -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full h-11 rounded-lg bg-primary-container text-on-primary font-body-bold text-body-bold hover:bg-primary transition-all flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">inventory</span>
+              Confirmar Baja y Descontar Kardex (F9)
+            </button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="h-9 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[17px]">print</span>
+                Imprimir (Ctrl+P)
+              </button>
+<button class="h-9 rounded-lg bg-surface-container text-error hover:bg-error-container hover:text-on-error-container transition-colors font-label-md text-label-md flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[17px]">delete</span>
+                Anular Acta
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Lista Rápida de Actas Recientes Emitidas -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-body-bold text-body-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">folder_special</span>
+            Actas Oficiales Recientes
+          </span>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">Ver Historial Completo</a>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Item A -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-code-mono text-code-mono font-bold text-on-surface text-[12px]">BAJA-2025-0007</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface text-[10px] font-semibold">22/05/2025</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">18x Cerveza Cristal · Rotura de estiba</span>
+</div>
+<div class="flex flex-col text-right shrink-0">
+<span class="font-code-mono text-code-mono font-bold text-error text-[12px]">$3,870.00</span>
+<span class="text-[11px] text-primary font-label-sm font-semibold">Autorizada</span>
+</div>
+</div>
+<!-- Item B -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-code-mono text-code-mono font-bold text-on-surface text-[12px]">BAJA-2025-0006</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface text-[10px] font-semibold">18/05/2025</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">4x Galletas Soda · Empaque roto</span>
+</div>
+<div class="flex flex-col text-right shrink-0">
+<span class="font-code-mono text-code-mono font-bold text-error text-[12px]">$760.00</span>
+<span class="text-[11px] text-primary font-label-sm font-semibold">Autorizada</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Keyboard Shortcuts Floating / Inline Helper Strip -->
+<div class="flex flex-wrap items-center justify-between px-space-md py-space-xs rounded-xl bg-surface-container text-on-surface-variant font-label-sm text-[12px] gap-space-sm">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="font-body-bold text-on-surface">Atajos de Teclado Rápido:</span>
+<span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-code-mono font-semibold shadow-sm text-[11px]">F4</kbd> Nueva Acta</span>
+<span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-code-mono font-semibold shadow-sm text-[11px]">F9</kbd> Confirmar Descuento</span>
+<span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-code-mono font-semibold shadow-sm text-[11px]">Ctrl+P</kbd> Imprimir Acta A4</span>
+<span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-code-mono font-semibold shadow-sm text-[11px]">Esc</kbd> Cancelar</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-code-mono text-[11px]">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+      Base de datos local SQLite sincronizada
+    </div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for shortcut handling
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F4') {
+      event.preventDefault();
+      alert('Iniciando nueva Acta de Baja de Inventario.');
+    } else if (event.key === 'F9') {
+      event.preventDefault();
+      alert('Confirmando Acta BAJA-2025-0008 y asentando movimientos en Kardex local SQLite.');
+    }
+  });
+</script></main></div></body></html>

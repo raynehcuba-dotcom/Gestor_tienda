@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#213145","outline-variant":"#c4c5d7","inverse-on-surface":"#eaf1ff","inverse-primary":"#b7c4ff","on-surface":"#0b1c30","on-secondary-fixed":"#131b2e","primary-fixed-dim":"#b7c4ff","on-surface-variant":"#434655","surface-dim":"#cbdbf5","secondary-fixed":"#dae2fd","tertiary-container":"#0051d6","surface-variant":"#d3e4fe","primary":"#0037b0","surface-bright":"#f8f9ff","error":"#ba1a1a","error-container":"#ffdad6","surface-container-highest":"#d3e4fe","on-error":"#ffffff","background":"#f8f9ff","tertiary":"#003ca3","surface-tint":"#2151da","on-secondary-fixed-variant":"#3f465c","secondary":"#565e74","on-primary":"#ffffff","on-tertiary-container":"#c9d4ff","outline":"#747686","on-tertiary-fixed":"#00174b","secondary-fixed-dim":"#bec6e0","on-secondary":"#ffffff","surface-container-high":"#dce9ff","surface":"#f8f9ff","primary-fixed":"#dce1ff","on-tertiary-fixed-variant":"#003ea8","on-background":"#0b1c30","surface-container-low":"#eff4ff","on-primary-fixed-variant":"#0039b5","primary-container":"#1d4ed8","on-primary-fixed":"#001551","tertiary-fixed-dim":"#b4c5ff","on-secondary-container":"#5c647a","on-error-container":"#93000a","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","tertiary-fixed":"#dbe1ff","secondary-container":"#dae2fd","on-primary-container":"#cad3ff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","margin-compact":"1rem","gutter-dense":"0.5rem","space-2xl":"2rem","space-lg":"1rem","margin":"1.5rem","space-md":"0.75rem","space-xl":"1.5rem"},fontFamily:{"label-sm":["Inter"],"display-md":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"code-mono":["JetBrains Mono"],"body-lg":["Inter"],"display-lg":["Inter"],"body-bold":["Inter"],"headline-sm":["Inter"],"body-md":["Inter"]},fontSize:{"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"display-md":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-md":["13px",{lineHeight:"18px",fontWeight:"500"}],"headline-lg":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"code-mono":["13px",{lineHeight:"18px",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-bold":["14px",{lineHeight:"20px",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased flex items-center justify-center min-h-screen"><main class="w-full flex items-center justify-center p-margin"><div class="flex flex-col w-full items-center justify-center py-6 px-4">
+<!-- Subtle decorative ambient glows behind container -->
+<div class="relative w-full max-w-xl">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-tertiary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Main Utilitarian Access Terminal Card -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden">
+<!-- Top Operational Sync / Telemetry Status Strip -->
+<div class="bg-surface-container-high px-6 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-container"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface">Modo Local Offline Activo</span>
+</div>
+<div class="flex items-center gap-1.5 font-code-mono text-code-mono text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm text-primary">dns</span>
+<span>127.0.0.1:5000</span>
+</div>
+</div>
+<!-- Business Identity Header -->
+<div class="px-8 pt-8 pb-4 flex flex-col items-center text-center">
+<div class="w-14 h-14 bg-surface-container-low rounded-xl flex items-center justify-center p-2 mb-4 shadow-sm">
+<img alt="Gestor Tienda Logo" class="w-full h-full object-contain rounded-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1XxhkGJDRBe04lfqEVajvPc94OjFuZSU_t9bLtyn71zSPGprR1Lhg0gHuhQlANqX3FI6ets3NzvL4a8eKBBdE2fMUKL7uyPjknD6dyPw23vds30RUORE-yyxGlfYoiKpt537ZDaFlVZD2IMRMCP9XXNRBIjrpB0JFVuvNRd-j9kPrPeziBdMkTVD-IwHeZRQfpWgXwtOapNCO6WYjT6GIIZ7BNsaVE4beMLs6TCeTRqvAzr5IQyWDz8CoM"/>
+</div>
+<div class="flex items-center gap-2">
+<h1 class="font-display-md text-display-md text-on-surface tracking-tight">Gestor Tienda</h1>
+<span class="bg-surface-container px-2 py-0.5 rounded font-code-mono text-label-sm text-primary font-bold">LOCAL</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-sm">
+          Acceso Offline al Sistema de Ventas e Inventario
+        </p>
+</div>
+<!-- Workstation Login Form -->
+<form class="px-8 py-4 space-y-4" onsubmit="event.preventDefault();">
+<!-- Username Field -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="username">
+            Usuario / Identificador
+          </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-lg pointer-events-none select-none">
+              person
+            </span>
+<input autocomplete="username" class="w-full h-10 pl-10 pr-3 font-body-md text-body-md bg-surface-container-low text-on-surface rounded-lg placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors" id="username" placeholder="ej. admin o vendedor1" type="text" value="admin"/>
+</div>
+</div>
+<!-- Password Field -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="password">
+              Contraseña de Acceso
+            </label>
+<span class="font-label-sm text-label-sm text-primary cursor-pointer hover:underline" onclick="document.getElementById('password').value='demo123';">
+              Rellenar Demo
+            </span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-lg pointer-events-none select-none">
+              lock
+            </span>
+<input autocomplete="current-password" class="w-full h-10 pl-10 pr-10 font-body-md text-body-md bg-surface-container-low text-on-surface rounded-lg placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors font-code-mono" id="password" type="password" value="••••••••"/>
+<button aria-label="Alternar visibilidad de contraseña" class="absolute right-2.5 p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors focus:outline-none" id="toggle-pwd-btn" type="button">
+<span class="material-symbols-outlined text-lg" id="pwd-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Terminal Workstation Checkbox -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary-container bg-surface-container-high focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant">
+              Recordar terminal en este equipo
+            </span>
+</label>
+<span class="font-code-mono text-label-sm text-outline-variant">POS-TERM-01</span>
+</div>
+<!-- Primary Action Button -->
+<div class="pt-2">
+<button class="w-full h-11 bg-primary-container hover:bg-tertiary-container text-on-primary font-headline-sm text-headline-sm rounded-lg shadow-sm flex items-center justify-center gap-2 transition-all active:scale-[0.99] cursor-pointer" id="login-submit-btn" type="submit">
+<span class="material-symbols-outlined text-lg">login</span>
+<span>Iniciar Sesión</span>
+</button>
+</div>
+</form>
+<!-- Quick Role Selector Demo Helper -->
+<div class="px-8 pt-4 pb-6">
+<div class="flex items-center gap-2 mb-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Perfiles Rápidos de Prueba</span>
+<div class="h-px flex-1 bg-surface-container-high"></div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Card 1: Admin Role -->
+<div class="group cursor-pointer bg-surface-container-low hover:bg-surface-container p-3 rounded-lg text-left transition-all relative overflow-hidden shadow-sm" id="role-admin-card">
+<div class="flex items-start justify-between">
+<div class="w-7 h-7 rounded bg-primary-fixed flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-base">admin_panel_settings</span>
+</div>
+<span class="font-code-mono text-label-sm text-primary font-semibold">admin</span>
+</div>
+<div class="font-body-bold text-body-bold text-on-surface">Administrador</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 leading-snug line-clamp-2">
+              Acceso total a reportes, usuarios y configuración.
+            </p>
+</div>
+<!-- Card 2: Seller Role -->
+<div class="group cursor-pointer bg-surface-container-low hover:bg-surface-container p-3 rounded-lg text-left transition-all relative overflow-hidden shadow-sm" id="role-seller-card">
+<div class="flex items-start justify-between">
+<div class="w-7 h-7 rounded bg-secondary-fixed flex items-center justify-center text-secondary mb-2">
+<span class="material-symbols-outlined text-base">point_of_sale</span>
+</div>
+<span class="font-code-mono text-label-sm text-secondary font-semibold">vendedor</span>
+</div>
+<div class="font-body-bold text-body-bold text-on-surface">Vendedor</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 leading-snug line-clamp-2">
+              Acceso rápido a TPV, ventas y consulta de stock.
+            </p>
+</div>
+</div>
+</div>
+<!-- Resilient Offline Footer Note -->
+<div class="bg-surface-container px-8 py-3.5 flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary">verified_user</span>
+<span class="font-label-sm text-label-sm">
+            Sin conexión externa requerida. Datos en SQLite local cifrada.
+          </span>
+</div>
+<span class="font-code-mono text-label-sm font-semibold text-on-surface-variant">
+          v1.0.0
+        </span>
+</div>
+</div>
+</div>
+<script>
+    (function() {
+      const usernameInput = document.getElementById('username');
+      const passwordInput = document.getElementById('password');
+      const togglePwdBtn = document.getElementById('toggle-pwd-btn');
+      const pwdIcon = document.getElementById('pwd-icon');
+      const roleAdminCard = document.getElementById('role-admin-card');
+      const roleSellerCard = document.getElementById('role-seller-card');
+      const loginBtn = document.getElementById('login-submit-btn');
+
+      if (togglePwdBtn && passwordInput && pwdIcon) {
+        togglePwdBtn.addEventListener('click', function() {
+          const isPassword = passwordInput.type === 'password';
+          passwordInput.type = isPassword ? 'text' : 'password';
+          pwdIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        });
+      }
+
+      if (roleAdminCard && usernameInput && passwordInput) {
+        roleAdminCard.addEventListener('click', function() {
+          usernameInput.value = 'admin';
+          passwordInput.value = 'admin2024';
+          highlightCard(roleAdminCard);
+        });
+      }
+
+      if (roleSellerCard && usernameInput && passwordInput) {
+        roleSellerCard.addEventListener('click', function() {
+          usernameInput.value = 'vendedor';
+          passwordInput.value = 'tpv2024';
+          highlightCard(roleSellerCard);
+        });
+      }
+
+      function highlightCard(card) {
+        [roleAdminCard, roleSellerCard].forEach(c => {
+          if (c) {
+            c.classList.remove('bg-surface-container-high');
+          }
+        });
+        if (card) {
+          card.classList.add('bg-surface-container-high');
+        }
+      }
+
+      if (loginBtn) {
+        loginBtn.addEventListener('click', function() {
+          const originalText = loginBtn.innerHTML;
+          loginBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-lg">sync</span><span>Validando Sesión Local...</span>';
+          loginBtn.disabled = true;
+          setTimeout(function() {
+            loginBtn.innerHTML = '<span class="material-symbols-outlined text-lg">check_circle</span><span>Sesión Concedida</span>';
+            setTimeout(function() {
+              loginBtn.innerHTML = originalText;
+              loginBtn.disabled = false;
+            }, 1200);
+          }, 700);
+        });
+      }
+    })();
+  </script>
+</div></main></body></html>

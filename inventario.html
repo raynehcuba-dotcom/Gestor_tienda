@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#213145","outline-variant":"#c4c5d7","inverse-on-surface":"#eaf1ff","inverse-primary":"#b7c4ff","on-surface":"#0b1c30","on-secondary-fixed":"#131b2e","primary-fixed-dim":"#b7c4ff","on-surface-variant":"#434655","surface-dim":"#cbdbf5","secondary-fixed":"#dae2fd","tertiary-container":"#0051d6","surface-variant":"#d3e4fe","primary":"#0037b0","surface-bright":"#f8f9ff","error":"#ba1a1a","error-container":"#ffdad6","surface-container-highest":"#d3e4fe","on-error":"#ffffff","background":"#f8f9ff","tertiary":"#003ca3","surface-tint":"#2151da","on-secondary-fixed-variant":"#3f465c","secondary":"#565e74","on-primary":"#ffffff","on-tertiary-container":"#c9d4ff","outline":"#747686","on-tertiary-fixed":"#00174b","secondary-fixed-dim":"#bec6e0","on-secondary":"#ffffff","surface-container-high":"#dce9ff","surface":"#f8f9ff","primary-fixed":"#dce1ff","on-tertiary-fixed-variant":"#003ea8","on-background":"#0b1c30","surface-container-low":"#eff4ff","on-primary-fixed-variant":"#0039b5","primary-container":"#1d4ed8","on-primary-fixed":"#001551","tertiary-fixed-dim":"#b4c5ff","on-secondary-container":"#5c647a","on-error-container":"#93000a","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","tertiary-fixed":"#dbe1ff","secondary-container":"#dae2fd","on-primary-container":"#cad3ff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","margin-compact":"1rem","gutter-dense":"0.5rem","space-2xl":"2rem","space-lg":"1rem","margin":"1.5rem","space-md":"0.75rem","space-xl":"1.5rem"},fontFamily:{"label-sm":["Inter"],"display-md":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"code-mono":["JetBrains Mono"],"body-lg":["Inter"],"display-lg":["Inter"],"body-bold":["Inter"],"headline-sm":["Inter"],"body-md":["Inter"]},fontSize:{"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"display-md":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-md":["13px",{lineHeight:"18px",fontWeight:"500"}],"headline-lg":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"code-mono":["13px",{lineHeight:"18px",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-bold":["14px",{lineHeight:"20px",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-margin pt-space-xl pb-space-lg flex flex-col gap-space-xs"><div class="flex items-center gap-space-md"><div class="p-space-xs rounded-xl bg-surface-container-lowest/10"><span class="material-symbols-outlined text-inverse-on-surface text-[24px]">storefront</span></div><div><span class="font-headline-sm text-headline-sm text-inverse-on-surface tracking-tight block">Gestor Tienda</span><span class="font-label-sm text-label-sm text-outline-variant block">Tienda Central</span></div></div><div class="mt-space-sm flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl bg-surface-container-lowest/5"><span class="inline-block w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span class="font-label-sm text-label-sm text-inverse-on-surface">Modo Offline Activo</span></div></div><nav class="px-space-md space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-bold rounded-xl shadow-[0_1px_2px_rgba(15,23,42,0.05)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-outline-variant hover:bg-surface-container-lowest/10 hover:text-inverse-on-surface transition-all group" data-path="dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-md text-label-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-outline-variant hover:bg-surface-container-lowest/10 hover:text-inverse-on-surface transition-all group" data-path="inventario" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-md text-label-md">Inventario</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-outline-variant hover:bg-surface-container-lowest/10 hover:text-inverse-on-surface transition-all group" data-path="ventas" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-label-md text-label-md">Ventas (TPV)</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-outline-variant hover:bg-surface-container-lowest/10 hover:text-inverse-on-surface transition-all group" data-path="proveedores-compras" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-md text-label-md">Proveedores</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-outline-variant hover:bg-surface-container-lowest/10 hover:text-inverse-on-surface transition-all group" data-path="reportes-financieros" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-label-md text-label-md">Reportes</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-lg bg-surface-container-lowest/10 text-inverse-on-surface">Admin</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-outline-variant hover:bg-surface-container-lowest/10 hover:text-inverse-on-surface transition-all group" data-path="usuarios-roles" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span class="font-label-md text-label-md">Usuarios y Roles</span></div><span class="w-2 h-2 rounded-full bg-inverse-primary"></span></a></nav></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-lowest/5 flex flex-col gap-space-xs"><div class="flex items-center justify-between text-outline-variant font-label-sm text-label-sm"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">sync</span> Sincronización</span><span class="font-code-mono text-code-mono text-inverse-on-surface">0 pend.</span></div><div class="flex items-center justify-between text-outline-variant font-label-sm text-label-sm pt-space-xs"><span class="font-code-mono text-code-mono text-[11px]">SQLite Local Activa</span><span class="font-code-mono text-code-mono text-[11px] text-inverse-on-surface">v1.0.0</span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-14 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin"><div class="flex items-center gap-space-lg"><img alt="Gestor Tienda Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/d/1X5XQjD0t_d7N5lJbFvT_E5ZpY_s5Y4kL"/><div class="flex items-center gap-space-sm font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">home</span><span>/</span><span class="text-on-surface font-body-bold">Panel de Operaciones</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-primary text-[16px]">dns</span><span>Sistema Local Offline - Base SQLite activa</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center p-0.5 rounded-xl bg-surface-container"><button class="px-space-sm py-space-xs rounded-lg font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(15,23,42,0.05)]" type="button">Admin</button><button class="px-space-sm py-space-xs rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">Vendedor</button></div><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden sm:block"><span class="font-label-md text-label-md text-on-surface block leading-tight">Alejandro Morales</span><span class="font-label-sm text-label-sm text-on-surface-variant block">Administrador</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div><button class="p-space-xs rounded-xl text-on-surface-variant hover:text-error transition-colors" title="Cerrar sesión" type="button"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></header><main class="relative pt-14 w-full px-margin pb-space-2xl bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Sincronización de navegación activa para Inventario en el shell existente -->
+<script>
+    (function() {
+      const navLinks = document.querySelectorAll('aside nav a[data-path]');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'inventario') {
+          link.className = "flex items-center justify-between px-space-md py-space-sm bg-primary-container text-on-primary font-body-bold rounded-xl shadow-sm transition-all";
+          const icon = link.querySelector('.material-symbols-outlined');
+          if (icon) icon.className = "material-symbols-outlined text-[20px] text-on-primary";
+          const label = link.querySelector('span:not(.material-symbols-outlined)');
+          if (label) label.className = "font-label-md text-label-md text-on-primary";
+        } else {
+          link.className = "flex items-center justify-between px-space-md py-space-sm rounded-xl text-outline-variant hover:bg-surface-container-lowest/10 hover:text-inverse-on-surface transition-all group";
+          const icon = link.querySelector('.material-symbols-outlined');
+          if (icon) icon.className = "material-symbols-outlined text-[20px]";
+          const label = link.querySelector('span:not(.material-symbols-outlined)');
+          if (label) label.className = "font-label-md text-label-md";
+        }
+      });
+    })();
+  </script>
+<!-- Barra de Notificación Offline & Telemetría SQLite persistente -->
+<section class="mb-space-lg flex flex-wrap items-center justify-between gap-space-md bg-surface-container-low px-space-lg py-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Base de Datos Activa:</span>
+<span class="font-code-mono text-code-mono text-primary font-medium tracking-tight">/var/data/tienda_stock.db</span>
+<span class="px-space-xs py-0.5 rounded-lg bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">Motor SQLite v3.42 - 100% Offline</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Modo Local Sin Conexión</span>
+<span class="px-space-xs py-0.5 rounded-lg bg-surface-container-high text-on-surface font-code-mono text-label-sm">CUP / MLC / USD</span>
+</div>
+</section>
+<!-- Encabezado de Sección & Acciones Operativas -->
+<header class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Módulo Operativo 02</span>
+<span class="text-on-surface-variant">/</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Inventario y Almacén</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Control de Inventario y Existencias</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Administración de catálogo, umbrales de alerta y entradas de mercancía de MIPYME.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm flex-shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-lg h-10 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-low transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Exportar Stock</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-lg h-10 rounded-xl bg-surface-container text-primary shadow-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md font-semibold" onclick="document.getElementById('quick-entry-panel').scrollIntoView({ behavior: 'smooth' })" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>+ Nueva Entrada de Compra</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-lg h-10 rounded-xl bg-primary-container text-on-primary shadow-md hover:bg-primary transition-all font-body-bold text-body-bold" type="button">
+<span class="material-symbols-outlined text-[20px]">add_box</span>
+<span>+ Nuevo Producto</span>
+</button>
+</div>
+</header>
+<!-- Fila Superior de KPIs y Alertas Operativas -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter mb-space-xl">
+<!-- KPI 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total en Catálogo</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">category</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-md text-display-md text-on-surface">184</span>
+<span class="font-label-md text-label-md text-secondary">artículos</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-space-xs pt-space-xs">
+<span>12 categorías activas</span>
+<span class="text-primary font-medium">98.2% activos</span>
+</div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Valoración Total</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-md text-display-md text-on-surface">$1,420,500</span>
+<span class="font-code-mono text-label-sm text-secondary">CUP</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-space-xs pt-space-xs">
+<span>Costo: $985,200 CUP</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-code-mono text-[11px] font-semibold">Margen +44.1%</span>
+</div>
+</div>
+</div>
+<!-- KPI 3: Alerta Crítica (Acento de Atención Visual) -->
+<div class="p-space-lg rounded-xl bg-error-container/40 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-error-container rounded-full opacity-40 pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-error-container uppercase tracking-wider font-semibold">Atención de Stock</span>
+<div class="w-8 h-8 rounded-lg bg-error text-on-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-md text-display-md text-on-error-container">6</span>
+<span class="font-label-md text-label-md text-error font-medium">críticos / agotados</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-error-container">Por debajo del umbral mínimo</span>
+<button class="px-space-sm py-1 rounded-lg bg-error text-on-error font-label-sm text-label-sm hover:opacity-90 transition-opacity font-semibold shadow-sm" onclick="filterByCategory('bajo-stock')" type="button">
+            Ver Críticos
+          </button>
+</div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Entradas Recientes</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-md text-display-md text-on-surface">3</span>
+<span class="font-label-md text-label-md text-secondary">recepciones</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-space-xs pt-space-xs">
+<span>Esta semana (locales)</span>
+<span class="font-code-mono text-label-sm text-on-surface font-medium">+420 unidades</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Filtros Rápidos, Pestañas de Categoría y Búsqueda Predictiva -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-lg flex flex-col gap-space-md">
+<!-- Fila superior: Input de búsqueda y Atajos -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-center">
+<div class="lg:col-span-6 relative">
+<div class="absolute inset-y-0 left-0 pl-space-md flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-10 pl-10 pr-16 bg-surface-container-low rounded-xl text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all font-body-md text-body-md" id="inventory-search" placeholder="Buscar por nombre, código de barras o referencia..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-space-md flex items-center pointer-events-none">
+<kbd class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-code-mono text-[11px] font-semibold">F2</kbd>
+</div>
+</div>
+<div class="lg:col-span-6 flex flex-wrap items-center justify-start lg:justify-end gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm h-10 rounded-xl">
+<span class="material-symbols-outlined text-[18px] text-secondary">filter_alt</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Proveedor:</span>
+<select class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none cursor-pointer pr-space-sm">
+<option value="todos">Todos los proveedores</option>
+<option value="caribe">Distribuidora Caribe S.R.L.</option>
+<option value="la-fe">Cooperativa La Fe</option>
+<option value="habana">Importaciones Habana</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm h-10 rounded-xl">
+<span class="material-symbols-outlined text-[18px] text-secondary">sort</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ordenar:</span>
+<select class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none cursor-pointer pr-space-sm">
+<option value="stock-asc">Stock (Menor a Mayor)</option>
+<option value="stock-desc">Stock (Mayor a Menor)</option>
+<option value="nombre">Nombre alfabético</option>
+<option value="margen">Mayor Rentabilidad</option>
+</select>
+</div>
+<button class="h-10 w-10 rounded-xl bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" title="Refrescar lista SQLite" type="button">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Pestañas de Segmentación Rápida -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-0.5 pt-space-xs">
+<button class="category-tab px-space-md py-space-xs rounded-xl font-label-sm text-label-sm bg-primary-container text-on-primary transition-all whitespace-nowrap shadow-sm" onclick="setTab(this, 'all')" type="button">
+        Todos (184)
+      </button>
+<button class="category-tab px-space-md py-space-xs rounded-xl font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap" onclick="setTab(this, 'alimentos')" type="button">
+        Alimentos y Bebidas (62)
+      </button>
+<button class="category-tab px-space-md py-space-xs rounded-xl font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap" onclick="setTab(this, 'aseo')" type="button">
+        Aseo y Hogar (45)
+      </button>
+<button class="category-tab px-space-md py-space-xs rounded-xl font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap" onclick="setTab(this, 'ferreteria')" type="button">
+        Ferretería y Herramientas (38)
+      </button>
+<button class="category-tab px-space-md py-space-xs rounded-xl font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap" onclick="setTab(this, 'electronica')" type="button">
+        Electrónica menor (24)
+      </button>
+<button class="category-tab px-space-md py-space-xs rounded-xl font-label-sm text-label-sm bg-error-container/50 text-error hover:bg-error-container transition-all whitespace-nowrap font-semibold" onclick="setTab(this, 'bajo-stock')" type="button">
+        Bajo Stock / Agotados (6)
+      </button>
+</div>
+</section>
+<!-- Tabla de Inventario de Alta Densidad Operativa -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-2xl">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="stock-table">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm tracking-wide uppercase">
+<th class="py-space-md px-space-lg font-semibold w-12 text-center">#</th>
+<th class="py-space-md px-space-lg font-semibold">Código / SKU</th>
+<th class="py-space-md px-space-lg font-semibold">Producto y Categoría</th>
+<th class="py-space-md px-space-lg font-semibold">Proveedor Habitual</th>
+<th class="py-space-md px-space-lg font-semibold text-right">P. Costo</th>
+<th class="py-space-md px-space-lg font-semibold text-right">P. Venta (CUP)</th>
+<th class="py-space-md px-space-lg font-semibold text-center">Margen</th>
+<th class="py-space-md px-space-lg font-semibold text-center">Existencia</th>
+<th class="py-space-md px-space-lg font-semibold text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-md text-body-md text-on-surface">
+<!-- FILA 1: Alerta Crítica Roja (Agotado) -->
+<tr class="hover:bg-error-container/20 transition-colors bg-error-container/10" data-category="alimentos" data-status="agotado">
+<td class="py-space-md px-space-lg text-center font-code-mono text-outline text-label-sm">01</td>
+<td class="py-space-md px-space-lg">
+<span class="font-code-mono text-code-mono font-medium text-error block">SKU-77021</span>
+<span class="font-label-sm text-[11px] text-secondary">EAN: 85910244102</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="font-body-bold text-body-bold text-on-surface flex items-center gap-space-xs">
+<span>Aceite Vegetal Criollo 1L</span>
+<span class="material-symbols-outlined text-error text-[16px]" title="Ruptura de stock">report</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Alimentos y Bebidas</span>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="font-label-md text-label-md text-on-surface block">Distribuidora Caribe S.R.L.</span>
+<span class="font-label-sm text-label-sm text-outline">Plazo entrega: 24h</span>
+</td>
+<td class="py-space-md px-space-lg text-right font-code-mono text-code-mono text-on-surface-variant">
+              $710.00
+            </td>
+<td class="py-space-md px-space-lg text-right font-code-mono text-body-bold text-on-surface">
+              $980.00
+            </td>
+<td class="py-space-md px-space-lg text-center">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-code-mono text-label-sm font-medium">38.0%</span>
+</td>
+<td class="py-space-md px-space-lg text-center">
+<div class="inline-flex flex-col items-center">
+<span class="px-space-sm py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-semibold tracking-wide">
+                  Agotado (0 u.)
+                </span>
+<span class="font-label-sm text-[11px] text-error font-medium mt-0.5">Mínimo: 15 u.</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary text-primary transition-colors" onclick="openAdjustment('Aceite Vegetal Criollo 1L', 'SKU-77021', 0, 15)" title="Ajustar Stock Inmediato" type="button">
+<span class="material-symbols-outlined text-[18px]">exposure</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Historial de compras" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Editar producto" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- FILA 2: Alerta Naranja (Bajo Stock) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container/30" data-category="aseo" data-status="bajo">
+<td class="py-space-md px-space-lg text-center font-code-mono text-outline text-label-sm">02</td>
+<td class="py-space-md px-space-lg">
+<span class="font-code-mono text-code-mono font-medium text-tertiary-container block">SKU-44109</span>
+<span class="font-label-sm text-[11px] text-secondary">EAN: 78912300445</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="font-body-bold text-body-bold text-on-surface">Detergente Multiuso 500g</div>
+<span class="font-label-sm text-label-sm text-secondary">Aseo y Hogar</span>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="font-label-md text-label-md text-on-surface block">Importaciones Habana</span>
+<span class="font-label-sm text-label-sm text-outline">Plazo entrega: 48h</span>
+</td>
+<td class="py-space-md px-space-lg text-right font-code-mono text-code-mono text-on-surface-variant">
+              $210.00
+            </td>
+<td class="py-space-md px-space-lg text-right font-code-mono text-body-bold text-on-surface">
+              $350.00
+            </td>
+<td class="py-space-md px-space-lg text-center">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-code-mono text-label-sm font-medium">66.7%</span>
+</td>
+<td class="py-space-md px-space-lg text-center">
+<div class="inline-flex flex-col items-center">
+<span class="px-space-sm py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold tracking-wide">
+                  Bajo Stock (4 / 20)
+                </span>
+<span class="font-label-sm text-[11px] text-on-secondary-fixed-variant font-medium mt-0.5">Déficit: -16 u.</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary text-primary transition-colors" onclick="openAdjustment('Detergente Multiuso 500g', 'SKU-44109', 4, 20)" title="Ajustar Stock" type="button">
+<span class="material-symbols-outlined text-[18px]">exposure</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Historial" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- FILA 3: Alerta Naranja (Bajo Stock) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container/30" data-category="alimentos" data-status="bajo">
+<td class="py-space-md px-space-lg text-center font-code-mono text-outline text-label-sm">03</td>
+<td class="py-space-md px-space-lg">
+<span class="font-code-mono text-code-mono font-medium text-tertiary-container block">SKU-31200</span>
+<span class="font-label-sm text-[11px] text-secondary">EAN: 85934110294</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="font-body-bold text-body-bold text-on-surface">Café Tostado Molido 250g</div>
+<span class="font-label-sm text-label-sm text-secondary">Alimentos y Bebidas</span>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="font-label-md text-label-md text-on-surface block">Cooperativa La Fe</span>
+<span class="font-label-sm text-label-sm text-outline">Plazo entrega: Directa</span>
+</td>
+<td class="py-space-md px-space-lg text-right font-code-mono text-code-mono text-on-surface-variant">
+              $390.00
+            </td>
+<td class="py-space-md px-space-lg text-right font-code-mono text-body-bold text-on-surface">
+              $600.00
+            </td>
+<td class="py-space-md px-space-lg text-center">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-code-mono text-label-sm font-medium">53.8%</span>
+</td>
+<td class="py-space-md px-space-lg text-center">
+<div class="inline-flex flex-col items-center">
+<span class="px-space-sm py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold tracking-wide">
+                  Bajo Stock (7 / 25)
+                </span>
+<span class="font-label-sm text-[11px] text-on-secondary-fixed-variant font-medium mt-0.5">Déficit: -18 u.</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary text-primary transition-colors" onclick="openAdjustment('Café Tostado Molido 250g', 'SKU-31200', 7, 25)" title="Ajustar Stock" type="button">
+<span class="material-symbols-outlined text-[18px]">exposure</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Historial" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- FILA 4: Estado Normal (Disponible) -->
+<tr class="hover:bg-surface-container-low transition-colors" data-category="alimentos" data-status="disponible">
+<td class="py-space-md px-space-lg text-center font-code-mono text-outline text-label-sm">04</td>
+<td class="py-space-md px-space-lg">
+<span class="font-code-mono text-code-mono font-medium text-on-surface-variant block">SKU-10944</span>
+<span class="font-label-sm text-[11px] text-secondary">EAN: 85994200118</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="font-body-bold text-body-bold text-on-surface">Arroz Grano Largo 1kg</div>
+<span class="font-label-sm text-label-sm text-secondary">Alimentos y Bebidas</span>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="font-label-md text-label-md text-on-surface block">Distribuidora Caribe S.R.L.</span>
+<span class="font-label-sm text-label-sm text-outline">Plazo entrega: 24h</span>
+</td>
+<td class="py-space-md px-space-lg text-right font-code-mono text-code-mono text-on-surface-variant">
+              $175.00
+            </td>
+<td class="py-space-md px-space-lg text-right font-code-mono text-body-bold text-on-surface">
+              $245.00
+            </td>
+<td class="py-space-md px-space-lg text-center">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-code-mono text-label-sm font-medium">40.0%</span>
+</td>
+<td class="py-space-md px-space-lg text-center">
+<div class="inline-flex flex-col items-center">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                  140 u. Disp.
+                </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant mt-0.5">Mínimo: 30 u.</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" onclick="openAdjustment('Arroz Grano Largo 1kg', 'SKU-10944', 140, 30)" title="Ajustar Stock" type="button">
+<span class="material-symbols-outlined text-[18px]">exposure</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Historial" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- FILA 5: Estado Normal (Disponible) -->
+<tr class="hover:bg-surface-container-low transition-colors" data-category="ferreteria" data-status="disponible">
+<td class="py-space-md px-space-lg text-center font-code-mono text-outline text-label-sm">05</td>
+<td class="py-space-md px-space-lg">
+<span class="font-code-mono text-code-mono font-medium text-on-surface-variant block">SKU-89211</span>
+<span class="font-label-sm text-[11px] text-secondary">EAN: 77011928371</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="font-body-bold text-body-bold text-on-surface">Bombillo LED 12W Luz Fría</div>
+<span class="font-label-sm text-label-sm text-secondary">Ferretería y Herramientas</span>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="font-label-md text-label-md text-on-surface block">Importaciones Habana</span>
+<span class="font-label-sm text-label-sm text-outline">Plazo entrega: 48h</span>
+</td>
+<td class="py-space-md px-space-lg text-right font-code-mono text-code-mono text-on-surface-variant">
+              $290.00
+            </td>
+<td class="py-space-md px-space-lg text-right font-code-mono text-body-bold text-on-surface">
+              $440.00
+            </td>
+<td class="py-space-md px-space-lg text-center">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-code-mono text-label-sm font-medium">51.7%</span>
+</td>
+<td class="py-space-md px-space-lg text-center">
+<div class="inline-flex flex-col items-center">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                  85 u. Disp.
+                </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant mt-0.5">Mínimo: 10 u.</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" onclick="openAdjustment('Bombillo LED 12W', 'SKU-89211', 85, 10)" title="Ajustar Stock" type="button">
+<span class="material-symbols-outlined text-[18px]">exposure</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Historial" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- FILA 6: Estado Normal (Disponible) -->
+<tr class="hover:bg-surface-container-low transition-colors" data-category="aseo" data-status="disponible">
+<td class="py-space-md px-space-lg text-center font-code-mono text-outline text-label-sm">06</td>
+<td class="py-space-md px-space-lg">
+<span class="font-code-mono text-code-mono font-medium text-on-surface-variant block">SKU-20512</span>
+<span class="font-label-sm text-[11px] text-secondary">EAN: 85900213459</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="font-body-bold text-body-bold text-on-surface">Jabón de Baño Floral 120g</div>
+<span class="font-label-sm text-label-sm text-secondary">Aseo y Hogar</span>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="font-label-md text-label-md text-on-surface block">Cooperativa La Fe</span>
+<span class="font-label-sm text-label-sm text-outline">Plazo entrega: Directa</span>
+</td>
+<td class="py-space-md px-space-lg text-right font-code-mono text-code-mono text-on-surface-variant">
+              $95.00
+            </td>
+<td class="py-space-md px-space-lg text-right font-code-mono text-body-bold text-on-surface">
+              $150.00
+            </td>
+<td class="py-space-md px-space-lg text-center">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-code-mono text-label-sm font-medium">57.9%</span>
+</td>
+<td class="py-space-md px-space-lg text-center">
+<div class="inline-flex flex-col items-center">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                  210 u. Disp.
+                </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant mt-0.5">Mínimo: 40 u.</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" onclick="openAdjustment('Jabón de Baño Floral', 'SKU-20512', 210, 40)" title="Ajustar Stock" type="button">
+<span class="material-symbols-outlined text-[18px]">exposure</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Historial" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginación y Resumen de Registros de Tabla -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>Mostrando</span>
+<span class="font-semibold text-on-surface">6</span>
+<span>de</span>
+<span class="font-semibold text-on-surface">184</span>
+<span>artículos sincronizados localmente</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm shadow-sm" disabled="" type="button">
+          Anterior
+        </button>
+<span class="px-space-sm py-1 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">1</span>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm shadow-sm" type="button">2</button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm shadow-sm" type="button">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm shadow-sm" type="button">31</button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-container" type="button">
+          Siguiente
+        </button>
+</div>
+</div>
+</section>
+<!-- Módulo Integrado Inferior: Registro Rápido de Entrada y Recepción de Mercancía -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl mb-space-xl" id="quick-entry-panel">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Recepción Rápida de Entrada de Mercancía</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Registro directo al almacén central con actualización atómica de costo e inventario.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container text-primary font-code-mono text-label-sm font-semibold">Transacción SQLite ACID</span>
+</div>
+</div>
+<!-- Formulario de Entrada Rápida -->
+<form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-md items-end" id="quick-stock-form" onsubmit="handleQuickEntry(event)">
+<!-- Proveedor -->
+<div class="lg:col-span-3 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Proveedor Asociado *</label>
+<select class="w-full h-10 px-space-md bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="entry-supplier" required="">
+<option value="">Seleccione proveedor...</option>
+<option value="Distribuidora Caribe S.R.L.">Distribuidora Caribe S.R.L.</option>
+<option value="Cooperativa La Fe">Cooperativa La Fe</option>
+<option value="Importaciones Habana">Importaciones Habana</option>
+<option value="Productor Independiente">Productor Independiente Local</option>
+</select>
+</div>
+<!-- Producto -->
+<div class="lg:col-span-4 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Producto a Ingresar *</label>
+<div class="relative">
+<input class="w-full h-10 px-space-md bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="entry-product" list="product-list" placeholder="Seleccione o escriba SKU..." required=""/>
+<datalist id="product-list">
+<option value="SKU-77021 - Aceite Vegetal Criollo 1L">Stock actual: 0 u.</option>
+<option value="SKU-44109 - Detergente Multiuso 500g">Stock actual: 4 u.</option>
+<option value="SKU-31200 - Café Tostado Molido 250g">Stock actual: 7 u.</option>
+<option value="SKU-10944 - Arroz Grano Largo 1kg">Stock actual: 140 u.</option>
+<option value="SKU-89211 - Bombillo LED 12W">Stock actual: 85 u.</option>
+<option value="SKU-20512 - Jabón de Baño Floral">Stock actual: 210 u.</option>
+</datalist>
+</div>
+</div>
+<!-- Cantidad Recibida -->
+<div class="lg:col-span-2 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Cantidad (Uds) *</label>
+<input class="w-full h-10 px-space-md bg-surface-container-low rounded-xl text-on-surface font-code-mono text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="entry-qty" min="1" placeholder="Ej: 50" required="" type="number"/>
+</div>
+<!-- Costo Unitario -->
+<div class="lg:col-span-2 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Costo Unit. (CUP)</label>
+<div class="relative">
+<input class="w-full h-10 pl-space-md pr-10 bg-surface-container-low rounded-xl text-on-surface font-code-mono text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="entry-cost" placeholder="CUP" step="0.01" type="number"/>
+<span class="absolute inset-y-0 right-0 pr-space-md flex items-center font-code-mono text-outline text-label-sm pointer-events-none">$</span>
+</div>
+</div>
+<!-- Botón de Confirmación -->
+<div class="lg:col-span-1">
+<button class="w-full h-10 rounded-xl bg-primary text-on-primary hover:bg-tertiary shadow-sm transition-all flex items-center justify-center font-label-md text-label-md font-bold" title="Guardar entrada en SQLite" type="submit">
+<span class="material-symbols-outlined text-[20px]">save</span>
+</button>
+</div>
+</form>
+<!-- Estado de Sincronización Local del Formulario -->
+<div class="hidden mt-space-md p-space-sm rounded-xl bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-between" id="quick-entry-status">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span id="quick-entry-msg">Entrada registrada con éxito en el archivo SQLite local.</span>
+</div>
+<span class="font-code-mono text-[11px] text-secondary">INSERT INTO transacciones_stock OK</span>
+</div>
+</section>
+<!-- Modal / Drawer Minimalista para Ajuste Rápido de Stock (Micro-interacción) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs hidden flex items-center justify-center p-margin" id="adjustment-modal">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden animate-in fade-in">
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ajuste Manual de Existencias</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeAdjustment()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div>
+<span class="font-code-mono text-label-sm text-secondary block" id="adj-product-sku">SKU-77021</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface" id="adj-product-title">Aceite Vegetal Criollo 1L</h4>
+</div>
+<div class="grid grid-cols-2 gap-space-md p-space-sm rounded-xl bg-surface-container-low">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Stock Actual</span>
+<span class="font-display-md text-display-md text-on-surface" id="adj-current-stock">0</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Umbral Mínimo</span>
+<span class="font-display-md text-display-md text-secondary" id="adj-min-stock">15</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Tipo de Ajuste</label>
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="adj-type-btn py-space-xs rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold" onclick="setAdjustmentType('conteo')" type="button">Conteo Físico</button>
+<button class="adj-type-btn py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container" onclick="setAdjustmentType('merma')" type="button">Merma / Daño</button>
+<button class="adj-type-btn py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container" onclick="setAdjustmentType('donacion')" type="button">Devolución</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Nueva Cantidad en Físico *</label>
+<input class="w-full h-10 px-space-md bg-surface-container-low rounded-xl text-on-surface font-code-mono text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="adj-new-qty" min="0" placeholder="Ingrese nuevo valor..." type="number"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Motivo o Justificación del Registro</label>
+<input class="w-full h-10 px-space-md bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="adj-reason" placeholder="Ej: Auditoría física de cierre quincenal" type="text"/>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-lg h-10 rounded-xl bg-surface-container-low hover:bg-surface-container font-label-md text-label-md text-on-surface transition-colors" onclick="closeAdjustment()" type="button">
+            Cancelar
+          </button>
+<button class="px-space-lg h-10 rounded-xl bg-primary text-on-primary hover:bg-tertiary font-body-bold text-body-bold shadow-sm transition-all flex items-center gap-space-xs" onclick="saveAdjustment()" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Guardar Ajuste</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Microinteracciones y lógica de filtrado del Módulo de Inventario -->
+<script>
+    // Atajo F2 para enfocar el buscador
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'F2') {
+        e.preventDefault();
+        const searchInput = document.getElementById('inventory-search');
+        if (searchInput) searchInput.focus();
+      }
+    });
+
+    // Filtro de Categoría por Tabs
+    function setTab(btn, category) {
+      document.querySelectorAll('.category-tab').forEach(b => {
+        b.className = "category-tab px-space-md py-space-xs rounded-xl font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap";
+      });
+      btn.className = "category-tab px-space-md py-space-xs rounded-xl font-label-sm text-label-sm bg-primary-container text-on-primary transition-all whitespace-nowrap shadow-sm";
+      filterTable(category);
+    }
+
+    function filterByCategory(category) {
+      const tabs = document.querySelectorAll('.category-tab');
+      tabs.forEach(t => {
+        if (category === 'bajo-stock' && t.textContent.includes('Bajo Stock')) {
+          t.click();
+        }
+      });
+    }
+
+    function filterTable(filter) {
+      const rows = document.querySelectorAll('#stock-table tbody tr');
+      rows.forEach(row => {
+        const cat = row.getAttribute('data-category');
+        const status = row.getAttribute('data-status');
+        if (filter === 'all') {
+          row.style.display = '';
+        } else if (filter === 'bajo-stock') {
+          if (status === 'agotado' || status === 'bajo') {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        } else {
+          if (cat === filter) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    // Búsqueda Dinámica
+    const searchField = document.getElementById('inventory-search');
+    if (searchField) {
+      searchField.addEventListener('input', function(e) {
+        const val = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll('#stock-table tbody tr');
+        rows.forEach(row => {
+          const text = row.innerText.toLowerCase();
+          row.style.display = text.includes(val) ? '' : 'none';
+        });
+      });
+    }
+
+    // Modal de Ajuste
+    function openAdjustment(productName, sku, currentStock, minStock) {
+      document.getElementById('adj-product-title').textContent = productName;
+      document.getElementById('adj-product-sku').textContent = sku;
+      document.getElementById('adj-current-stock').textContent = currentStock;
+      document.getElementById('adj-min-stock').textContent = minStock;
+      document.getElementById('adj-new-qty').value = currentStock;
+      document.getElementById('adjustment-modal').classList.remove('hidden');
+    }
+
+    function closeAdjustment() {
+      document.getElementById('adjustment-modal').classList.add('hidden');
+    }
+
+    function setAdjustmentType(type) {
+      const btns = document.querySelectorAll('.adj-type-btn');
+      btns.forEach(b => {
+        b.className = "adj-type-btn py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container";
+      });
+      event.target.className = "adj-type-btn py-space-xs rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold";
+    }
+
+    function saveAdjustment() {
+      const newQty = document.getElementById('adj-new-qty').value;
+      const sku = document.getElementById('adj-product-sku').textContent;
+      closeAdjustment();
+      const statusBox = document.getElementById('quick-entry-status');
+      const msg = document.getElementById('quick-entry-msg');
+      msg.textContent = `Ajuste confirmado para ${sku}. Nueva existencia física: ${newQty} unidades guardadas en SQLite local.`;
+      statusBox.classList.remove('hidden');
+      setTimeout(() => {
+        statusBox.classList.add('hidden');
+      }, 5000);
+    }
+
+    // Registro Rápido de Entrada
+    function handleQuickEntry(e) {
+      e.preventDefault();
+      const supplier = document.getElementById('entry-supplier').value;
+      const product = document.getElementById('entry-product').value;
+      const qty = document.getElementById('entry-qty').value;
+      const cost = document.getElementById('entry-cost').value || 'N/A';
+
+      const statusBox = document.getElementById('quick-entry-status');
+      const msg = document.getElementById('quick-entry-msg');
+      msg.textContent = `Recepción de +${qty} unidades de "${product}" provistas por "${supplier}" guardada localmente (Costo: $${cost} CUP).`;
+      statusBox.classList.remove('hidden');
+
+      document.getElementById('quick-stock-form').reset();
+
+      setTimeout(() => {
+        statusBox.classList.add('hidden');
+      }, 6000);
+    }
+  </script>
+</div></main></div></body></html>

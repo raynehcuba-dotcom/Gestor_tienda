@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#213145","outline-variant":"#c4c5d7","inverse-on-surface":"#eaf1ff","inverse-primary":"#b7c4ff","on-surface":"#0b1c30","on-secondary-fixed":"#131b2e","primary-fixed-dim":"#b7c4ff","on-surface-variant":"#434655","surface-dim":"#cbdbf5","secondary-fixed":"#dae2fd","tertiary-container":"#0051d6","surface-variant":"#d3e4fe","primary":"#0037b0","surface-bright":"#f8f9ff","error":"#ba1a1a","error-container":"#ffdad6","surface-container-highest":"#d3e4fe","on-error":"#ffffff","background":"#f8f9ff","tertiary":"#003ca3","surface-tint":"#2151da","on-secondary-fixed-variant":"#3f465c","secondary":"#565e74","on-primary":"#ffffff","on-tertiary-container":"#c9d4ff","outline":"#747686","on-tertiary-fixed":"#00174b","secondary-fixed-dim":"#bec6e0","on-secondary":"#ffffff","surface-container-high":"#dce9ff","surface":"#f8f9ff","primary-fixed":"#dce1ff","on-tertiary-fixed-variant":"#003ea8","on-background":"#0b1c30","surface-container-low":"#eff4ff","on-primary-fixed-variant":"#0039b5","primary-container":"#1d4ed8","on-primary-fixed":"#001551","tertiary-fixed-dim":"#b4c5ff","on-secondary-container":"#5c647a","on-error-container":"#93000a","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","tertiary-fixed":"#dbe1ff","secondary-container":"#dae2fd","on-primary-container":"#cad3ff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","margin-compact":"1rem","gutter-dense":"0.5rem","space-2xl":"2rem","space-lg":"1rem","margin":"1.5rem","space-md":"0.75rem","space-xl":"1.5rem"},fontFamily:{"label-sm":["Inter"],"display-md":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"code-mono":["JetBrains Mono"],"body-lg":["Inter"],"display-lg":["Inter"],"body-bold":["Inter"],"headline-sm":["Inter"],"body-md":["Inter"]},fontSize:{"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"display-md":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-md":["13px",{lineHeight:"18px",fontWeight:"500"}],"headline-lg":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"code-mono":["13px",{lineHeight:"18px",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-bold":["14px",{lineHeight:"20px",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-margin pt-space-xl pb-space-lg flex flex-col gap-space-xs"><div class="flex items-center gap-space-md"><div class="p-space-xs rounded-xl bg-surface-container-lowest/10"><span class="material-symbols-outlined text-inverse-on-surface text-[24px]">storefront</span></div><div><span class="font-headline-sm text-headline-sm text-inverse-on-surface tracking-tight block">Gestor Tienda</span><span class="font-label-sm text-label-sm text-outline-variant block">Tienda Central</span></div></div><div class="mt-space-sm flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl bg-surface-container-lowest/5"><span class="inline-block w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span class="font-label-sm text-label-sm text-inverse-on-surface">Modo Offline Activo</span></div></div><nav class="px-space-md space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-bold rounded-xl shadow-[0_1px_2px_rgba(15,23,42,0.05)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-outline-variant hover:bg-surface-container-lowest/10 hover:text-inverse-on-surface transition-all group" data-path="dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-md text-label-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-outline-variant hover:bg-surface-container-lowest/10 hover:text-inverse-on-surface transition-all group" data-path="inventario" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-md text-label-md">Inventario</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-outline-variant hover:bg-surface-container-lowest/10 hover:text-inverse-on-surface transition-all group" data-path="ventas" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-label-md text-label-md">Ventas (TPV)</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-outline-variant hover:bg-surface-container-lowest/10 hover:text-inverse-on-surface transition-all group" data-path="proveedores-compras" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-md text-label-md">Proveedores</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-outline-variant hover:bg-surface-container-lowest/10 hover:text-inverse-on-surface transition-all group" data-path="reportes-financieros" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-label-md text-label-md">Reportes</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-lg bg-surface-container-lowest/10 text-inverse-on-surface">Admin</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all group bg-primary-container text-on-primary font-body-bold rounded-xl shadow-[0_1px_2px_rgba(15,23,42,0.05)]" data-path="usuarios-roles" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span class="font-label-md text-label-md">Usuarios y Roles</span></div><span class="w-2 h-2 rounded-full bg-inverse-primary"></span></a></nav></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-lowest/5 flex flex-col gap-space-xs"><div class="flex items-center justify-between text-outline-variant font-label-sm text-label-sm"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">sync</span> Sincronización</span><span class="font-code-mono text-code-mono text-inverse-on-surface">0 pend.</span></div><div class="flex items-center justify-between text-outline-variant font-label-sm text-label-sm pt-space-xs"><span class="font-code-mono text-code-mono text-[11px]">SQLite Local Activa</span><span class="font-code-mono text-code-mono text-[11px] text-inverse-on-surface">v1.0.0</span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-14 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin"><div class="flex items-center gap-space-lg"><img alt="Gestor Tienda Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/d/1X5XQjD0t_d7N5lJbFvT_E5ZpY_s5Y4kL"/><div class="flex items-center gap-space-sm font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">home</span><span>/</span><span class="text-on-surface font-body-bold">Panel de Operaciones</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-primary text-[16px]">dns</span><span>Sistema Local Offline - Base SQLite activa</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center p-0.5 rounded-xl bg-surface-container"><button class="px-space-sm py-space-xs rounded-lg font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(15,23,42,0.05)]" type="button">Admin</button><button class="px-space-sm py-space-xs rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">Vendedor</button></div><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden sm:block"><span class="font-label-md text-label-md text-on-surface block leading-tight">Alejandro Morales</span><span class="font-label-sm text-label-sm text-on-surface-variant block">Administrador</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div><button class="p-space-xs rounded-xl text-on-surface-variant hover:text-error transition-colors" title="Cerrar sesión" type="button"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></header><main class="relative pt-14 w-full px-margin pb-space-2xl bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Notification Bar (Simulated Offline SQLite Sync Status) -->
+<div class="flex items-center justify-between px-space-lg py-space-sm rounded-xl bg-surface-container-low shadow-sm mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-md text-label-md text-on-surface">Base de Datos Local SQLite: Control de Accesos Autenticado</span>
+<span class="font-code-mono text-code-mono text-outline text-[11px]">/var/data/tienda_auth.db</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Modo Zero-Cloud Habilitado</span>
+</div>
+</div>
+</div>
+<!-- Page Header -->
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-md mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Administración de Sistema</span><span class="text-outline text-label-sm">•</span><span class="font-label-sm text-label-sm text-secondary">Gestor Tienda Central</span></div>
+<h1 class="font-display-lg text-display-lg text-on-surface mt-space-xs">Gestión de Usuarios y Permisos</h1>
+<p class="font-body-md text-body-md text-secondary mt-0.5">Administración de accesos locales, privilegios criptográficos y terminales físicas del personal de la tienda.</p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-xl bg-primary text-on-primary font-body-bold text-body-bold hover:bg-tertiary shadow-sm transition-all active:scale-[0.98]" onclick="document.getElementById('quick-user-form').scrollIntoView({behavior:'smooth'}); document.getElementById('input-fullname').focus();" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>+ Nuevo Usuario</span>
+</button>
+</div>
+</div>
+<!-- 3 Metric / KPI Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-space-xl">
+<!-- KPI 1 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total Usuarios Registrados</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-headline-lg">4</span>
+<span class="font-body-md text-body-md text-secondary">cuentas activas</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/60 -mx-space-lg -mb-space-lg px-space-lg pb-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-body-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 1 Admin
+          </span>
+<span class="text-outline text-[12px]">|</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> 3 Vendedores
+          </span>
+</div>
+<span class="font-code-mono text-code-mono text-secondary text-[11px]">100% cuota local</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Sesiones Locales Activas</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-headline-lg">2</span>
+<span class="font-body-md text-body-md text-secondary">terminales en línea</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">devices</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/60 -mx-space-lg -mb-space-lg px-space-lg pb-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Caja Central &amp; TPV 2 en turno</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-body-bold">IP: 192.168.1.*</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Política de Seguridad Local</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface">Argon2id + PBKDF2</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Protegido</span>
+</span>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/60 -mx-space-lg -mb-space-lg px-space-lg pb-space-sm flex items-center justify-between">
+<span class="font-body-md text-label-sm text-secondary">Hash local sin envío externo</span>
+<span class="font-code-mono text-code-mono text-secondary text-[11px]">Salt: 32 bytes</span>
+</div>
+</div>
+</div>
+<!-- Main Content Grid: Left (User Cards) & Right (Permissions Matrix + Fast Create Form) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT / MAIN COLUMN: User List (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">manage_accounts</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Usuarios en Dispositivo</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-secondary font-code-mono">4</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="h-9 pl-9 pr-3 rounded-xl bg-surface-container-lowest font-body-md text-on-surface placeholder:text-outline text-label-md shadow-sm outline-none focus:bg-surface-container-low transition-colors w-48 sm:w-60" placeholder="Filtrar operador..." type="text"/>
+</div>
+</div>
+</div>
+<!-- User Card 1: Alejandro Morales (Admin) -->
+<div class="relative rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all group">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="relative w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm font-headline-lg">
+<span>AM</span>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Alejandro Morales</h3>
+<span class="font-code-mono text-code-mono text-secondary text-label-sm">@admin</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">Administrador</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Activo
+                </span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-1">Socio fundador &amp; Administrador general del sistema local.</p>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 mt-space-sm text-secondary font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">point_of_sale</span>
+                  Terminal Caja 1 (Principal)
+                </span>
+<span class="text-outline">•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                  Hoy, 09:15 AM
+                </span>
+</div>
+</div>
+</div>
+<div class="flex items-center sm:flex-col gap-space-xs shrink-0 self-end sm:self-start">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+              Editar
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-secondary font-label-md text-label-md hover:text-on-surface transition-colors" type="button">
+              Cambiar Clave
+            </button>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-body-bold">Privilegios:</span>
+<span class="text-secondary">Control total, auditoría financiera, configuración, cierre de caja</span>
+</div>
+<span class="font-code-mono text-[11px] text-secondary">Nivel 0 (Root)</span>
+</div>
+</div>
+<!-- User Card 2: Laura González (Vendedor) -->
+<div class="relative rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all group">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="relative w-12 h-12 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center shrink-0 font-headline-lg">
+<span>LG</span>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Laura González</h3>
+<span class="font-code-mono text-code-mono text-secondary text-label-sm">@laura_ventas</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">Vendedor</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Activo
+                </span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-1">Operadora de caja matutina y atención a clientes de mostrador.</p>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 mt-space-sm text-secondary font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">point_of_sale</span>
+                  Terminal TPV 2
+                </span>
+<span class="text-outline">•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                  Hoy, 08:30 AM
+                </span>
+</div>
+</div>
+</div>
+<div class="flex items-center sm:flex-col gap-space-xs shrink-0 self-end sm:self-start">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+              Editar
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-secondary font-label-md text-label-md hover:text-on-surface transition-colors" type="button">
+              Cambiar Clave
+            </button>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">receipt_long</span>
+<span class="font-body-bold">Privilegios:</span>
+<span class="text-secondary">Facturación rápida, consulta existencias, cobro en CUP / USD / Transfermóvil</span>
+</div>
+<span class="font-code-mono text-[11px] text-secondary">Nivel 2 (TPV)</span>
+</div>
+</div>
+<!-- User Card 3: Carlos Pérez (Vendedor / Almacén) -->
+<div class="relative rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all group">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="relative w-12 h-12 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center shrink-0 font-headline-lg">
+<span>CP</span>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Carlos Pérez</h3>
+<span class="font-code-mono text-code-mono text-secondary text-label-sm">@carlos_almacen</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">Vendedor</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Activo
+                </span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-1">Encargado de recepción de mercancía física y conteo de existencias.</p>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 mt-space-sm text-secondary font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+                  Almacén Trasero (Tablet Local)
+                </span>
+<span class="text-outline">•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                  Ayer, 06:40 PM
+                </span>
+</div>
+</div>
+</div>
+<div class="flex items-center sm:flex-col gap-space-xs shrink-0 self-end sm:self-start">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+              Editar
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-secondary font-label-md text-label-md hover:text-on-surface transition-colors" type="button">
+              Cambiar Clave
+            </button>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">local_shipping</span>
+<span class="font-body-bold">Privilegios:</span>
+<span class="text-secondary">Entradas de inventario, registro de mermas, lectura de códigos de barra</span>
+</div>
+<span class="font-code-mono text-[11px] text-secondary">Nivel 2 (Stock)</span>
+</div>
+</div>
+<!-- User Card 4: Yanet Díaz (Inactivo) -->
+<div class="relative rounded-xl bg-surface-container-lowest p-space-lg shadow-sm opacity-80 hover:opacity-100 transition-all group">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="relative w-12 h-12 rounded-xl bg-surface-container text-secondary flex items-center justify-center shrink-0 font-headline-lg">
+<span>YD</span>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-secondary line-through">Yanet Díaz</h3>
+<span class="font-code-mono text-code-mono text-outline text-label-sm">@yanet_temp</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-outline font-label-sm text-label-sm">Vendedor</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Inactivo
+                </span>
+</div>
+<p class="font-body-md text-body-md text-outline mt-1">Cajero suplente período vacacional. Acceso temporalmente bloqueado.</p>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 mt-space-sm text-outline font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">history</span>
+                  Último acceso: Hace 12 días
+                </span>
+</div>
+</div>
+</div>
+<div class="flex items-center sm:flex-col gap-space-xs shrink-0 self-end sm:self-start">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+              Reactivar
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-error-container text-error font-label-md text-label-md hover:opacity-90 transition-opacity" type="button">
+              Eliminar
+            </button>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-outline text-[18px]">block</span>
+<span>Credenciales suspendidas en SQLite. Sin autorización para emitir comprobantes fiscales.</span>
+</div>
+<span class="font-code-mono text-[11px] text-outline">/var/data/tienda_auth.db</span>
+</div>
+</div>
+<!-- Quick Audit Log / Session Security Snapshot -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">policy</span>
+<div>
+<span class="font-body-bold text-body-bold text-on-surface block leading-tight">Auditoría Local en Terminal</span>
+<span class="font-label-sm text-label-sm text-secondary">Los accesos quedan registrados en registro de eventos inmutable.</span>
+</div>
+</div>
+<button class="font-label-md text-label-md text-primary hover:underline font-body-bold" type="button">
+          Ver Registro de Accesos
+        </button>
+</div>
+</div>
+<!-- RIGHT COLUMN: Permissions Matrix + Fast Create Form (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Card: Matriz de Permisos por Rol -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">table_chart</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Matriz de Permisos</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded-full">v2.4 Estándar</span>
+</div>
+<p class="font-body-md text-label-md text-secondary mb-space-md">Políticas locales aplicadas a las sesiones activas en este terminal:</p>
+<!-- Visual Comparative Table -->
+<div class="overflow-hidden rounded-xl bg-surface-container-low">
+<div class="grid grid-cols-12 bg-surface-container-high py-2.5 px-space-md font-label-sm text-label-sm text-on-surface font-body-bold">
+<div class="col-span-6">Módulo / Capacidad</div>
+<div class="col-span-3 text-center text-primary">Admin</div>
+<div class="col-span-3 text-center text-secondary">Vendedor</div>
+</div>
+<!-- Row 1 -->
+<div class="grid grid-cols-12 items-center py-2.5 px-space-md bg-surface-container-lowest">
+<div class="col-span-6 font-label-md text-label-md text-on-surface">
+<span>Dashboard &amp; Métricas</span>
+<span class="block font-label-sm text-label-sm text-secondary">Flujo de caja, ventas totales</span>
+</div>
+<div class="col-span-3 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-fixed text-primary" title="Totalmente Permitido">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</div>
+<div class="col-span-3 text-center">
+<span class="font-label-sm text-label-sm text-secondary block">Solo su turno</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-12 items-center py-2.5 px-space-md bg-surface-container-low/40">
+<div class="col-span-6 font-label-md text-label-md text-on-surface">
+<span>Gestión de Inventario</span>
+<span class="block font-label-sm text-label-sm text-secondary">CRUD y ajuste de precios</span>
+</div>
+<div class="col-span-3 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-fixed text-primary">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</div>
+<div class="col-span-3 text-center">
+<span class="font-label-sm text-label-sm text-secondary">Lectura stock</span>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-12 items-center py-2.5 px-space-md bg-surface-container-lowest">
+<div class="col-span-6 font-label-md text-label-md text-on-surface">
+<span>Punto de Venta (TPV)</span>
+<span class="block font-label-sm text-label-sm text-secondary">Cobro y ticket local</span>
+</div>
+<div class="col-span-3 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-fixed text-primary">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</div>
+<div class="col-span-3 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-fixed text-primary" title="TPV Rápido">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="grid grid-cols-12 items-center py-2.5 px-space-md bg-surface-container-low/40">
+<div class="col-span-6 font-label-md text-label-md text-on-surface">
+<span>Entradas / Proveedores</span>
+<span class="block font-label-sm text-label-sm text-secondary">Recepción y costos MLC/CUP</span>
+</div>
+<div class="col-span-3 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-fixed text-primary">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</div>
+<div class="col-span-3 text-center">
+<span class="px-2 py-0.5 rounded text-[11px] bg-surface-container-high text-secondary font-label-sm">Requiere clave</span>
+</div>
+</div>
+<!-- Row 5 -->
+<div class="grid grid-cols-12 items-center py-2.5 px-space-md bg-surface-container-lowest">
+<div class="col-span-6 font-label-md text-label-md text-on-surface">
+<span>Reportes y Finanzas</span>
+<span class="block font-label-sm text-label-sm text-secondary">Exportar PDF / Excel</span>
+</div>
+<div class="col-span-3 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-fixed text-primary">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</div>
+<div class="col-span-3 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-error-container text-error" title="Bloqueado">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</span>
+</div>
+</div>
+<!-- Row 6 -->
+<div class="grid grid-cols-12 items-center py-2.5 px-space-md bg-surface-container-low/40">
+<div class="col-span-6 font-label-md text-label-md text-on-surface">
+<span>Gestión de Roles</span>
+<span class="block font-label-sm text-label-sm text-secondary">Crear y cambiar usuarios</span>
+</div>
+<div class="col-span-3 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-fixed text-primary">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</div>
+<div class="col-span-3 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-error-container text-error" title="Bloqueado">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card: Crear o Editar Usuario -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm" id="quick-user-form">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">person_add_alt</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Crear o Editar Usuario</h2>
+</div>
+<span class="text-secondary font-label-sm text-label-sm">Formulario Rápido</span>
+</div>
+<form class="space-y-space-md" onsubmit="event.preventDefault(); alert('Usuario persistido correctamente en SQLite Local.');">
+<!-- Campo: Nombre completo -->
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="input-fullname">Nombre Completo</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">person</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-xl bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#0037b0] transition-all" id="input-fullname" placeholder="Ej: Mario Rodríguez Suárez" required="" type="text"/>
+</div>
+</div>
+<!-- Campo: Username (código) -->
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="input-username">Nombre de Usuario (Login)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">alternate_email</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-xl bg-surface-container-low font-code-mono text-code-mono text-on-surface placeholder:text-outline outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#0037b0] transition-all" id="input-username" placeholder="mario_caja" required="" type="text"/>
+</div>
+<p class="font-label-sm text-[11px] text-secondary mt-1">Identificador único para apertura de caja y tickets de compra.</p>
+</div>
+<!-- Campo: Rol con selector contextual -->
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">Rol Operativo</label>
+<div class="grid grid-cols-2 gap-space-xs">
+<label class="flex flex-col p-space-sm rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Vendedor</span>
+<input checked="" class="accent-primary" name="user_role" type="radio" value="vendedor"/>
+</div>
+<span class="font-label-sm text-[11px] text-secondary mt-1">TPV, cobro y consulta rápida de inventario</span>
+</label>
+<label class="flex flex-col p-space-sm rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Administrador</span>
+<input class="accent-primary" name="user_role" type="radio" value="admin"/>
+</div>
+<span class="font-label-sm text-[11px] text-secondary mt-1">Control absoluto, balance, compras y personal</span>
+</label>
+</div>
+</div>
+<!-- Campo: Contraseña inicial -->
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="input-password">Contraseña Inicial</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">key</span>
+<input class="w-full h-10 pl-9 pr-10 rounded-xl bg-surface-container-low font-code-mono text-code-mono text-on-surface placeholder:text-outline outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#0037b0] transition-all" id="input-password" placeholder="Mínimo 6 caracteres" required="" type="password"/>
+<button class="absolute right-3 top-2.5 text-outline hover:text-on-surface" onclick="const p=document.getElementById('input-password'); p.type = p.type==='password'?'text':'password';" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Checkbox: Activo -->
+<div class="pt-1">
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded accent-primary text-on-primary" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface">Habilitar usuario de inmediato para inicio de sesión</span>
+</label>
+</div>
+<!-- Botón Guardar -->
+<div class="pt-space-xs flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-xl text-secondary hover:text-on-surface font-label-md text-label-md transition-colors" type="reset">
+              Limpiar
+            </button>
+<button class="inline-flex items-center gap-space-xs px-space-xl py-2.5 rounded-xl bg-primary text-on-primary font-body-bold text-body-bold hover:bg-tertiary shadow-sm transition-all active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Guardar Usuario</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

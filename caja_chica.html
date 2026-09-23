@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"tertiary-fixed-dim":"#b4c5ff","on-secondary-fixed":"#131b2e","on-primary-fixed-variant":"#0039b5","inverse-on-surface":"#eaf1ff","primary-container":"#1d4ed8","surface-container-lowest":"#ffffff","secondary-fixed":"#dae2fd","error-container":"#ffdad6","surface-tint":"#2151da","surface-container-highest":"#d3e4fe","secondary-container":"#dae2fd","background":"#f8f9ff","secondary":"#565e74","surface-variant":"#d3e4fe","on-tertiary-fixed-variant":"#003ea8","primary-fixed":"#dce1ff","primary-fixed-dim":"#b7c4ff","outline-variant":"#c4c5d7","on-background":"#0b1c30","surface":"#f8f9ff","surface-bright":"#f8f9ff","secondary-fixed-dim":"#bec6e0","inverse-primary":"#b7c4ff","on-surface-variant":"#434655","on-surface":"#0b1c30","on-tertiary":"#ffffff","tertiary":"#003ca3","on-primary-container":"#cad3ff","surface-dim":"#cbdbf5","outline":"#747686","on-tertiary-container":"#c9d4ff","inverse-surface":"#213145","primary":"#0037b0","surface-container":"#e5eeff","on-secondary":"#ffffff","on-secondary-container":"#5c647a","surface-container-high":"#dce9ff","on-error":"#ffffff","tertiary-fixed":"#dbe1ff","on-primary-fixed":"#001551","on-error-container":"#93000a","error":"#ba1a1a","tertiary-container":"#0051d6","on-tertiary-fixed":"#00174b","surface-container-low":"#eff4ff","on-secondary-fixed-variant":"#3f465c","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"0.75rem","margin":"1.5rem","margin-compact":"1rem","space-2xl":"2rem","gutter-dense":"0.5rem","space-sm":"0.5rem","space-lg":"1rem","space-xl":"1.5rem","gutter":"1rem","space-xs":"0.25rem"},"fontFamily":{"code-mono":["JetBrains Mono"],"label-sm":["Inter"],"body-md":["Inter"],"body-bold":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"],"display-md":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"headline-sm":["Inter"]},"fontSize":{"code-mono":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-bold":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"display-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="p-space-lg flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WZaVAPBbmPEq579_00uv2bs2YrnYxBWG8B8maHdvv-Mo8DTfO6k02iTscoX_KGKPJc4FudNe6cjzYFuBuCFR4lF13GrBXfGMnuJkNilDtec2DNH-XAONQEiFKAZVn0rW22x2Wb6J-RjcznHbw9Yba44zp-u5-84_BLWSUbBau4FCUNdH_jLHrxIfaN1RHSSBPAcAXSpttyd-Yit3_6dUI1uzInFpNdMrGhPjKWEgVcRsnvTI9VjE5_pxUT"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate">Gestor Tienda</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Tienda Central</span></div></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high rounded"><span class="material-symbols-outlined text-primary text-[16px]">wifi_off</span><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Modo Offline Activo</span></div></div><nav class="flex-1 px-space-md py-space-xs flex flex-col gap-space-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="dashboard" href="#">Dashboard</a><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="inventario-y-kardex" href="#">Inventario y Kardex</a><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="ventas-tpv" href="#">Ventas (TPV)</a><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="clientes-y-creditos" href="#">Clientes y Créditos</a><div class="flex flex-col gap-space-xs pt-space-xs"><div class="px-space-md py-space-xs flex items-center justify-between text-on-surface font-label-sm text-label-sm font-semibold uppercase tracking-wider"><span>Caja y Finanzas</span></div><a aria-current="page" class="ml-space-sm pl-space-md pr-space-sm py-space-xs transition-colors flex items-center justify-between bg-primary-container text-on-primary font-bold rounded-lg" data-path="caja-chica-y-gastos" href="#"><span>Caja Chica y Gastos</span></a></div><div class="flex flex-col gap-space-xs pt-space-xs"><div class="px-space-md py-space-xs flex items-center justify-between text-on-surface font-label-sm text-label-sm font-semibold uppercase tracking-wider"><span>Proveedores</span><span class="h-1.5 w-1.5 rounded-full bg-primary"></span></div><a class="ml-space-sm pl-space-md pr-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md flex items-center justify-between" data-path="catalogo-y-cuentas-por-pagar" href="#"><span>Catálogo y Cuentas por Pagar</span></a><a class="ml-space-sm pl-space-md pr-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md flex items-center justify-between" data-path="cuadre-semanal-y-liquidacion-de-ganancias" href="#"><span>Cuadre y Liquidación</span></a><a class="ml-space-sm pl-space-md pr-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md flex items-center justify-between" data-path="historial-de-comprobantes-de-pago" href="#"><span>Historial de Comprobantes</span></a></div><div class="flex flex-col gap-space-xs pt-space-xs"><div class="px-space-md py-space-xs flex items-center justify-between text-on-surface font-label-sm text-label-sm font-semibold uppercase tracking-wider"><span>Configuración / Sistema</span></div><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="reportes" href="#">Reportes</a><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="respaldo-y-mantenimiento-sqlite" href="#">Respaldo y Mantenimiento SQLite</a><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="usuarios-y-roles" href="#">Usuarios y Roles</a></div></nav><div class="p-space-md bg-surface-container-low"><div class="flex items-center justify-between gap-space-xs text-on-surface-variant"><div class="flex items-center gap-space-xs min-w-0"><span class="h-2 w-2 rounded-full bg-primary shrink-0"></span><span class="font-code-mono text-code-mono truncate">0 pend. SQLite Local</span></div><span class="font-label-sm text-label-sm shrink-0">v1.0.0</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 px-space-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md min-w-0"><img alt="Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WZaVAPBbmPEq579_00uv2bs2YrnYxBWG8B8maHdvv-Mo8DTfO6k02iTscoX_KGKPJc4FudNe6cjzYFuBuCFR4lF13GrBXfGMnuJkNilDtec2DNH-XAONQEiFKAZVn0rW22x2Wb6J-RjcznHbw9Yba44zp-u5-84_BLWSUbBau4FCUNdH_jLHrxIfaN1RHSSBPAcAXSpttyd-Yit3_6dUI1uzInFpNdMrGhPjKWEgVcRsnvTI9VjE5_pxUT"/><nav class="hidden xl:flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant truncate"><span class="text-on-surface-variant">Panel de Operaciones</span><span>/</span><span class="text-on-surface-variant">Caja y Finanzas</span><span>/</span><span class="font-body-bold text-body-bold text-on-surface truncate">Caja Chica y Gastos</span></nav></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded"><span class="material-symbols-outlined text-primary text-[16px]">database</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">SQLite Activa / WAL Mode</span></div><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded"><span class="font-label-sm text-label-sm text-on-surface-variant">Moneda:</span><span class="font-code-mono text-code-mono text-on-surface font-bold">CUP / MLC / USD</span></div><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">shield_person</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Rol: Admin</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden lg:flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Alejandro Morales</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Administrador</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-screen px-space-margin pb-space-2xl"><div class="flex flex-col w-full gap-space-xl">
+<!-- TOP CONTEXT BAR & BREADCRUMB -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant flex-wrap">
+<span>Panel de Operaciones</span>
+<span class="text-outline-variant">/</span>
+<span>Finanzas y Tesorería</span>
+<span class="text-outline-variant">/</span>
+<span class="font-body-bold text-body-bold text-primary">Caja Chica y Gastos Menores</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap mt-1">
+<h1 class="font-display-md text-display-md text-on-surface tracking-tight">Gestión de Caja Chica y Gastos Operativos Menores</h1>
+<div class="flex items-center gap-space-xs px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-code-mono text-[11px] font-semibold">
+<span class="h-2 w-2 rounded-full bg-emerald-600 animate-pulse"></span>
+<span>Gaveta 01 · Oficina Principal</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        Control estricto de fondo fijo rotatorio, emisión de vales de egreso para suministros, servicios técnicos, flete puntual y liquidación de comprobantes físicos en soporte inmutable SQLite.
+      </p>
+</div>
+<!-- PRIMARY TOP ACTIONS -->
+<div class="flex items-center gap-space-sm flex-wrap self-start md:self-auto shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">balance</span>
+<span>Arqueo Físico</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Exportar Libro</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary hover:bg-blue-800 transition-all font-label-md text-label-md shadow-md active:scale-95" onclick="document.getElementById('input-monto').focus()" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Registrar Gasto (F4)</span>
+</button>
+</div>
+</div>
+<!-- KPI SUMMARY METRICS ROW -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Card 1: Fondo Fijo Asignado -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Fondo Fijo Asignado</span>
+<span class="font-display-md text-display-md text-on-surface font-code-mono mt-1 font-bold">$25,000.00</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">verified_user</span>
+<span class="truncate">Aut. por Socio Alejandro M.</span>
+</div>
+</div>
+<!-- Card 2: Saldo Disponible -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Saldo Disponible</span>
+<span class="px-1.5 py-0.2 rounded bg-amber-100 text-amber-900 font-label-sm text-[10px] font-bold">33.7%</span>
+</div>
+<span class="font-display-md text-display-md text-on-surface font-code-mono mt-1 font-bold text-amber-800">$8,420.00</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-amber-50 flex items-center justify-center text-amber-700">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col gap-1">
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-amber-600 h-1.5 rounded-full" style="width: 33.7%"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[11px] text-amber-900 font-medium">
+<span>Umbral alerta (&lt; 35%)</span>
+<span class="font-code-mono">CUP</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Gastos Acumulados -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest flex flex-col justify-between shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Egresos en Ciclo</span>
+<span class="font-display-md text-display-md text-on-surface font-code-mono mt-1 font-bold text-error">$16,580.00</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">18 vales emitidos</span>
+<span class="font-code-mono text-[11px]">08 Oct - 14 Oct</span>
+</div>
+</div>
+<!-- Card 4: Reposición en Trámite -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest flex flex-col justify-between shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Por Reintegrar</span>
+<span class="font-display-md text-display-md text-on-surface font-code-mono mt-1 font-bold text-primary">$16,580.00</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-emerald-600">check_circle</span>
+<span class="truncate">Listo para Cuadre Semanal</span>
+</div>
+</div>
+<!-- Card 5: Mayor Impacto -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest flex flex-col justify-between shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Rubro Mayor</span>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-1 truncate font-bold">Insumos Tienda</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">pie_chart</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-code-mono text-on-surface font-bold">$7,250.00 CUP</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-semibold text-primary text-[11px]">43.7%</span>
+</div>
+</div>
+</div>
+<!-- WORKSPACE GRID: LEFT LEDGER (65%) & RIGHT FORMS/AUDIT (35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT 7 COLUMNS (LEDGER + CATEGORY PILLS) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- QUICK CATEGORY PILLS BAR -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none">
+<button class="px-space-md py-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold shrink-0 shadow-sm flex items-center gap-1.5">
+<span>Todos los Rubros</span>
+<span class="bg-blue-900 text-on-primary-container px-1.5 py-0.2 rounded-full font-code-mono text-[11px]">$16,580</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium shrink-0 transition-colors flex items-center gap-1.5 shadow-sm">
+<span>Insumos y Embalaje</span>
+<span class="font-code-mono text-[11px] text-secondary">$7,250</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium shrink-0 transition-colors flex items-center gap-1.5 shadow-sm">
+<span>Servicios Básicos (UNE/ETECSA)</span>
+<span class="font-code-mono text-[11px] text-secondary">$3,400</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium shrink-0 transition-colors flex items-center gap-1.5 shadow-sm">
+<span>Mantenimiento y Reparación</span>
+<span class="font-code-mono text-[11px] text-secondary">$2,850</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium shrink-0 transition-colors flex items-center gap-1.5 shadow-sm">
+<span>Transporte y Flete Menor</span>
+<span class="font-code-mono text-[11px] text-secondary">$1,680</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium shrink-0 transition-colors flex items-center gap-1.5 shadow-sm">
+<span>Estipendios y Dietas</span>
+<span class="font-code-mono text-[11px] text-secondary">$1,400</span>
+</button>
+</div>
+<!-- MAIN DATA TABLE CONTAINER -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- FILTER & CONTROLS TOOLBAR -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm">
+<div class="relative flex-1 max-w-lg">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline">search</span>
+<input class="w-full pl-9 pr-space-md py-2 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-xs" placeholder="Buscar por N° Vale, concepto, beneficiario o N° CI... (Atajo '/')" type="text"/>
+</div>
+<div class="flex items-center gap-space-xs self-end sm:self-auto">
+<select class="px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md focus:outline-none shadow-xs">
+<option>Estado: Todos los vales</option>
+<option>Comprobante físico entregado</option>
+<option>Pendiente rendición de factura</option>
+</select>
+<button class="p-2 rounded-lg bg-surface-container-lowest text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Filtrar por rango temporal">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-lowest text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Actualizar datos locales">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- TABLE OF IMMUTABLE VOUCHERS -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/60 text-secondary font-label-sm text-[11px] uppercase tracking-wider">
+<th class="py-3 px-space-md font-semibold">Folio / Fecha</th>
+<th class="py-3 px-space-md font-semibold">Concepto y Justificación</th>
+<th class="py-3 px-space-md font-semibold">Rubro</th>
+<th class="py-3 px-space-md font-semibold">Beneficiario / CI</th>
+<th class="py-3 px-space-md font-semibold">Soporte Físico</th>
+<th class="py-3 px-space-md font-semibold text-right">Importe</th>
+<th class="py-3 px-space-md font-semibold text-center">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code-mono text-code-mono font-bold text-primary">VAL-CC-2023-042</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Hoy · 11:30 hs</span>
+</div>
+</td>
+<td class="py-3 px-space-md min-w-[240px]">
+<p class="font-body-md text-body-md text-on-surface leading-tight font-medium">Compra de 10 paquetes de bolsas de nylon tipo camiseta</p>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate block">500 unid. despacho continuo mostrador central</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-100 text-blue-800">Insumos</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-body-bold text-[13px] text-on-surface">Raúl Méndez</span>
+<span class="font-code-mono text-[11px] text-on-surface-variant">CI: 88102319401</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-100 text-emerald-800">
+<span class="material-symbols-outlined text-[13px]">attach_file</span> Factura #884
+                  </span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-code-mono text-body-bold font-bold text-on-surface">$3,800.00</span>
+<span class="block text-[10px] font-code-mono text-on-surface-variant">CUP</span>
+</td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1 opacity-80 group-hover:opacity-100">
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors" title="Imprimir Comprobante Térmico">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors" title="Ver Detalle y Auditoría">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code-mono text-code-mono font-bold text-primary">VAL-CC-2023-041</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Hoy · 09:15 hs</span>
+</div>
+</td>
+<td class="py-3 px-space-md min-w-[240px]">
+<p class="font-body-md text-body-md text-on-surface leading-tight font-medium">Pago de factura eléctrica UNE (Turno Neveras lácteos)</p>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate block">Comprobante Oficial UNE #948210-C</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-100 text-purple-800">Servicios</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-body-bold text-[13px] text-on-surface">Laura González</span>
+<span class="font-code-mono text-[11px] text-on-surface-variant">CI: 92051408321</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-100 text-emerald-800">
+<span class="material-symbols-outlined text-[13px]">receipt</span> Recibo Oficial
+                  </span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-code-mono text-body-bold font-bold text-on-surface">$3,400.00</span>
+<span class="block text-[10px] font-code-mono text-on-surface-variant">CUP</span>
+</td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1 opacity-80 group-hover:opacity-100">
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors" title="Imprimir Comprobante Térmico">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors" title="Ver Detalle">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code-mono text-code-mono font-bold text-primary">VAL-CC-2023-040</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Ayer · 16:45 hs</span>
+</div>
+</td>
+<td class="py-3 px-space-md min-w-[240px]">
+<p class="font-body-md text-body-md text-on-surface leading-tight font-medium">Adquisición de 10 rollos térmicos de 80mm</p>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate block">Suministro para impresora tickets POS Caja 1 y Caja 2</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-100 text-blue-800">Insumos</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-body-bold text-[13px] text-on-surface">Laura González</span>
+<span class="font-code-mono text-[11px] text-on-surface-variant">CI: 92051408321</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-100 text-emerald-800">
+<span class="material-symbols-outlined text-[13px]">check</span> Factura #1029
+                  </span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-code-mono text-body-bold font-bold text-on-surface">$3,450.00</span>
+<span class="block text-[10px] font-code-mono text-on-surface-variant">CUP</span>
+</td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1 opacity-80 group-hover:opacity-100">
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors" title="Imprimir Comprobante">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors" title="Ver Detalle">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code-mono text-code-mono font-bold text-primary">VAL-CC-2023-039</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Ayer · 12:20 hs</span>
+</div>
+</td>
+<td class="py-3 px-space-md min-w-[240px]">
+<p class="font-body-md text-body-md text-on-surface leading-tight font-medium">Flete bicitaxi: traslado 4 cajas de aceite vegetal</p>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate block">Traslado urgente desde almacén anexo Calle Real</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-900">Transporte</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-body-bold text-[13px] text-on-surface">Mario Rivero</span>
+<span class="font-code-mono text-[11px] text-on-surface-variant">CI: 74011218902</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-medium bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">draw</span> Firma Conforme
+                  </span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-code-mono text-body-bold font-bold text-on-surface">$800.00</span>
+<span class="block text-[10px] font-code-mono text-on-surface-variant">CUP</span>
+</td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1 opacity-80 group-hover:opacity-100">
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors" title="Imprimir Comprobante">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors" title="Ver Detalle">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code-mono text-code-mono font-bold text-primary">VAL-CC-2023-038</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">12 Oct · 17:10 hs</span>
+</div>
+</td>
+<td class="py-3 px-space-md min-w-[240px]">
+<p class="font-body-md text-body-md text-on-surface leading-tight font-medium">Compra de 4 bombillos LED 50W y cinta aislante</p>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate block">Reemplazo luminarias fundidas pasillo comercial</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-900">Mantenim.</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-body-bold text-[13px] text-on-surface">Ernesto Cabrera</span>
+<span class="font-code-mono text-[11px] text-on-surface-variant">CI: 81090409812</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-100 text-emerald-800">
+<span class="material-symbols-outlined text-[13px]">attach_file</span> Vale Tienda
+                  </span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-code-mono text-body-bold font-bold text-on-surface">$1,850.00</span>
+<span class="block text-[10px] font-code-mono text-on-surface-variant">CUP</span>
+</td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1 opacity-80 group-hover:opacity-100">
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors" title="Imprimir Comprobante">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors" title="Ver Detalle">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code-mono text-code-mono font-bold text-primary">VAL-CC-2023-037</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">11 Oct · 10:00 hs</span>
+</div>
+</td>
+<td class="py-3 px-space-md min-w-[240px]">
+<p class="font-body-md text-body-md text-on-surface leading-tight font-medium">Estipendio almuerzo jornada corrida fin de semana</p>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate block">2 cajeros turno extendido (Planilla autorizada)</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-rose-100 text-rose-800">Alimentación</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-body-bold text-[13px] text-on-surface">Laura González</span>
+<span class="font-code-mono text-[11px] text-on-surface-variant">CI: 92051408321</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-medium bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">draw</span> Firma Conforme
+                  </span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-code-mono text-body-bold font-bold text-on-surface">$1,400.00</span>
+<span class="block text-[10px] font-code-mono text-on-surface-variant">CUP</span>
+</td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1 opacity-80 group-hover:opacity-100">
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors" title="Imprimir Comprobante">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors" title="Ver Detalle">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- TABLE FOOTER & AUDIT METADATA -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span>Mostrando <strong class="text-on-surface font-semibold">6</strong> de <strong class="text-on-surface font-semibold">18</strong> vales del ciclo activo</span>
+<span class="text-outline-variant">|</span>
+<span class="font-code-mono text-on-surface">Subtotal visualizado: $14,700.00 CUP</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-mono text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">verified</span>
+<span>SQLite: libro_egresos_cc.db · SHA-256 Validado</span>
+</div>
+</div>
+</div>
+<!-- IN-LINE EXPENSE DISTRIBUTION PROGRESS BAR COMPONENT -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">donut_large</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Composición de Gastos por Rubro (Ciclo 08 - 14 Oct)</h3>
+</div>
+<span class="font-code-mono text-label-sm text-on-surface-variant">Total: $16,580.00 CUP</span>
+</div>
+<!-- Multi-segment Progress Bar -->
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-blue-600 h-full" style="width: 43.7%" title="Insumos: 43.7%"></div>
+<div class="bg-purple-600 h-full" style="width: 20.5%" title="Servicios Básicos: 20.5%"></div>
+<div class="bg-emerald-600 h-full" style="width: 17.2%" title="Mantenimiento: 17.2%"></div>
+<div class="bg-amber-500 h-full" style="width: 10.1%" title="Transporte: 10.1%"></div>
+<div class="bg-rose-500 h-full" style="width: 8.5%" title="Alimentación: 8.5%"></div>
+</div>
+<!-- Legend Items -->
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-sm pt-space-xs text-label-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
+<span class="truncate text-on-surface-variant font-medium">Insumos (43.7%)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-purple-600 shrink-0"></span>
+<span class="truncate text-on-surface-variant font-medium">Servicios (20.5%)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-600 shrink-0"></span>
+<span class="truncate text-on-surface-variant font-medium">Mantenim. (17.2%)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></span>
+<span class="truncate text-on-surface-variant font-medium">Transporte (10.1%)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-rose-500 shrink-0"></span>
+<span class="truncate text-on-surface-variant font-medium">Alimentos (8.5%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT 5 COLUMNS (DESEMBOLSO FORM + RECONCILIATION PANEL + POLICY) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- PANEL 1: RAPID CASH DISBURSEMENT FORM -->
+<div class="rounded-xl bg-surface-container-lowest shadow-md overflow-hidden flex flex-col">
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">post_add</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Emitir Nuevo Vale de Caja</h2>
+</div>
+<div class="px-2 py-0.5 rounded bg-primary text-on-primary font-code-mono text-[11px] font-bold">
+            VAL-CC-2023-043
+          </div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Monto Input with Quick Cash Buttons -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface flex justify-between">
+<span>Monto a Desembolsar (Efectivo)</span>
+<span class="text-on-surface-variant font-code-mono text-[11px]">Máx: $5,000 CUP</span>
+</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 font-code-mono font-bold text-primary text-[15px]">$</span>
+<input class="w-full pl-8 pr-14 py-2.5 bg-surface-container-low rounded-lg font-code-mono text-headline-sm font-bold text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" id="input-monto" placeholder="0.00" type="number" value="1200"/>
+<span class="absolute right-3 top-3 font-code-mono text-label-sm text-on-surface-variant font-bold">CUP</span>
+</div>
+<!-- Quick Cash Denominations Shortcuts -->
+<div class="grid grid-cols-4 gap-1.5 mt-1">
+<button class="py-1 px-2 rounded bg-surface-container-low hover:bg-surface-container-high font-code-mono text-[11px] font-semibold text-on-surface transition-colors text-center" onclick="document.getElementById('input-monto').value='500'" type="button">+$500</button>
+<button class="py-1 px-2 rounded bg-surface-container-low hover:bg-surface-container-high font-code-mono text-[11px] font-semibold text-on-surface transition-colors text-center" onclick="document.getElementById('input-monto').value='1000'" type="button">+$1,000</button>
+<button class="py-1 px-2 rounded bg-surface-container-low hover:bg-surface-container-high font-code-mono text-[11px] font-semibold text-on-surface transition-colors text-center" onclick="document.getElementById('input-monto').value='2000'" type="button">+$2,000</button>
+<button class="py-1 px-2 rounded bg-surface-container-low hover:bg-surface-container-high font-code-mono text-[11px] font-semibold text-on-surface transition-colors text-center" onclick="document.getElementById('input-monto').value='5000'" type="button">+$5,000</button>
+</div>
+</div>
+<!-- Rubro / Categoría -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Rubro / Destino del Gasto</label>
+<select class="w-full px-space-md py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary">
+<option selected="">Insumos de Tienda (Bolsas, rollos, papelería)</option>
+<option>Servicios Básicos (UNE, ETECSA, Aguas de La Habana)</option>
+<option>Mantenimiento Menor y Reparaciones</option>
+<option>Transporte / Mensajería / Flete</option>
+<option>Alimentación y Dietas del Personal</option>
+<option>Gastos de Gestión y Trámites MIPYME</option>
+</select>
+</div>
+<!-- Justificación / Concepto -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Concepto y Motivo Operativo</label>
+<textarea class="w-full px-space-md py-2 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary resize-none" placeholder="Describa el producto adquirido, proveedor o servicio prestado..." rows="2">Adquisición de cinta scotch para empaquetado de pedidos mayoristas</textarea>
+</div>
+<!-- Persona Receptora & CI -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-[11px] font-semibold text-on-surface">Nombre Beneficiario</label>
+<input class="w-full px-space-sm py-2 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="Raúl Méndez"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-[11px] font-semibold text-on-surface">Carnet de Identidad</label>
+<input class="w-full px-space-sm py-2 bg-surface-container-low rounded-lg font-code-mono text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="88102319401"/>
+</div>
+</div>
+<!-- Tipo de Comprobante / Soporte -->
+<div class="flex flex-col gap-1.5 p-space-sm bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-[11px] font-semibold text-secondary uppercase tracking-wider">Compromiso de Rendición</span>
+<div class="flex items-center gap-2">
+<input checked="" class="rounded text-primary focus:ring-primary w-4 h-4" id="check-factura" type="checkbox"/>
+<label class="font-body-md text-[13px] text-on-surface" for="check-factura">Entregará factura / ticket fiscal dentro de 24 hrs</label>
+</div>
+</div>
+<!-- Dynamic Saldo Remaining Alert -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between font-label-sm">
+<span class="text-on-surface-variant">Saldo proyectado en gaveta:</span>
+<span class="font-code-mono font-bold text-on-surface text-[14px]">$7,220.00 CUP</span>
+</div>
+<!-- Submit Button -->
+<button class="w-full py-3 rounded-lg bg-primary hover:bg-blue-800 text-on-primary font-body-bold text-body-bold transition-all flex items-center justify-center gap-space-xs shadow-md active:scale-98" type="button">
+<span class="material-symbols-outlined text-[20px]">lock_open</span>
+<span>Registrar Vale y Abrir Gaveta (Enter)</span>
+</button>
+</div>
+</div>
+<!-- PANEL 2: REPLENISHMENT & RECONCILIATION SUMMARY -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">published_with_changes</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Rendición y Reposición</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-label-sm text-[11px] font-bold">En Ciclo</span>
+</div>
+<p class="font-body-md text-[13px] text-on-surface-variant leading-relaxed">
+          Para restablecer el fondo fijo a su dotación de <strong>$25,000.00 CUP</strong>, se elabora la planilla de rendición y se extrae el importe equivalente desde la liquidación diaria de ventas.
+        </p>
+<!-- Arqueo Físico Desglose -->
+<div class="flex flex-col divide-y divide-surface-container-high bg-surface-container-low rounded-lg p-space-sm">
+<div class="py-1.5 flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Vales y facturas en gaveta (18 uds):</span>
+<span class="font-code-mono font-bold text-error">$16,580.00</span>
+</div>
+<div class="py-1.5 flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Efectivo físico en billetes:</span>
+<span class="font-code-mono font-bold text-on-surface">$8,420.00</span>
+</div>
+<div class="py-2 flex items-center justify-between font-body-bold text-body-bold text-primary">
+<span>Total verificado (Cuadre 100%):</span>
+<span class="font-code-mono font-bold text-[15px]">$25,000.00 CUP</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Generar Planilla de Reintegro Semanal</span>
+</button>
+</div>
+<!-- PANEL 3: POLÍTICA INTERNA MIPYME & AUDIT INFO -->
+<div class="rounded-xl bg-surface-container-low p-space-lg flex flex-col gap-space-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">policy</span>
+<span>Reglas de Control Interno (MIPYME)</span>
+</div>
+<ul class="list-disc pl-4 flex flex-col gap-1 text-[12px] text-on-surface-variant leading-normal">
+<li><strong>Tope por vale individual:</strong> Máximo $5,000.00 CUP. Desembolsos mayores exigen transferencia EnZona/Transfermóvil o aval del Administrador.</li>
+<li><strong>Plazo límite de rendición:</strong> 24 horas hábiles tras la entrega del efectivo.</li>
+<li><strong>Restricción:</strong> Queda estrictamente prohibido usar caja chica para préstamos personales o pagos de nómina ordinaria.</li>
+</ul>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

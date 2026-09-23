@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-container":"#1d4ed8","surface-dim":"#cbdbf5","background":"#f8f9ff","primary":"#0037b0","surface":"#f8f9ff","on-tertiary-container":"#c9d4ff","on-secondary-container":"#5c647a","on-primary-container":"#cad3ff","outline-variant":"#c4c5d7","surface-container-highest":"#d3e4fe","on-error-container":"#93000a","on-tertiary-fixed":"#00174b","on-tertiary":"#ffffff","surface-bright":"#f8f9ff","surface-container-low":"#eff4ff","on-secondary-fixed":"#131b2e","primary-fixed":"#dce1ff","inverse-surface":"#213145","on-surface-variant":"#434655","error-container":"#ffdad6","surface-container":"#e5eeff","surface-variant":"#d3e4fe","on-primary-fixed-variant":"#0039b5","inverse-on-surface":"#eaf1ff","on-primary-fixed":"#001551","surface-container-lowest":"#ffffff","secondary-fixed":"#dae2fd","surface-tint":"#2151da","tertiary-container":"#0051d6","on-surface":"#0b1c30","surface-container-high":"#dce9ff","tertiary-fixed":"#dbe1ff","secondary-container":"#dae2fd","on-background":"#0b1c30","primary-fixed-dim":"#b7c4ff","secondary":"#565e74","on-secondary":"#ffffff","on-primary":"#ffffff","on-tertiary-fixed-variant":"#003ea8","secondary-fixed-dim":"#bec6e0","tertiary":"#003ca3","outline":"#747686","tertiary-fixed-dim":"#b4c5ff","on-error":"#ffffff","on-secondary-fixed-variant":"#3f465c","error":"#ba1a1a","inverse-primary":"#b7c4ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"0.75rem","gutter-dense":"0.5rem","space-lg":"1rem","space-sm":"0.5rem","space-2xl":"2rem","space-xs":"0.25rem","space-xl":"1.5rem","margin":"1.5rem","gutter":"1rem","margin-compact":"1rem"},"fontFamily":{"headline-lg":["Inter"],"display-lg":["Inter"],"code-mono":["JetBrains Mono"],"label-md":["Inter"],"body-md":["Inter"],"label-sm":["Inter"],"headline-sm":["Inter"],"display-md":["Inter"],"body-bold":["Inter"],"body-lg":["Inter"]},"fontSize":{"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-mono":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-bold":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="p-space-lg flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #1d4ed8
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WZaVAPBbmPEq579_00uv2bs2YrnYxBWG8B8maHdvv-Mo8DTfO6k02iTscoX_KGKPJc4FudNe6cjzYFuBuCFR4lF13GrBXfGMnuJkNilDtec2DNH-XAONQEiFKAZVn0rW22x2Wb6J-RjcznHbw9Yba44zp-u5-84_BLWSUbBau4FCUNdH_jLHrxIfaN1RHSSBPAcAXSpttyd-Yit3_6dUI1uzInFpNdMrGhPjKWEgVcRsnvTI9VjE5_pxUT"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate">Gestor Tienda</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Tienda Central</span></div></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high rounded"><span class="material-symbols-outlined text-primary text-[16px]">wifi_off</span><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Modo Offline Activo</span></div></div><nav class="flex-1 px-space-md py-space-xs flex flex-col gap-space-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-md text-label-md flex-1">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventario" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-md text-label-md flex-1">Inventario</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ventas-tpv" href="#"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-label-md text-label-md flex-1">Ventas (TPV)</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="proveedores" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-md text-label-md flex-1">Proveedores</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span class="font-label-md text-label-md flex-1">Reportes</span><span class="font-label-sm text-label-sm px-space-xs py-[2px] bg-secondary-container text-on-secondary-container rounded font-bold">Admin</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="usuarios-y-roles" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="font-label-md text-label-md flex-1">Usuarios y Roles</span></a></nav><div class="p-space-md bg-surface-container-low"><div class="flex items-center justify-between gap-space-xs text-on-surface-variant"><div class="flex items-center gap-space-xs min-w-0"><span class="h-2 w-2 rounded-full bg-primary shrink-0"></span><span class="font-code-mono text-code-mono truncate">0 pend. SQLite Local</span></div><span class="font-label-sm text-label-sm shrink-0">v1.0.0</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 px-space-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md min-w-0"><img alt="Brand logo. - Primary color: #1d4ed8
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WZaVAPBbmPEq579_00uv2bs2YrnYxBWG8B8maHdvv-Mo8DTfO6k02iTscoX_KGKPJc4FudNe6cjzYFuBuCFR4lF13GrBXfGMnuJkNilDtec2DNH-XAONQEiFKAZVn0rW22x2Wb6J-RjcznHbw9Yba44zp-u5-84_BLWSUbBau4FCUNdH_jLHrxIfaN1RHSSBPAcAXSpttyd-Yit3_6dUI1uzInFpNdMrGhPjKWEgVcRsnvTI9VjE5_pxUT"/><nav class="hidden xl:flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant truncate"><span class="text-on-surface-variant">Panel de Operaciones</span><span>/</span><span class="text-on-surface-variant">Módulo 03</span><span>/</span><span class="font-body-bold text-body-bold text-on-surface truncate">Ventas y Punto de Venta (TPV)</span></nav></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded"><span class="material-symbols-outlined text-primary text-[16px]">database</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">SQLite Activa</span></div><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded"><span class="font-label-sm text-label-sm text-on-surface-variant">Moneda:</span><span class="font-code-mono text-code-mono text-on-surface font-bold">CUP / MLC / USD</span></div><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">shield_person</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Rol: Admin</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden lg:flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Alejandro Morales</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Administrador</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-screen px-space-margin pb-space-2xl"><div class="flex flex-col w-full">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navLinks = document.querySelectorAll('aside nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'dashboard') {
+          link.className = 'flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-bold shadow-sm transition-colors';
+        } else {
+          link.className = 'flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors';
+        }
+      });
+      const breadcrumbs = document.querySelector('header nav');
+      if (breadcrumbs) {
+        breadcrumbs.innerHTML = `
+          <span class="text-on-surface-variant">Panel de Operaciones</span>
+          <span>/</span>
+          <span class="text-on-surface-variant">Módulo 04</span>
+          <span>/</span>
+          <span class="font-body-bold text-body-bold text-on-surface truncate">Dashboard de KPIs y Rendimiento</span>
+        `;
+      }
+    });
+  </script>
+<div class="flex flex-col gap-space-xl pt-space-md">
+<!-- Action Bar & Operational Context Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center p-space-xs shrink-0">
+<img alt="Logo Gestor Tienda" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WZaVAPBbmPEq579_00uv2bs2YrnYxBWG8B8maHdvv-Mo8DTfO6k02iTscoX_KGKPJc4FudNe6cjzYFuBuCFR4lF13GrBXfGMnuJkNilDtec2DNH-XAONQEiFKAZVn0rW22x2Wb6J-RjcznHbw9Yba44zp-u5-84_BLWSUbBau4FCUNdH_jLHrxIfaN1RHSSBPAcAXSpttyd-Yit3_6dUI1uzInFpNdMrGhPjKWEgVcRsnvTI9VjE5_pxUT"/>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Rendimiento Operativo y Financiero</h1>
+<span class="inline-flex items-center gap-1 px-space-xs py-[2px] bg-surface-container-high text-on-surface text-label-sm font-label-sm rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              SQLite Activa
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Módulo 04 • Análisis de ventas en CUP, márgenes comerciales y recaudación local en La Habana
+          </p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Time Filter Segmented -->
+<div class="inline-flex p-1 bg-surface-container rounded-lg">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm font-semibold transition-all" type="button">Esta Semana</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" type="button">Este Mes</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" type="button">Mes Anterior</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+<span>Personalizado</span>
+</button>
+</div>
+<!-- Secondary and Primary Action Buttons -->
+<button class="h-10 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold inline-flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Actualizar</span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-semibold inline-flex items-center gap-space-xs shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Exportar Resumen</span>
+</button>
+</div>
+</div>
+<!-- Top Key Metrics Cards (KPIs) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1: Ventas / Ingresos Totales -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Ventas / Ingresos Totales</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">
+            $418,920<span class="text-headline-sm font-headline-sm font-normal text-on-surface-variant">.00 CUP</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="inline-flex items-center gap-0.5 px-space-xs py-[2px] rounded bg-[#ecfdf5] text-[#065f46] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+              +14.6%
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">vs semana anterior</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs text-label-sm font-label-sm text-on-surface-variant flex items-center justify-between">
+<span>Meta semanal: $400k</span>
+<span class="text-[#065f46] font-semibold">104.7% cumplida</span>
+</div>
+</div>
+<!-- KPI 2: Ganancia Neta -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Ganancia Neta Calculada</span>
+<div class="w-9 h-9 rounded-lg bg-[#ecfdf5] text-[#065f46] flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-display-lg text-display-lg text-[#065f46] font-bold tracking-tight">
+            $128,450<span class="text-headline-sm font-headline-sm font-normal text-on-surface-variant">.00 CUP</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="inline-flex items-center gap-0.5 px-space-xs py-[2px] rounded bg-[#ecfdf5] text-[#065f46] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+              +18.2%
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">margen real 30.7%</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs text-label-sm font-label-sm text-on-surface-variant flex items-center justify-between">
+<span>Costo deducido: $290,470</span>
+<span class="font-code-mono font-bold text-on-surface">Neto</span>
+</div>
+</div>
+<!-- KPI 3: Tickets / Operaciones -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Operaciones TPV / Tickets</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">
+            182 <span class="text-headline-sm font-headline-sm font-normal text-on-surface-variant">tickets</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="inline-flex items-center gap-0.5 px-space-xs py-[2px] rounded bg-[#ecfdf5] text-[#065f46] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+              +8.3%
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">vs semana anterior</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs text-label-sm font-label-sm text-on-surface-variant flex items-center justify-between">
+<span>Ticket promedio:</span>
+<span class="font-code-mono font-bold text-on-surface">$2,301.75 CUP</span>
+</div>
+</div>
+<!-- KPI 4: Margen Bruto Promedio -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Margen Bruto Promedio</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">pie_chart</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">
+            36.4<span class="text-headline-sm font-headline-sm font-normal text-on-surface-variant">%</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="inline-flex items-center gap-0.5 px-space-xs py-[2px] rounded bg-[#ecfdf5] text-[#065f46] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+              +1.8 pts
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">eficiencia de compra</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs text-label-sm font-label-sm text-on-surface-variant flex items-center justify-between">
+<span>Tasa mayorista: estable</span>
+<span class="text-primary font-semibold">Óptimo</span>
+</div>
+</div>
+</div>
+<!-- Period Breakdown Cards: Structured Comparative -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Comparative: Semanal -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">date_range</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Comparativo Semanal de Ingresos</h2>
+</div>
+<span class="px-space-xs py-1 rounded bg-surface-container font-code-mono text-label-sm text-on-surface-variant font-bold">Sem 18 vs Sem 17</span>
+</div>
+<div class="grid grid-cols-2 gap-space-md mt-space-md p-space-md bg-surface-container-low rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Semana Actual</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1">$418,920 CUP</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Lunes a Domingo en curso</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Semana Anterior</span>
+<span class="font-headline-lg text-headline-lg font-bold text-secondary mt-1">$365,400 CUP</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Cierre auditado SQLite</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#065f46] text-[18px]">add_circle</span>
+<span class="font-body-bold text-body-bold text-[#065f46]">+$53,520.00 CUP de incremento</span>
+</div>
+<div class="w-1/3 bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 87%;"></div>
+</div>
+</div>
+</div>
+<!-- Comparative: Mensual -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#065f46] text-[20px]">account_balance_wallet</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Ganancia Mensual Acumulada</h2>
+</div>
+<span class="px-space-xs py-1 rounded bg-surface-container font-code-mono text-label-sm text-on-surface-variant font-bold">Mayo vs Abril</span>
+</div>
+<div class="grid grid-cols-2 gap-space-md mt-space-md p-space-md bg-surface-container-low rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Este Mes (Proyectado)</span>
+<span class="font-headline-lg text-headline-lg font-bold text-[#065f46] mt-1">$512,300 CUP</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Margen operativo 32.1%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Mes Anterior</span>
+<span class="font-headline-lg text-headline-lg font-bold text-secondary mt-1">$442,100 CUP</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Liquidación formal</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#065f46] text-[18px]">trending_up</span>
+<span class="font-body-bold text-body-bold text-[#065f46]">+$70,200.00 CUP vs mes previo</span>
+</div>
+<div class="w-1/3 bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-[#065f46] h-full rounded-full" style="width: 79%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Charts Row (Under KPIs as strictly requested) -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-space-md">
+<!-- Area / Line Chart: Daily Revenue vs Costs & Daily Net Profit -->
+<div class="xl:col-span-2 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tendencia Diaria: Ingresos vs. Costos y Ganancia</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Lunes a Domingo (Valores en miles de CUP)</p>
+</div>
+<!-- Legend -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Ingresos</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-[#94a3b8]"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Costos</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-[#10b981]"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Ganancia Neta</span>
+</div>
+</div>
+</div>
+<!-- High-Fidelity Responsive Inline SVG Area/Line Chart -->
+<div class="w-full h-64 relative">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 650 220">
+<defs>
+<lineargradient id="ingresosGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="gananciaGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#10b981" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#10b981" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Grid lines -->
+<line stroke="#eff4ff" stroke-width="1" x1="40" x2="630" y1="20" y2="20"></line>
+<text fill="#94a3b8" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="32" y="24">80k</text>
+<line stroke="#eff4ff" stroke-width="1" x1="40" x2="630" y1="65" y2="65"></line>
+<text fill="#94a3b8" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="32" y="69">60k</text>
+<line stroke="#eff4ff" stroke-width="1" x1="40" x2="630" y1="110" y2="110"></line>
+<text fill="#94a3b8" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="32" y="114">40k</text>
+<line stroke="#eff4ff" stroke-width="1" x1="40" x2="630" y1="155" y2="155"></line>
+<text fill="#94a3b8" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="32" y="159">20k</text>
+<line stroke="#cbd5e1" stroke-width="1" x1="40" x2="630" y1="190" y2="190"></line>
+<text fill="#94a3b8" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="32" y="193">0k</text>
+<!-- Area under Ingresos -->
+<polygon fill="url(#ingresosGrad)" points="
+              60,125  150,110  240,95  330,80  420,60  510,40  600,30
+              600,190 510,190  420,190 330,190 240,190 150,190 60,190
+            "></polygon>
+<!-- Area under Ganancia -->
+<polygon fill="url(#gananciaGrad)" points="
+              60,165  150,160  240,150 330,145 420,135 510,120 600,110
+              600,190 510,190  420,190 330,190 240,190 150,190 60,190
+            "></polygon>
+<!-- Line: Costos (dashed slate) -->
+<polyline fill="none" points="
+              60,150  150,140  240,135 330,125 420,115 510,110 600,105
+            " stroke="#94a3b8" stroke-dasharray="4 3" stroke-width="2"></polyline>
+<!-- Line: Ingresos (Primary Blue) -->
+<polyline fill="none" points="
+              60,125  150,110  240,95  330,80  420,60  510,40  600,30
+            " stroke="#1d4ed8" stroke-width="3"></polyline>
+<!-- Line: Ganancia (Emerald Green) -->
+<polyline fill="none" points="
+              60,165  150,160  240,150 330,145 420,135 510,120 600,110
+            " stroke="#10b981" stroke-width="2.5"></polyline>
+<!-- Dots for Ingresos -->
+<circle cx="60" cy="125" fill="#1d4ed8" r="3.5"></circle>
+<circle cx="150" cy="110" fill="#1d4ed8" r="3.5"></circle>
+<circle cx="240" cy="95" fill="#1d4ed8" r="3.5"></circle>
+<circle cx="330" cy="80" fill="#1d4ed8" r="3.5"></circle>
+<circle cx="420" cy="60" fill="#1d4ed8" r="3.5"></circle>
+<circle cx="510" cy="40" fill="#1d4ed8" r="3.5"></circle>
+<circle cx="600" cy="30" fill="#1d4ed8" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<!-- High Point Value Tag on Sábado / Domingo -->
+<rect fill="#0b1c30" height="18" rx="4" width="75" x="560" y="8"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="10" font-weight="bold" text-anchor="middle" x="597" y="21">$78.4k CUP</text>
+<!-- X Axis Labels -->
+<text fill="#64748b" font-family="Inter" font-size="11" font-weight="500" text-anchor="middle" x="60" y="208">Lun</text>
+<text fill="#64748b" font-family="Inter" font-size="11" font-weight="500" text-anchor="middle" x="150" y="208">Mar</text>
+<text fill="#64748b" font-family="Inter" font-size="11" font-weight="500" text-anchor="middle" x="240" y="208">Mié</text>
+<text fill="#64748b" font-family="Inter" font-size="11" font-weight="500" text-anchor="middle" x="330" y="208">Jue</text>
+<text fill="#64748b" font-family="Inter" font-size="11" font-weight="500" text-anchor="middle" x="420" y="208">Vie</text>
+<text fill="#64748b" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle" x="510" y="208">Sáb</text>
+<text fill="#1d4ed8" font-family="Inter" font-size="11" font-weight="700" text-anchor="middle" x="600" y="208">Dom</text>
+</svg>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-space-xs mt-space-sm">
+<span>Pico de venta registrado: Domingo 18:30 - 20:00 hrs</span>
+<span class="font-code-mono text-on-surface">Base de datos local sincronizada</span>
+</div>
+</div>
+<!-- Bar Chart: Payment Methods Distribution & Weekly Volume -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Canales de Pago &amp; Recaudación</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Desglose semanal en pasarelas locales</p>
+</div>
+<!-- Payment methods breakdown bars -->
+<div class="space-y-space-md my-space-md">
+<!-- Efectivo CUP -->
+<div>
+<div class="flex justify-between items-center text-label-md font-label-md mb-1">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                Efectivo CUP (Caja Física)
+              </span>
+<span class="font-code-mono text-on-surface font-bold">$218,500 <span class="text-on-surface-variant font-normal">(52.2%)</span></span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 52.2%;"></div>
+</div>
+</div>
+<!-- Transfermóvil -->
+<div>
+<div class="flex justify-between items-center text-label-md font-label-md mb-1">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#10b981]"></span>
+                Transfermóvil (QR / Pago en Línea)
+              </span>
+<span class="font-code-mono text-on-surface font-bold">$146,800 <span class="text-on-surface-variant font-normal">(35.0%)</span></span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-[#10b981] h-full rounded-full" style="width: 35.0%;"></div>
+</div>
+</div>
+<!-- EnZona -->
+<div>
+<div class="flex justify-between items-center text-label-md font-label-md mb-1">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#f59e0b]"></span>
+                EnZona (Bulevar QR)
+              </span>
+<span class="font-code-mono text-on-surface font-bold">$53,620 <span class="text-on-surface-variant font-normal">(12.8%)</span></span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-[#f59e0b] h-full rounded-full" style="width: 12.8%;"></div>
+</div>
+</div>
+</div>
+<!-- Weekly mini bar comparison chart (SVG) -->
+<div class="p-space-md bg-surface-container-low rounded-lg">
+<div class="text-label-sm font-label-sm text-on-surface-variant mb-space-xs font-semibold">
+            Volumen diario acumulado (Efectivo vs Digital)
+          </div>
+<svg class="w-full h-16" viewbox="0 0 300 80">
+<!-- Lun -->
+<rect fill="#1d4ed8" height="30" rx="1" width="12" x="15" y="45"></rect>
+<rect fill="#10b981" height="20" rx="1" width="12" x="29" y="55"></rect>
+<!-- Mar -->
+<rect fill="#1d4ed8" height="35" rx="1" width="12" x="55" y="40"></rect>
+<rect fill="#10b981" height="25" rx="1" width="12" x="69" y="50"></rect>
+<!-- Mie -->
+<rect fill="#1d4ed8" height="40" rx="1" width="12" x="95" y="35"></rect>
+<rect fill="#10b981" height="27" rx="1" width="12" x="109" y="48"></rect>
+<!-- Jue -->
+<rect fill="#1d4ed8" height="45" rx="1" width="12" x="135" y="30"></rect>
+<rect fill="#10b981" height="33" rx="1" width="12" x="149" y="42"></rect>
+<!-- Vie -->
+<rect fill="#1d4ed8" height="55" rx="1" width="12" x="175" y="20"></rect>
+<rect fill="#10b981" height="43" rx="1" width="12" x="189" y="32"></rect>
+<!-- Sab -->
+<rect fill="#1d4ed8" height="65" rx="1" width="12" x="215" y="10"></rect>
+<rect fill="#10b981" height="53" rx="1" width="12" x="229" y="22"></rect>
+<!-- Dom -->
+<rect fill="#1d4ed8" height="70" rx="1" width="12" x="255" y="5"></rect>
+<rect fill="#10b981" height="60" rx="1" width="12" x="269" y="15"></rect>
+</svg>
+<div class="flex justify-between text-[10px] text-on-surface-variant font-code-mono mt-1 px-1">
+<span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Pasarelas electrónicas:</span>
+<span class="font-bold text-[#065f46]">47.8% del total</span>
+</div>
+</div>
+</div>
+<!-- Best Sellers Section: Dual Ranking (Volume & Profit) -->
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-space-md">
+<!-- Ranking por Cantidad Vendida -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">format_list_numbered</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Productos Más Vendidos (Por Unidades)</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Mayor rotación en góndola esta semana</p>
+</div>
+</div>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-1 rounded text-on-surface font-semibold">Top 5 Unidades</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-code-mono text-label-md font-bold text-primary w-5 text-center">#1</span>
+<div class="min-w-0">
+<div class="font-body-bold text-body-bold text-on-surface truncate">Cerveza Cristal 355ml (Lata)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="font-code-mono">SKU-BEV-0021</span>
+<span>•</span>
+<span>Bebidas</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-lg text-right shrink-0">
+<div>
+<span class="font-code-mono font-bold text-on-surface">342 uds</span>
+<div class="w-24 bg-surface-container h-1.5 rounded-full mt-1">
+<div class="bg-primary h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex px-2 py-0.5 rounded bg-[#ecfdf5] text-[#065f46] font-code-mono text-label-sm font-bold">58 en stock</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-code-mono text-label-md font-bold text-primary w-5 text-center">#2</span>
+<div class="min-w-0">
+<div class="font-body-bold text-body-bold text-on-surface truncate">Aceite Vegetal Cocinero 1L</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="font-code-mono">SKU-ALM-1049</span>
+<span>•</span>
+<span>Víveres</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-lg text-right shrink-0">
+<div>
+<span class="font-code-mono font-bold text-on-surface">210 uds</span>
+<div class="w-24 bg-surface-container h-1.5 rounded-full mt-1">
+<div class="bg-primary h-full rounded-full" style="width: 61%;"></div>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex px-2 py-0.5 rounded bg-[#fffbeb] text-[#92400e] font-code-mono text-label-sm font-bold">14 en stock</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-code-mono text-label-md font-bold text-primary w-5 text-center">#3</span>
+<div class="min-w-0">
+<div class="font-body-bold text-body-bold text-on-surface truncate">Pollo Entero Congelado 1.8kg</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="font-code-mono">SKU-CRN-0891</span>
+<span>•</span>
+<span>Cárnicos</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-lg text-right shrink-0">
+<div>
+<span class="font-code-mono font-bold text-on-surface">184 uds</span>
+<div class="w-24 bg-surface-container h-1.5 rounded-full mt-1">
+<div class="bg-primary h-full rounded-full" style="width: 53%;"></div>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex px-2 py-0.5 rounded bg-[#ecfdf5] text-[#065f46] font-code-mono text-label-sm font-bold">42 en stock</span>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-code-mono text-label-md font-bold text-primary w-5 text-center">#4</span>
+<div class="min-w-0">
+<div class="font-body-bold text-body-bold text-on-surface truncate">Refresco Tukola 330ml</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="font-code-mono">SKU-BEV-0015</span>
+<span>•</span>
+<span>Bebidas</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-lg text-right shrink-0">
+<div>
+<span class="font-code-mono font-bold text-on-surface">148 uds</span>
+<div class="w-24 bg-surface-container h-1.5 rounded-full mt-1">
+<div class="bg-primary h-full rounded-full" style="width: 43%;"></div>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex px-2 py-0.5 rounded bg-[#fef2f2] text-[#991b1b] font-code-mono text-label-sm font-bold">5 en stock (Crítico)</span>
+</div>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-code-mono text-label-md font-bold text-primary w-5 text-center">#5</span>
+<div class="min-w-0">
+<div class="font-body-bold text-body-bold text-on-surface truncate">Detergente OMO Multiacción 1kg</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="font-code-mono">SKU-LMP-0430</span>
+<span>•</span>
+<span>Aseo Hogar</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-lg text-right shrink-0">
+<div>
+<span class="font-code-mono font-bold text-on-surface">95 uds</span>
+<div class="w-24 bg-surface-container h-1.5 rounded-full mt-1">
+<div class="bg-primary h-full rounded-full" style="width: 28%;"></div>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex px-2 py-0.5 rounded bg-[#ecfdf5] text-[#065f46] font-code-mono text-label-sm font-bold">29 en stock</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Ranking por Ingresos y Ganancia Aportada -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-[#ecfdf5] text-[#065f46] flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">monetization_on</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ranking por Ingreso y Ganancia</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Mayor impacto neto en la caja del negocio</p>
+</div>
+</div>
+<span class="text-label-sm font-label-sm bg-[#ecfdf5] text-[#065f46] px-2 py-1 rounded font-semibold">Top Rentabilidad</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-code-mono text-label-md font-bold text-[#065f46] w-5 text-center">1°</span>
+<div class="min-w-0">
+<div class="font-body-bold text-body-bold text-on-surface truncate">Pollo Entero Congelado 1.8kg</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                  Margen bruto: <span class="text-on-surface font-semibold">34.2%</span> • 184 vendidos
+                </div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-code-mono font-bold text-on-surface text-body-bold">$106,720 CUP</div>
+<div class="font-label-sm text-label-sm text-[#065f46] font-semibold">+$36,500 Ganancia</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-code-mono text-label-md font-bold text-[#065f46] w-5 text-center">2°</span>
+<div class="min-w-0">
+<div class="font-body-bold text-body-bold text-on-surface truncate">Cerveza Cristal 355ml (Lata)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                  Margen bruto: <span class="text-on-surface font-semibold">28.5%</span> • 342 vendidos
+                </div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-code-mono font-bold text-on-surface text-body-bold">$88,920 CUP</div>
+<div class="font-label-sm text-label-sm text-[#065f46] font-semibold">+$25,340 Ganancia</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-code-mono text-label-md font-bold text-[#065f46] w-5 text-center">3°</span>
+<div class="min-w-0">
+<div class="font-body-bold text-body-bold text-on-surface truncate">Aceite Vegetal Cocinero 1L</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                  Margen bruto: <span class="text-on-surface font-semibold">22.0%</span> • 210 vendidos
+                </div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-code-mono font-bold text-on-surface text-body-bold">$84,000 CUP</div>
+<div class="font-label-sm text-label-sm text-[#065f46] font-semibold">+$18,480 Ganancia</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-code-mono text-label-md font-bold text-[#065f46] w-5 text-center">4°</span>
+<div class="min-w-0">
+<div class="font-body-bold text-body-bold text-on-surface truncate">Leche en Polvo Instantánea 1kg</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                  Margen bruto: <span class="text-on-surface font-semibold">41.0%</span> • 45 vendidos
+                </div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-code-mono font-bold text-on-surface text-body-bold">$54,000 CUP</div>
+<div class="font-label-sm text-label-sm text-[#065f46] font-semibold">+$22,140 Ganancia</div>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-code-mono text-label-md font-bold text-[#065f46] w-5 text-center">5°</span>
+<div class="min-w-0">
+<div class="font-body-bold text-body-bold text-on-surface truncate">Café Serrano Tostado 250g</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                  Margen bruto: <span class="text-on-surface font-semibold">44.5%</span> • 72 vendidos
+                </div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-code-mono font-bold text-on-surface text-body-bold">$39,600 CUP</div>
+<div class="font-label-sm text-label-sm text-[#065f46] font-semibold">+$17,620 Ganancia</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Alerts & Business Recommendations -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#ba1a1a] text-[22px]">notifications_active</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Alertas Operativas &amp; Recomendaciones del Negocio</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Acciones sugeridas por el motor de análisis según rotación y patrones de compra</p>
+</div>
+</div>
+<span class="px-space-sm py-1 bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold rounded">3 Avisos Críticos</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Alert 1: Reposición Inmediata -->
+<div class="p-space-md rounded-lg bg-[#fef2f2] flex flex-col justify-between">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[#991b1b] text-[20px] shrink-0 mt-0.5">priority_high</span>
+<div>
+<span class="font-body-bold text-body-bold text-[#991b1b]">Reposición Inmediata: Refresco Tukola</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+                Quedan solo <strong class="text-on-surface">5 unidades</strong> en almacén. Con el ritmo de venta promedio (21 uds/día), se proyecta quiebre de stock en menos de 6 horas.
+              </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-code-mono text-label-sm text-[#991b1b] font-bold">Ruptura Inminente</span>
+<button class="text-label-sm font-label-sm font-bold text-primary hover:underline flex items-center gap-0.5" type="button">
+<span>Crear Pedido</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Alert 2: Horarios de Mayor Afluencia TPV -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col justify-between">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">schedule</span>
+<div>
+<span class="font-body-bold text-body-bold text-on-surface">Pico de Afluencia: 17:30 a 20:00 hrs</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+                El 48% de las transacciones diarias se concentran al cierre de jornada laboral. Se recomienda tener dos cajeros activos y papel térmico recargado.
+              </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Capacidad de TPV sugerida: 2 terminales</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+</div>
+<!-- Alert 3: Rotación de Aceite y Precios -->
+<div class="p-space-md rounded-lg bg-[#fffbeb] flex flex-col justify-between">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[#92400e] text-[20px] shrink-0 mt-0.5">inventory_2</span>
+<div>
+<span class="font-body-bold text-body-bold text-[#92400e]">Alerta de Stock: Aceite Cocinero 1L</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+                Stock actual: <strong class="text-on-surface">14 unidades</strong>. Producto con la 2da mayor rotación de la semana. Proveedor local entrega en 48 horas hábiles.
+              </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-code-mono text-label-sm text-[#92400e] font-bold">Solicitar a Proveedor</span>
+<button class="text-label-sm font-label-sm font-bold text-primary hover:underline flex items-center gap-0.5" type="button">
+<span>Contactar</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>s

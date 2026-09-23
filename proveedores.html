@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"tertiary-fixed-dim":"#b4c5ff","on-secondary-fixed":"#131b2e","on-primary-fixed-variant":"#0039b5","inverse-on-surface":"#eaf1ff","primary-container":"#1d4ed8","surface-container-lowest":"#ffffff","secondary-fixed":"#dae2fd","error-container":"#ffdad6","surface-tint":"#2151da","surface-container-highest":"#d3e4fe","secondary-container":"#dae2fd","background":"#f8f9ff","secondary":"#565e74","surface-variant":"#d3e4fe","on-tertiary-fixed-variant":"#003ea8","primary-fixed":"#dce1ff","primary-fixed-dim":"#b7c4ff","outline-variant":"#c4c5d7","on-background":"#0b1c30","surface":"#f8f9ff","surface-bright":"#f8f9ff","secondary-fixed-dim":"#bec6e0","inverse-primary":"#b7c4ff","on-surface-variant":"#434655","on-surface":"#0b1c30","on-tertiary":"#ffffff","tertiary":"#003ca3","on-primary-container":"#cad3ff","surface-dim":"#cbdbf5","outline":"#747686","on-tertiary-container":"#c9d4ff","inverse-surface":"#213145","primary":"#0037b0","surface-container":"#e5eeff","on-secondary":"#ffffff","on-secondary-container":"#5c647a","surface-container-high":"#dce9ff","on-error":"#ffffff","tertiary-fixed":"#dbe1ff","on-primary-fixed":"#001551","on-error-container":"#93000a","error":"#ba1a1a","tertiary-container":"#0051d6","on-tertiary-fixed":"#00174b","surface-container-low":"#eff4ff","on-secondary-fixed-variant":"#3f465c","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"0.75rem","margin":"1.5rem","margin-compact":"1rem","space-2xl":"2rem","gutter-dense":"0.5rem","space-sm":"0.5rem","space-lg":"1rem","space-xl":"1.5rem","gutter":"1rem","space-xs":"0.25rem"},"fontFamily":{"code-mono":["JetBrains Mono"],"label-sm":["Inter"],"body-md":["Inter"],"body-bold":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"],"display-md":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"headline-sm":["Inter"]},"fontSize":{"code-mono":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-bold":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"display-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="p-space-lg flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #1d4ed8
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WZaVAPBbmPEq579_00uv2bs2YrnYxBWG8B8maHdvv-Mo8DTfO6k02iTscoX_KGKPJc4FudNe6cjzYFuBuCFR4lF13GrBXfGMnuJkNilDtec2DNH-XAONQEiFKAZVn0rW22x2Wb6J-RjcznHbw9Yba44zp-u5-84_BLWSUbBau4FCUNdH_jLHrxIfaN1RHSSBPAcAXSpttyd-Yit3_6dUI1uzInFpNdMrGhPjKWEgVcRsnvTI9VjE5_pxUT"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate">Gestor Tienda</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Tienda Central</span></div></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high rounded"><span class="material-symbols-outlined text-primary text-[16px]">wifi_off</span><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Modo Offline Activo</span></div></div><nav class="flex-1 px-space-md py-space-xs flex flex-col gap-space-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="dashboard" href="#">Dashboard</a><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="kardex-y-actas-de-baja-mermas" href="#">Inventario y Kardex</a><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="ventas-tpv" href="#">Ventas (TPV)</a><div class="flex flex-col gap-space-xs pt-space-xs"><div class="px-space-md py-space-xs flex items-center justify-between text-on-surface font-label-sm text-label-sm font-semibold uppercase tracking-wider"><span>Proveedores</span><span class="h-1.5 w-1.5 rounded-full bg-primary"></span></div><a class="ml-space-sm pl-space-md pr-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md flex items-center justify-between" data-path="catalogo-de-proveedores-y-cuentas-por-pagar" href="#"><span>Catálogo y Cuentas por Pagar</span></a><a class="ml-space-sm pl-space-md pr-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md flex items-center justify-between" data-path="cuadre-semanal-y-liquidacion-de-ganancias" href="#"><span>Cuadre y Liquidación</span></a></div><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="reportes" href="#">Reportes</a><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="usuarios-y-roles" href="#">Usuarios y Roles</a></nav><div class="p-space-md bg-surface-container-low"><div class="flex items-center justify-between gap-space-xs text-on-surface-variant"><div class="flex items-center gap-space-xs min-w-0"><span class="h-2 w-2 rounded-full bg-primary shrink-0"></span><span class="font-code-mono text-code-mono truncate">0 pend. SQLite Local</span></div><span class="font-label-sm text-label-sm shrink-0">v1.0.0</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 px-space-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md min-w-0"><img alt="Brand logo. - Primary color: #1d4ed8
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WZaVAPBbmPEq579_00uv2bs2YrnYxBWG8B8maHdvv-Mo8DTfO6k02iTscoX_KGKPJc4FudNe6cjzYFuBuCFR4lF13GrBXfGMnuJkNilDtec2DNH-XAONQEiFKAZVn0rW22x2Wb6J-RjcznHbw9Yba44zp-u5-84_BLWSUbBau4FCUNdH_jLHrxIfaN1RHSSBPAcAXSpttyd-Yit3_6dUI1uzInFpNdMrGhPjKWEgVcRsnvTI9VjE5_pxUT"/><nav class="hidden xl:flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant truncate"><span class="text-on-surface-variant">Panel de Operaciones</span><span>/</span><span class="text-on-surface-variant">Proveedores y Finanzas</span><span>/</span><span class="font-body-bold text-body-bold text-on-surface truncate">Cuentas por Pagar y Liquidación</span></nav></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded"><span class="material-symbols-outlined text-primary text-[16px]">database</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">SQLite Activa</span></div><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded"><span class="font-label-sm text-label-sm text-on-surface-variant">Moneda:</span><span class="font-code-mono text-code-mono text-on-surface font-bold">CUP / MLC / USD</span></div><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">shield_person</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Rol: Admin</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden lg:flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Alejandro Morales</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Administrador</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-screen px-space-margin pb-space-2xl"><div class="flex flex-col w-full">
+<!-- Top Command & Action Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface">Gestión de Proveedores y Obligaciones de Pago</span>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded text-[11px] font-semibold bg-surface-container text-primary uppercase tracking-wider">MIPYME TPV Sync</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        Devengo automático de costos por ventas en consignación/mostrador, saldo de deuda acumulada y amortización de pagos (Efectivo y Transferencias).
+      </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all flex items-center gap-space-xs shadow-sm font-label-md text-label-md" onclick="toggleModal('modal-nuevo-proveedor')">
+<span class="material-symbols-outlined text-[18px] text-primary">person_add</span>
+<span>+ Nuevo Proveedor <kbd class="font-code-mono text-[11px] bg-surface-container-high px-1 rounded text-on-surface-variant">F2</kbd></span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all flex items-center gap-space-xs shadow-md font-label-md text-label-md" onclick="focusPaymentForm('EMELYH', 68400)">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span>+ Registrar Pago <kbd class="font-code-mono text-[11px] bg-primary text-on-primary px-1 rounded opacity-90">F4</kbd></span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-space-xs shadow-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Exportar (Excel/PDF)</span>
+</button>
+</div>
+</div>
+<!-- Real-time SQLite Local Notice & Sync Status -->
+<div class="mb-space-lg p-space-sm px-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm text-on-surface">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></div>
+<span class="font-label-md text-label-md font-semibold">SQLite Ledger Local Integrado:</span>
+<span class="font-body-md text-body-md text-on-surface-variant truncate">Los costos de ventas devengan pasivos al registrar cada ticket de caja en tiempo real sin conexión activa.</span>
+</div>
+<div class="flex items-center gap-space-md font-code-mono text-code-mono text-on-surface-variant shrink-0">
+<span>Gaveta Efectivo CUP: <strong class="text-on-surface font-semibold">$154,200.00</strong></span>
+<span class="text-outline-variant">|</span>
+<span>BPA/Bandec: <strong class="text-on-surface font-semibold">$89,450.00</strong></span>
+</div>
+</div>
+<!-- KPI Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md mb-space-xl">
+<!-- Total Pendiente -->
+<div class="relative overflow-hidden p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-semibold">Total Obligaciones Pendientes</span>
+<span class="material-symbols-outlined text-error text-[20px]">receipt_long</span>
+</div>
+<div>
+<div class="font-display-md text-display-md font-bold text-on-surface tracking-tight">$122,241.00 <span class="font-label-sm text-label-sm text-error font-semibold">CUP</span></div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">2 órdenes devengadas activas</p>
+</div>
+<div class="mt-space-sm h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+<!-- Efectivo Pendiente -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">A Pagar Efectivo</span>
+<span class="material-symbols-outlined text-primary text-[20px]">point_of_sale</span>
+</div>
+<div>
+<div class="font-display-md text-display-md font-bold text-on-surface tracking-tight">$122,241.00 <span class="font-label-sm text-label-sm text-on-surface-variant">CUP</span></div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">100% fondo acordado en mostrador</p>
+</div>
+<span class="inline-flex items-center gap-1 font-code-mono text-code-mono text-primary mt-space-sm">
+<span class="material-symbols-outlined text-[14px]">lock_clock</span> Saldo en caja suficiente
+      </span>
+</div>
+<!-- Transferencias Pendiente -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">A Pagar Transferencias</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">account_balance</span>
+</div>
+<div>
+<div class="font-display-md text-display-md font-bold text-on-surface tracking-tight">$0.00 <span class="font-label-sm text-label-sm text-on-surface-variant">CUP</span></div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Transfermóvil / EnZona al día</p>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant mt-space-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Sin colas pendientes
+      </span>
+</div>
+<!-- Pagos de la Semana -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Pagos en la Semana</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+</div>
+<div>
+<div class="font-display-md text-display-md font-bold text-on-surface tracking-tight">$45,800.00 <span class="font-label-sm text-label-sm text-on-surface-variant">CUP</span></div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">3 órdenes liquidadas</p>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary mt-space-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]">trending_down</span> Amortizado 27.2% total
+      </div>
+</div>
+<!-- Costo Devengado Hoy -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Devengado Hoy (TPV)</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">store</span>
+</div>
+<div>
+<div class="font-display-md text-display-md font-bold text-on-surface tracking-tight">$18,450.00 <span class="font-label-sm text-label-sm text-on-surface-variant">CUP</span></div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Por 38 tickets emitidos hoy</p>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant mt-space-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">sync</span> Actualizado hace 4 min
+      </span>
+</div>
+</div>
+<!-- Main Multi-Panel Workspace: 70% Providers Table & 30% Payment Form Drawer -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Master Table & Settlement Ledger (8 cols = ~67-70%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Search, Filtering, and Snapshot Toolbar -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all placeholder:text-outline" id="provider-search-input" onkeyup="filterProvidersTable()" placeholder="Buscar proveedor por nombre, teléfono o tipo de contrato..." type="text"/>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<select class="h-10 px-space-md rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md focus:outline-none">
+<option value="all">Todos los Contratos</option>
+<option value="consignacion">Solo Consignación</option>
+<option value="credito">Crédito Directo</option>
+<option value="deuda">Con Saldo Pendiente (&gt; $0)</option>
+</select>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" title="Refrescar desde base local SQLite">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Providers Master Table Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="px-space-lg py-space-md flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Catálogo de Proveedores y Cuentas Devengadas</span>
+</div>
+<span class="font-code-mono text-code-mono text-on-surface-variant">3 Registrados / 2 Con Saldo Activo</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="table-proveedores">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<th class="py-3 px-space-md uppercase font-semibold">Proveedor / Razón Social</th>
+<th class="py-3 px-space-md uppercase font-semibold text-center">Ventas Asoc.</th>
+<th class="py-3 px-space-md uppercase font-semibold text-right">Costo Devengado</th>
+<th class="py-3 px-space-md uppercase font-semibold text-right">Abonos Realizados</th>
+<th class="py-3 px-space-md uppercase font-semibold text-right">Saldo Pendiente</th>
+<th class="py-3 px-space-md uppercase font-semibold text-center">Estado</th>
+<th class="py-3 px-space-md uppercase font-semibold text-center">Acciones</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md">
+<!-- Provider 1: EMELYH -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-lowest">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Distribuidora EMELYH</span>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span class="material-symbols-outlined text-[13px]">phone</span>
+<span>+53 5284-9102</span>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center px-1.5 py-0.2 bg-secondary-container text-on-secondary-fixed rounded text-[10px] font-semibold uppercase">Consignación</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="font-code-mono text-code-mono text-on-surface font-semibold">142 uds</span>
+<span class="block text-[11px] text-on-surface-variant">Snacks &amp; Abarrotes</span>
+</td>
+<td class="py-3 px-space-md text-right font-code-mono text-code-mono font-semibold text-on-surface">
+                  $68,400.00
+                </td>
+<td class="py-3 px-space-md text-right font-code-mono text-code-mono text-on-surface-variant">
+                  $0.00
+                </td>
+<td class="py-3 px-space-md text-right">
+<span class="font-code-mono text-code-mono font-bold text-error text-[15px]">$68,400.00</span>
+<span class="block text-[10px] uppercase font-semibold text-error">CUP</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-error-container text-on-error-container">
+<span class="h-1.5 w-1.5 rounded-full bg-error"></span> Pendiente
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<div class="inline-flex items-center justify-center gap-1">
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-all shadow-sm" onclick="focusPaymentForm('EMELYH', 68400)" title="Abonar o liquidar">
+                      Abonar
+                    </button>
+<button class="p-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="openKardexDetail('Distribuidora EMELYH', 142, 68400)" title="Ver Kardex de Ventas">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+<button class="p-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" title="Comprobantes anteriores">
+<span class="material-symbols-outlined text-[16px]">receipt</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Provider 2: GAIBE -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-low/20">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Comercializadora GAIBE</span>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span class="material-symbols-outlined text-[13px]">phone</span>
+<span>+53 5390-1120</span>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center px-1.5 py-0.2 bg-secondary-container text-on-secondary-fixed rounded text-[10px] font-semibold uppercase">Crédito 15d</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="font-code-mono text-code-mono text-on-surface font-semibold">98 uds</span>
+<span class="block text-[11px] text-on-surface-variant">Bebidas y Lácteos</span>
+</td>
+<td class="py-3 px-space-md text-right font-code-mono text-code-mono font-semibold text-on-surface">
+                  $53,841.00
+                </td>
+<td class="py-3 px-space-md text-right font-code-mono text-code-mono text-on-surface-variant">
+                  $0.00
+                </td>
+<td class="py-3 px-space-md text-right">
+<span class="font-code-mono text-code-mono font-bold text-error text-[15px]">$53,841.00</span>
+<span class="block text-[10px] uppercase font-semibold text-error">CUP</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-error-container text-on-error-container">
+<span class="h-1.5 w-1.5 rounded-full bg-error"></span> Pendiente
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<div class="inline-flex items-center justify-center gap-1">
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-all shadow-sm" onclick="focusPaymentForm('GAIBE', 53841)" title="Abonar o liquidar">
+                      Abonar
+                    </button>
+<button class="p-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="openKardexDetail('Comercializadora GAIBE', 98, 53841)" title="Ver Kardex de Ventas">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+<button class="p-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" title="Comprobantes anteriores">
+<span class="material-symbols-outlined text-[16px]">receipt</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Provider 3: Habana Sur (Saldado) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-lowest opacity-85">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Importadora Habana Sur</span>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span class="material-symbols-outlined text-[13px]">phone</span>
+<span>+53 7831-4455</span>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center px-1.5 py-0.2 bg-surface-container text-on-surface-variant rounded text-[10px] font-semibold uppercase">Consignación</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="font-code-mono text-code-mono text-on-surface">76 uds</span>
+<span class="block text-[11px] text-on-surface-variant">Confitería</span>
+</td>
+<td class="py-3 px-space-md text-right font-code-mono text-code-mono text-on-surface">
+                  $45,800.00
+                </td>
+<td class="py-3 px-space-md text-right font-code-mono text-code-mono text-primary font-semibold">
+                  $45,800.00
+                </td>
+<td class="py-3 px-space-md text-right">
+<span class="font-code-mono text-code-mono font-bold text-on-surface text-[15px]">$0.00</span>
+<span class="block text-[10px] uppercase font-semibold text-on-surface-variant">CUP</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Saldado
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<div class="inline-flex items-center justify-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-high cursor-default opacity-60">
+                      Saldado
+                    </button>
+<button class="p-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="openKardexDetail('Importadora Habana Sur', 76, 45800)" title="Ver Kardex">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+<button class="p-1 rounded bg-surface-container text-primary hover:bg-surface-container-high transition-colors" title="Recibo de Liquidación">
+<span class="material-symbols-outlined text-[16px]">download_done</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr class="bg-surface-container font-body-bold text-body-bold text-on-surface">
+<td class="py-3 px-space-md text-on-surface">
+<span class="uppercase tracking-wider font-bold">TOTAL DE DEUDA CON PROVEEDORES:</span>
+</td>
+<td class="py-3 px-space-md text-center font-code-mono">316 uds</td>
+<td class="py-3 px-space-md text-right font-code-mono font-bold">$168,041.00</td>
+<td class="py-3 px-space-md text-right font-code-mono text-primary font-bold">$45,800.00</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-code-mono font-bold text-error text-[16px]">$122,241.00</span>
+<span class="text-[11px] uppercase font-bold text-error block">CUP</span>
+</td>
+<td class="py-3 px-space-md text-right font-label-sm text-label-sm text-on-surface-variant" colspan="2">
+                  Exacto s/ Archivo Excel • Consolidado TPV
+                </td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+<!-- Recent Executed Settlement Vouchers Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">history_edu</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Últimos Pagos Ejecutados &amp; Comprobantes Firmados</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold" href="#">Ver Libro Diario Completo →</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Voucher Card 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex items-start justify-between">
+<span class="font-code-mono text-code-mono text-on-surface-variant">REC-2023-0891</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-container-high text-primary uppercase">Efectivo</span>
+</div>
+<div>
+<span class="font-body-bold text-body-bold text-on-surface">Habana Sur (Lote C-12)</span>
+<div class="font-display-md text-display-md font-bold text-on-surface mt-0.5">$30,000.00 <span class="font-label-sm text-label-sm text-on-surface-variant">CUP</span></div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Firma: Carlos Viamontes (Chofer)</p>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-code-mono text-[11px]">
+<span>12 Oct 2023, 14:15</span>
+<button class="text-primary hover:underline flex items-center gap-0.5 font-bold">
+<span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> Imprimir
+              </button>
+</div>
+</div>
+<!-- Voucher Card 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex items-start justify-between">
+<span class="font-code-mono text-code-mono text-on-surface-variant">REC-2023-0890</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-container-high text-primary uppercase">BPA Trf #8831</span>
+</div>
+<div>
+<span class="font-body-bold text-body-bold text-on-surface">Habana Sur (Lote C-11)</span>
+<div class="font-display-md text-display-md font-bold text-on-surface mt-0.5">$15,800.00 <span class="font-label-sm text-label-sm text-on-surface-variant">CUP</span></div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Ref: EnZona 00928174</p>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-code-mono text-[11px]">
+<span>10 Oct 2023, 11:30</span>
+<button class="text-primary hover:underline flex items-center gap-0.5 font-bold">
+<span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> Imprimir
+              </button>
+</div>
+</div>
+<!-- Quick Audit Summary -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Conciliación Contable</span>
+<p class="font-body-md text-body-md text-on-surface mt-1 leading-snug">
+                El total debitado coincide con las mermas y salidas autorizadas por el Kardex de liquidación por venta neta.
+              </p>
+</div>
+<div class="mt-space-sm p-space-sm rounded bg-surface-container-lowest flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface">Validación de Cierre</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold">
+<span class="material-symbols-outlined text-[16px]">verified_user</span> Cuadre OK
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Fast Payment Settlement Drawer / Form (4 cols = ~30%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-md sticky top-20">
+<!-- Form Header -->
+<div class="flex items-start justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Registrar Pago / Abono</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Amortización directa de pasivo devengado</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">add_card</span>
+</div>
+</div>
+<form class="flex flex-col gap-space-md" id="payment-settlement-form" onsubmit="handlePaymentSubmit(event)">
+<!-- Provider Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex justify-between">
+<span>Proveedor a Liquidar</span>
+<span class="text-error font-code-mono text-[11px]" id="selected-current-debt">Deuda: $68,400.00 CUP</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container" id="select-provider" onchange="onProviderSelectChange()">
+<option data-debt="68400" value="EMELYH">Distribuidora EMELYH ($68,400.00 CUP)</option>
+<option data-debt="53841" value="GAIBE">Comercializadora GAIBE ($53,841.00 CUP)</option>
+<option data-debt="0" value="HABANA_SUR">Importadora Habana Sur ($0.00 CUP - Saldado)</option>
+</select>
+</div>
+</div>
+<!-- Payment Method Toggle Tabs -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Modalidad de Egreso / Pago</label>
+<div class="grid grid-cols-2 gap-space-xs p-1 rounded-lg bg-surface-container-low">
+<button class="py-1.5 px-space-sm rounded-md font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1" id="tab-cash" onclick="setPaymentMethod('cash')" type="button">
+<span class="material-symbols-outlined text-[16px]">payments</span> Efectivo (Caja)
+              </button>
+<button class="py-1.5 px-space-sm rounded-md font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1" id="tab-transfer" onclick="setPaymentMethod('transfer')" type="button">
+<span class="material-symbols-outlined text-[16px]">account_balance</span> Transferencia
+              </button>
+</div>
+</div>
+<!-- Dynamic Source Indicator -->
+<div class="p-space-xs px-space-sm rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-between" id="source-notice">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">point_of_sale</span>
+<span>Descuenta de: <strong>Gaveta Principal CUP</strong></span>
+</span>
+<span class="font-code-mono font-semibold text-on-surface">Disp: $154,200.00</span>
+</div>
+<!-- Payment Amount & Live Real-Time Calc -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Monto a Liquidar / Abonar</label>
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold" onclick="payTotalBalance()" type="button">
+                Saldar Todo (100%)
+              </button>
+</div>
+<div class="relative">
+<span class="absolute left-3 top-2.5 font-code-mono text-body-md text-on-surface-variant font-bold">$</span>
+<input class="w-full h-10 pl-8 pr-16 rounded-lg bg-surface-container-low text-on-surface font-code-mono text-body-bold focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container" id="input-payment-amount" oninput="calculateRemainingBalance()" step="0.01" type="number" value="68400.00"/>
+<span class="absolute right-3 top-2.5 font-code-mono text-body-md text-on-surface-variant font-semibold">CUP</span>
+</div>
+</div>
+<!-- Balance Differential Live Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Saldo Restante al aplicar:</span>
+<span class="font-code-mono font-bold text-body-bold text-on-surface" id="label-remaining-balance">$0.00 CUP</span>
+</div>
+<div class="px-2 py-0.5 rounded text-[11px] font-bold bg-surface-container-lowest text-primary" id="badge-settlement-status">
+              Liquidación Total
+            </div>
+</div>
+<!-- Voucher Reference / Receptor Details -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Nº Comprobante</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-code-mono text-label-md focus:outline-none focus:ring-2 focus:ring-primary-container" id="voucher-number" type="text" value="REC-2023-0892"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Receptor / Carnet Ident.</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-label-md focus:outline-none focus:ring-2 focus:ring-primary-container" id="voucher-recipient" placeholder="Ej: Juan Pérez / CI" type="text"/>
+</div>
+</div>
+<!-- Notes / Concept -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Concepto Contable (Glosa)</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container" id="voucher-notes" type="text" value="Liquidación semanal de ventas consignación según reporte Kardex"/>
+</div>
+<!-- Submit Confirmation Action -->
+<button class="w-full h-11 mt-space-xs rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-all flex items-center justify-center gap-space-xs shadow-md font-headline-sm text-headline-sm font-semibold" type="submit">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+<span>Registrar y Emitir Comprobante</span>
+<kbd class="font-code-mono text-[11px] bg-primary-container text-on-primary px-1.5 py-0.5 rounded ml-1">F9</kbd>
+</button>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center leading-tight">
+            Impacta el Libro Diario local y emite comprobante oficial en formato térmico 80mm o PDF estándar.
+          </p>
+</form>
+</div>
+</div>
+</div>
+<!-- Modal: Kardex Detail Viewer (Interactive Micro-drawer) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-space-margin" id="modal-kardex">
+<div class="bg-surface-container-lowest w-full max-w-2xl rounded-xl shadow-xl overflow-hidden flex flex-col">
+<div class="p-space-md px-space-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">inventory</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface" id="modal-provider-title">Kardex de Ventas: Distribuidora EMELYH</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Detalle de unidades vendidas y devengo automático de costo</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container-highest transition-colors text-on-surface-variant" onclick="closeKardexModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md max-h-[614px] overflow-y-auto">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Unidades Vendidas en Mostrador:</span>
+<span class="font-code-mono font-bold ml-1" id="modal-kardex-units">142 uds</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Costo Acordado Devengado:</span>
+<span class="font-code-mono font-bold text-error ml-1" id="modal-kardex-cost">$68,400.00 CUP</span>
+</div>
+</div>
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">
+<th class="p-2">Fecha/Hora Ticket</th>
+<th class="p-2">Producto / Código</th>
+<th class="p-2 text-center">Cant.</th>
+<th class="p-2 text-right">Costo Unit. Acordado</th>
+<th class="p-2 text-right">Subtotal Pasivo</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-code-mono text-[13px]">
+<tr>
+<td class="p-2">12 Oct 11:20 #T-4401</td>
+<td class="p-2 font-sans font-medium">Galletas de Vainilla 200g</td>
+<td class="p-2 text-center">40 uds</td>
+<td class="p-2 text-right">$450.00 CUP</td>
+<td class="p-2 text-right font-bold">$18,000.00 CUP</td>
+</tr>
+<tr>
+<td class="p-2">12 Oct 10:45 #T-4392</td>
+<td class="p-2 font-sans font-medium">Papas Fritas Artesanales 150g</td>
+<td class="p-2 text-center">62 uds</td>
+<td class="p-2 text-right">$500.00 CUP</td>
+<td class="p-2 text-right font-bold">$31,000.00 CUP</td>
+</tr>
+<tr>
+<td class="p-2">11 Oct 17:30 #T-4310</td>
+<td class="p-2 font-sans font-medium">Refresco Enlatado 330ml</td>
+<td class="p-2 text-center">40 uds</td>
+<td class="p-2 text-right">$485.00 CUP</td>
+<td class="p-2 text-right font-bold">$19,400.00 CUP</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Generado por SQLite Kardex TPV Local</span>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors" onclick="closeKardexModal()">
+          Cerrar
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal: Nuevo Proveedor (F2) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-space-margin" id="modal-nuevo-proveedor">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-xl shadow-xl overflow-hidden flex flex-col">
+<div class="p-space-md px-space-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">person_add</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Registrar Nuevo Proveedor</span>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container-highest text-on-surface-variant" onclick="toggleModal('modal-nuevo-proveedor')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Nombre Comercial / Empresa</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Ej: Distribuidora Santiago S.R.L." type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Teléfono de Contacto</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="+53 5000-0000" type="text"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Tipo de Contrato</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none">
+<option>Consignación (Liquidación por Venta)</option>
+<option>Crédito Directo (Factura Diferida)</option>
+<option>Contado Inmediato</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Cuenta Bancaria CUP / Transfermóvil (Opcional)</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-code-mono text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="9200-XXXX-XXXX-XXXX" type="text"/>
+</div>
+</div>
+<div class="p-space-md bg-surface-container flex items-center justify-end gap-space-sm">
+<button class="h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" onclick="toggleModal('modal-nuevo-proveedor')">
+          Cancelar
+        </button>
+<button class="h-10 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all" onclick="saveNewProvider()">
+          Guardar Proveedor
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Container -->
+<div class="fixed bottom-6 right-6 z-50 hidden transform transition-all duration-300" id="toast-notification">
+<div class="p-space-md rounded-xl bg-on-surface text-surface flex items-center gap-space-sm shadow-xl">
+<span class="material-symbols-outlined text-primary text-[22px]" id="toast-icon">check_circle</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-surface font-semibold" id="toast-title">Operación Exitosa</span>
+<span class="font-label-sm text-label-sm text-surface-container font-normal" id="toast-message">Pago registrado y comprobante emitido.</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentMethod = 'cash';
+
+  function setPaymentMethod(method) {
+    currentMethod = method;
+    const tabCash = document.getElementById('tab-cash');
+    const tabTransfer = document.getElementById('tab-transfer');
+    const notice = document.getElementById('source-notice');
+
+    if (method === 'cash') {
+      tabCash.className = 'py-1.5 px-space-sm rounded-md font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1';
+      tabTransfer.className = 'py-1.5 px-space-sm rounded-md font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1';
+      notice.innerHTML = `
+        <span class="flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px] text-primary">point_of_sale</span>
+          <span>Descuenta de: <strong>Gaveta Principal CUP</strong></span>
+        </span>
+        <span class="font-code-mono font-semibold text-on-surface">Disp: $154,200.00</span>
+      `;
+    } else {
+      tabTransfer.className = 'py-1.5 px-space-sm rounded-md font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1';
+      tabCash.className = 'py-1.5 px-space-sm rounded-md font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1';
+      notice.innerHTML = `
+        <span class="flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px] text-primary">account_balance</span>
+          <span>Transfiere desde: <strong>Cuenta Fiscal BPA CUP</strong></span>
+        </span>
+        <span class="font-code-mono font-semibold text-on-surface">Disp: $89,450.00</span>
+      `;
+    }
+  }
+
+  function getSelectedDebt() {
+    const select = document.getElementById('select-provider');
+    const selectedOption = select.options[select.selectedIndex];
+    return parseFloat(selectedOption.getAttribute('data-debt') || 0);
+  }
+
+  function onProviderSelectChange() {
+    const debt = getSelectedDebt();
+    document.getElementById('selected-current-debt').textContent = 'Deuda: $' + debt.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' CUP';
+    document.getElementById('input-payment-amount').value = debt.toFixed(2);
+    calculateRemainingBalance();
+  }
+
+  function payTotalBalance() {
+    const debt = getSelectedDebt();
+    document.getElementById('input-payment-amount').value = debt.toFixed(2);
+    calculateRemainingBalance();
+  }
+
+  function calculateRemainingBalance() {
+    const debt = getSelectedDebt();
+    const amountVal = parseFloat(document.getElementById('input-payment-amount').value) || 0;
+    const remaining = Math.max(0, debt - amountVal);
+    const label = document.getElementById('label-remaining-balance');
+    const badge = document.getElementById('badge-settlement-status');
+
+    label.textContent = '$' + remaining.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' CUP';
+
+    if (remaining === 0 && amountVal > 0) {
+      badge.textContent = 'Liquidación Total';
+      badge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-surface-container-highest text-primary';
+    } else if (remaining > 0 && amountVal > 0) {
+      badge.textContent = 'Abono Parcial';
+      badge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-secondary-container text-on-secondary-container';
+    } else {
+      badge.textContent = 'Sin Pago';
+      badge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-surface-container text-on-surface-variant';
+    }
+  }
+
+  function focusPaymentForm(providerKey, amount) {
+    const select = document.getElementById('select-provider');
+    select.value = providerKey;
+    onProviderSelectChange();
+    document.getElementById('input-payment-amount').focus();
+    window.scrollTo({ top: 180, behavior: 'smooth' });
+  }
+
+  function handlePaymentSubmit(event) {
+    event.preventDefault();
+    const amount = document.getElementById('input-payment-amount').value;
+    const select = document.getElementById('select-provider');
+    const providerName = select.options[select.selectedIndex].text.split('(')[0].trim();
+    const voucher = document.getElementById('voucher-number').value;
+
+    showToast('Pago Registrado Exitosamente', `Se emitieron $${parseFloat(amount).toLocaleString('es-ES', {minimumFractionDigits: 2})} CUP a ${providerName} (${voucher}).`);
+
+    // Increment voucher counter for next payment
+    const numPart = parseInt(voucher.replace('REC-2023-', '')) || 892;
+    document.getElementById('voucher-number').value = 'REC-2023-' + String(numPart + 1).padStart(4, '0');
+  }
+
+  function showToast(title, message) {
+    const toast = document.getElementById('toast-notification');
+    document.getElementById('toast-title').textContent = title;
+    document.getElementById('toast-message').textContent = message;
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 4500);
+  }
+
+  function toggleModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal.classList.contains('hidden')) {
+      modal.classList.remove('hidden');
+    } else {
+      modal.classList.add('hidden');
+    }
+  }
+
+  function saveNewProvider() {
+    toggleModal('modal-nuevo-proveedor');
+    showToast('Proveedor Guardado', 'El proveedor ha sido registrado en la base de datos SQLite local.');
+  }
+
+  function openKardexDetail(provider, units, cost) {
+    document.getElementById('modal-provider-title').textContent = 'Kardex de Ventas: ' + provider;
+    document.getElementById('modal-kardex-units').textContent = units + ' uds';
+    document.getElementById('modal-kardex-cost').textContent = '$' + cost.toLocaleString('es-ES', { minimumFractionDigits: 2 }) + ' CUP';
+    document.getElementById('modal-kardex').classList.remove('hidden');
+  }
+
+  function closeKardexModal() {
+    document.getElementById('modal-kardex').classList.add('hidden');
+  }
+
+  function filterProvidersTable() {
+    const query = document.getElementById('provider-search-input').value.toLowerCase();
+    const table = document.getElementById('table-proveedores');
+    const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+    for (let i = 0; i < rows.length; i++) {
+      const text = rows[i].textContent.toLowerCase();
+      rows[i].style.display = text.includes(query) ? '' : 'none';
+    }
+  }
+
+  // Hotkey Bindings (F2, F4, F9)
+  window.addEventListener('keydown', function(e) {
+    if (e.key === 'F2') {
+      e.preventDefault();
+      toggleModal('modal-nuevo-proveedor');
+    } else if (e.key === 'F4') {
+      e.preventDefault();
+      focusPaymentForm('EMELYH', 68400);
+    } else if (e.key === 'F9') {
+      e.preventDefault();
+      document.getElementById('payment-settlement-form').requestSubmit();
+    }
+  });
+
+  // Init live calc state
+  calculateRemainingBalance();
+</script></main></div></body></html>
