@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Logo Gestor Tienda">
+  <defs>
+    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#2f6fef"/>
+      <stop offset="100%" stop-color="#4bbfa3"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="28" fill="#f4f7fb"/>
+  <rect x="28" y="28" width="200" height="200" rx="30" fill="url(#g)"/>
+  <path d="M78 98h42c27 0 41 15 41 38s-14 38-41 38H78V98zm18 16v44h24c15 0 24-7 24-22 0-14-9-22-24-22h-24z" fill="#fff"/>
+  <path d="M145 84h29l25 88h-18l-5-18h-31l-5 18h-18l25-88zm12 20l-9 33h19l-10-33z" fill="#fff"/>
+</svg>
