@@ -27,6 +27,7 @@ import json
 import sqlite3
 import hashlib
 import mimetypes
+import re
 from datetime import datetime
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
@@ -45,8 +46,10 @@ def get_db():
     conn.execute("PRAGMA synchronous = NORMAL;")
     return conn
 
+
 def hash_sha256(texto: str) -> str:
     return hashlib.sha256(texto.encode('utf-8')).hexdigest()
+
 
 # ---------------------------------------------------------------------------
 # CONTROLADOR PRINCIPAL DEL SERVIDOR HTTP Y API
@@ -638,7 +641,7 @@ class GestorTiendaHandler(BaseHTTPRequestHandler):
 
         # Quitar el slash inicial para ruta local
         clean_path = path.lstrip("/")
-        
+
         # Mapa de alias cómodos para navegar en navegador
         aliases = {
             "pos": "pos.html",
@@ -669,6 +672,15 @@ class GestorTiendaHandler(BaseHTTPRequestHandler):
         try:
             with open(clean_path, "rb") as f:
                 content = f.read()
+
+            if clean_path.lower().endswith(".html"):
+                html = content.decode("utf-8", errors="ignore")
+                html = re.sub(r'<link[^>]+href=["\']https?://(?:fonts\.googleapis\.com|fonts\.gstatic\.com)[^"\'>]*["\'][^>]*>', '', html, flags=re.I)
+                html = re.sub(r'<script[^>]+src=["\']https?://[^"\']+["\'][^>]*></script>', '', html, flags=re.I)
+                html = re.sub(r'src=["\']https?://[^"\']+["\']', 'src="assets/logo-placeholder.svg"', html, flags=re.I)
+                html = re.sub(r'href=["\']https?://[^"\']+["\']', 'href=""', html, flags=re.I)
+                html = html.replace('<head>', '<head><link href="css/tailwind.min.css" rel="stylesheet"/><link href="css/material-icons.css" rel="stylesheet"/>', 1)
+                content = html.encode("utf-8")
             self._set_headers(200, mime_type)
             self.wfile.write(content)
         except Exception as e:
@@ -695,6 +707,7 @@ def run_server():
     except KeyboardInterrupt:
         print("\n[+] Servidor detenido con éxito por el usuario.")
         httpd.server_close()
+
 
 if __name__ == "__main__":
     run_server()
